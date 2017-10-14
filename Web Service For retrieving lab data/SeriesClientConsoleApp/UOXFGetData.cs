@@ -885,7 +885,7 @@ namespace SeriesClientConsoleApp
 
         public string InsertProject(string idLab, project NewProject)
         {
-            string PrID = CheckIFprojectExists((int.Parse(NewProject.idProject)), idLab);
+            string PrID = CheckIFprojectExists(NewProject.idProject, idLab);
 
             string reasonOfPr;
             if (NewProject.projectDescription == null)
@@ -941,7 +941,7 @@ namespace SeriesClientConsoleApp
 
             return PrID;
         }
-        public string CheckIFprojectExists(int ProjectLocalID, string idlab)
+        public string CheckIFprojectExists(string ProjectLocalID, string idlab)
         {
             string projectId = null;
             string sqlSelectPr = "select idProject from Project where project.Localid = @localId AND project.laboratory_idlaboratory = @idlab";
