@@ -141,6 +141,8 @@ namespace SeriesClientConsoleApp
                 {
                     System.Console.WriteLine(cp.projectTitle);
                     System.Console.WriteLine(cp.idProject);
+                    System.Console.WriteLine("EDW KATW");
+                    dbOps.UpdateSearch(cp);
                 }
                 else
                 {
@@ -183,7 +185,7 @@ namespace SeriesClientConsoleApp
                 }
             }
 
-            dbOps.UpdateSearch(); //kanei ena update ton pinaka search
+             //kanei ena update ton pinaka search
 
             dbOps.insertLabLastUpdate(DateTime.UtcNow.ToString("yyyy/MM/dd HH:mm:ss"), LabID); //kanei ena update sto laboratory
 
@@ -228,14 +230,19 @@ namespace SeriesClientConsoleApp
                         //check if Institution exists and insert it if not
                         //get the id and insert it in the personnel table as FK
                         institution PersonInstitution = ProjectPerson.institution;
-
-                        InstitutionID = dbOps.InsertInstitution(PersonInstitution);
-                        CrLogger.CreateLogIntro("insert", DateTime.UtcNow.ToString("yyyy/MM/dd HH:mm:ss"), InstitutionID, "Institution");
-                        PersonnelID = dbOps.InsertPersonnel(ProjectPerson, InstitutionID);
-                        if (dbOps.CheckIfproject_has_personnelExists(ProjectId, PersonnelID) == null)
+                        if (PersonInstitution != null)
                         {
-                            dbOps.InsertProjectHasPersonnel(ProjectId, PersonnelID, ProjectPerson.role);
-                            CrLogger.CreateLogIntro("insert", DateTime.UtcNow.ToString("yyyy/MM/dd HH:mm:ss"), ProjectId, "PrHasPersonnel");
+                            InstitutionID = dbOps.InsertInstitution(PersonInstitution);
+
+
+                            CrLogger.CreateLogIntro("insert", DateTime.UtcNow.ToString("yyyy/MM/dd HH:mm:ss"), InstitutionID, "Institution");
+                            PersonnelID = dbOps.InsertPersonnel(ProjectPerson, InstitutionID);
+
+                            if (dbOps.CheckIfproject_has_personnelExists(ProjectId, PersonnelID) == null)
+                            {
+                                dbOps.InsertProjectHasPersonnel(ProjectId, PersonnelID, ProjectPerson.role);
+                                CrLogger.CreateLogIntro("insert", DateTime.UtcNow.ToString("yyyy/MM/dd HH:mm:ss"), ProjectId, "PrHasPersonnel");
+                            }
                         }
                     }
                 }
@@ -252,13 +259,13 @@ namespace SeriesClientConsoleApp
 
                 specimen RunningSpecimen;
 
-                int?[] SpecimenIDs = CurrentProject.specimenIDs;
+                string[] SpecimenIDs = CurrentProject.specimenIDs;
                 if (SpecimenIDs != null)
                 {
                     for (int i = 0; i < SpecimenIDs.Length; i++)
                     {
                         //RunningSpecimen = WSClient.getSpecimenData((int)SpecimenIDs[i]);
-                        RunningSpecimen = WSClient.getSpecimenData(SpecimenIDs[i].ToString());
+                        RunningSpecimen = WSClient.getSpecimenData(SpecimenIDs[i]);
 
                         InsertSpecimenLevel(ProjectId, RunningSpecimen);
 
@@ -1106,7 +1113,6 @@ namespace SeriesClientConsoleApp
         public string InsertInstitution(institution Instit)
         {
             //System.Console.WriteLine(infrastru.resourceName + infrastru.location + infrastru.infrastructureName);
-
             string InstititutionId = CheckIfInstitutionExists(Instit);
             //first we check if the location exists and then we insert it
             //if the location exists the function returns the id,so we can
@@ -1136,10 +1142,11 @@ namespace SeriesClientConsoleApp
             MySqlDataReader InstitutionReader = selectInstitution.ExecuteReader();
             if (InstitutionReader.HasRows)
             {
-                InstitutionReader.Read();
-                IdInstitution = InstitutionReader[0].ToString();
+               InstitutionReader.Read();
+               IdInstitution = InstitutionReader[0].ToString();
             }
             InstitutionReader.Close();
+            
 
             return IdInstitution;
         }
@@ -1711,7 +1718,7 @@ namespace SeriesClientConsoleApp
                 insert.Parameters.AddWithValue("@Size", CompExpPic.imageSize);
                 insert.Parameters.AddWithValue("@privacy", CompExpPic.privacy);
                 insert.Parameters.AddWithValue("@summary", CompExpPic.summary);
-                insert.Parameters.AddWithValue("@Role", CompExpPic.documentRole);
+                insert.Parameters.AddWithValue("@Role", CompExpPic.imageRole);
 
                 insert.ExecuteNonQuery();
                 IdExpImg = insert.LastInsertedId.ToString();
@@ -2189,7 +2196,7 @@ namespace SeriesClientConsoleApp
                 MySqlCommand InsertMeshModelPic = new MySqlCommand(SqlInsertMeshModelPic, conn);
                 InsertMeshModelPic.Parameters.AddWithValue("@Name", MeshModelPic.imageName);
                 InsertMeshModelPic.Parameters.AddWithValue("@PictureDate", MeshModelPic.imageDate);
-                InsertMeshModelPic.Parameters.AddWithValue("@role", MeshModelPic.documentRole);
+                InsertMeshModelPic.Parameters.AddWithValue("@role", MeshModelPic.imageRole);
                 InsertMeshModelPic.Parameters.AddWithValue("@Author", MeshModelPic.imageAuthor);
                 InsertMeshModelPic.Parameters.AddWithValue("@Format", MeshModelPic.imageFormat);
                 InsertMeshModelPic.Parameters.AddWithValue("@Size", MeshModelPic.imageSize);
@@ -2386,7 +2393,7 @@ namespace SeriesClientConsoleApp
                 InsertSpecimenPicture.Parameters.AddWithValue("@CreationDate", SpecImage.imageDate);
                 InsertSpecimenPicture.Parameters.AddWithValue("@LocalId", SpecImage.idImage);
 
-                InsertSpecimenPicture.Parameters.AddWithValue("@role", SpecImage.documentRole);
+                InsertSpecimenPicture.Parameters.AddWithValue("@role", SpecImage.imageRole);
                 InsertSpecimenPicture.Parameters.AddWithValue("@Author", SpecImage.imageAuthor);
                 InsertSpecimenPicture.Parameters.AddWithValue("@Format", SpecImage.imageFormat);
 
@@ -2476,18 +2483,23 @@ namespace SeriesClientConsoleApp
         */
 
 
-        public void UpdateSearch()
+        public void UpdateSearch(project cp)
         {
 
-
-
+            for (int i = 1; i <= cp.projectKeywords.Length; i++)
+            {
+                System.Console.WriteLine(cp.projectKeywords[i]);
+            }
+           
             //System.Console.WriteLine("relation  between original and nomianl does not exist");
 
 
             string SqlInsert = "delete from search ;";
-
+            
             MySqlCommand Insert = new MySqlCommand(SqlInsert, conn);
             Insert.ExecuteNonQuery();
+
+
 
             Insert.CommandText = "insert into search  (Category,Keyword,ProjectID,ParentID,ProjectTitle,abstract,startdate,enddate,type,labid,labname) (select 'resource', location.resource , project.idProject,project.idProject,project.title, Project.reason,project.startdate, project.enddate, 'Project',project.laboratory_idlaboratory,laboratory.LongName from laboratory, Location, project_has_location, Project where laboratory.idlaboratory =project.laboratory_idlaboratory and project_has_location.Project_idProject = Project.idProject AND project_has_location.Location_idLocation = Location.idLocation and location.resource is not null and location.resource != ' ');";
             Insert.ExecuteNonQuery();

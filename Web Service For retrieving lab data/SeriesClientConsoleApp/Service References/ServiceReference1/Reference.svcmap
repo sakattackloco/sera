@@ -17,13 +17,13 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://engs-uknees.eng.ox.ac.uk:53135/DatOX/DOS?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="https://elsadata:53136/SERIESConnector/DOS?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="DOS1.xsd" MetadataType="Schema" ID="fd472c04-87c5-4808-aa3c-6db360404163" SourceId="1" SourceUrl="http://engs-uknees.eng.ox.ac.uk:53135/DatOX/DOS?xsd=1" />
-    <MetadataFile FileName="DOS1.wsdl" MetadataType="Wsdl" ID="144867f2-2d17-45e6-983d-8d7e4ddd2647" SourceId="1" SourceUrl="http://engs-uknees.eng.ox.ac.uk:53135/DatOX/DOS?wsdl" />
+    <MetadataFile FileName="DOS.wsdl" MetadataType="Wsdl" ID="18a5155d-c5d3-42fa-afe7-177b3697efae" SourceId="1" SourceUrl="https://elsadata:53136/SERIESConnector/DOS?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
   </Extensions>
 </ReferenceGroup>

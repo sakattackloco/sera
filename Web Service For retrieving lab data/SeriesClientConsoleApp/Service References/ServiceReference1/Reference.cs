@@ -16,965 +16,325 @@ namespace SeriesClientConsoleApp.ServiceReference1 {
     public interface DOS {
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ilm.eng.ox.ac.uk/DOS/getVersionRequest", ReplyAction="http://ilm.eng.ox.ac.uk/DOS/getVersionResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(experimentComputation))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SeriesClientConsoleApp.ServiceReference1.getVersionResponse getVersion(SeriesClientConsoleApp.ServiceReference1.getVersionRequest request);
+        SeriesClientConsoleApp.ServiceReference1.getExperimentDocumentsResponse getExperimentDocuments(SeriesClientConsoleApp.ServiceReference1.getExperimentDocuments request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ilm.eng.ox.ac.uk/DOS/getCacheInfoRequest", ReplyAction="http://ilm.eng.ox.ac.uk/DOS/getCacheInfoResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompletedResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompleted))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getClosedProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getVersion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentImages))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getStructuralComponentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMyKR))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenImages))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(experimentComputation))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMe))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getOpenProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationImages))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SeriesClientConsoleApp.ServiceReference1.getCacheInfoResponse1 getCacheInfo(SeriesClientConsoleApp.ServiceReference1.getCacheInfoRequest request);
+        SeriesClientConsoleApp.ServiceReference1.getComputationDocumentsResponse getComputationDocuments(SeriesClientConsoleApp.ServiceReference1.getComputationDocuments request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ilm.eng.ox.ac.uk/DOS/testMeRequest", ReplyAction="http://ilm.eng.ox.ac.uk/DOS/testMeResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompletedResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompleted))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getClosedProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getVersion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentImages))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getStructuralComponentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMyKR))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenImages))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(experimentComputation))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMe))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getOpenProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationImages))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SeriesClientConsoleApp.ServiceReference1.testMeResponse testMe(SeriesClientConsoleApp.ServiceReference1.testMeRequest request);
+        SeriesClientConsoleApp.ServiceReference1.getExperimentDataResponse getExperimentData(SeriesClientConsoleApp.ServiceReference1.getExperimentData request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ilm.eng.ox.ac.uk/DOS/testMyKRRequest", ReplyAction="http://ilm.eng.ox.ac.uk/DOS/testMyKRResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompletedResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompleted))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getClosedProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getVersion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentImages))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getStructuralComponentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMyKR))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenImages))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(experimentComputation))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMe))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getOpenProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationImages))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SeriesClientConsoleApp.ServiceReference1.testMyKRResponse testMyKR(SeriesClientConsoleApp.ServiceReference1.testMyKRRequest request);
+        SeriesClientConsoleApp.ServiceReference1.getProjectDocumentsResponse getProjectDocuments(SeriesClientConsoleApp.ServiceReference1.getProjectDocuments request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ilm.eng.ox.ac.uk/DOS/getProjectIDsRequest", ReplyAction="http://ilm.eng.ox.ac.uk/DOS/getProjectIDsResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompletedResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompleted))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getClosedProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getVersion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentImages))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getStructuralComponentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMyKR))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenImages))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(experimentComputation))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMe))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getOpenProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationImages))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SeriesClientConsoleApp.ServiceReference1.getProjectIDsResponse getProjectIDs(SeriesClientConsoleApp.ServiceReference1.getProjectIDsRequest request);
+        SeriesClientConsoleApp.ServiceReference1.getExperimentImagesResponse getExperimentImages(SeriesClientConsoleApp.ServiceReference1.getExperimentImages request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ilm.eng.ox.ac.uk/DOS/getProjectDataRequest", ReplyAction="http://ilm.eng.ox.ac.uk/DOS/getProjectDataResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompletedResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompleted))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getClosedProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getVersion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentImages))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getStructuralComponentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMyKR))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenImages))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(experimentComputation))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMe))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getOpenProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationImages))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SeriesClientConsoleApp.ServiceReference1.getProjectDataResponse1 getProjectData(SeriesClientConsoleApp.ServiceReference1.getProjectDataRequest request);
+        SeriesClientConsoleApp.ServiceReference1.testMeResponse testMe(SeriesClientConsoleApp.ServiceReference1.testMe request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ilm.eng.ox.ac.uk/DOS/getSpecimenDataRequest", ReplyAction="http://ilm.eng.ox.ac.uk/DOS/getSpecimenDataResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompletedResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompleted))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getClosedProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getVersion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentImages))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getStructuralComponentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMyKR))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenImages))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(experimentComputation))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMe))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getOpenProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationImages))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SeriesClientConsoleApp.ServiceReference1.getSpecimenDataResponse1 getSpecimenData(SeriesClientConsoleApp.ServiceReference1.getSpecimenDataRequest request);
+        SeriesClientConsoleApp.ServiceReference1.getExperimentVideosResponse getExperimentVideos(SeriesClientConsoleApp.ServiceReference1.getExperimentVideos request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ilm.eng.ox.ac.uk/DOS/getStructuralComponentDataRequest", ReplyAction="http://ilm.eng.ox.ac.uk/DOS/getStructuralComponentDataResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompletedResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompleted))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getClosedProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getVersion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentImages))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getStructuralComponentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMyKR))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenImages))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(experimentComputation))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMe))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getOpenProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationImages))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SeriesClientConsoleApp.ServiceReference1.getStructuralComponentDataResponse getStructuralComponentData(SeriesClientConsoleApp.ServiceReference1.getStructuralComponentDataRequest request);
+        SeriesClientConsoleApp.ServiceReference1.getSpecimenDocumentsResponse getSpecimenDocuments(SeriesClientConsoleApp.ServiceReference1.getSpecimenDocuments request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ilm.eng.ox.ac.uk/DOS/getExperimentDataRequest", ReplyAction="http://ilm.eng.ox.ac.uk/DOS/getExperimentDataResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompletedResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompleted))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getClosedProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getVersion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentImages))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getStructuralComponentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMyKR))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenImages))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(experimentComputation))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMe))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getOpenProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationImages))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SeriesClientConsoleApp.ServiceReference1.getExperimentDataResponse1 getExperimentData(SeriesClientConsoleApp.ServiceReference1.getExperimentDataRequest request);
+        SeriesClientConsoleApp.ServiceReference1.getComputationLoadingDataResponse getComputationLoadingData(SeriesClientConsoleApp.ServiceReference1.getComputationLoadingData request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ilm.eng.ox.ac.uk/DOS/getComputationDataRequest", ReplyAction="http://ilm.eng.ox.ac.uk/DOS/getComputationDataResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompletedResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompleted))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getClosedProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getVersion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentImages))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getStructuralComponentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMyKR))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenImages))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(experimentComputation))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMe))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getOpenProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationImages))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SeriesClientConsoleApp.ServiceReference1.getComputationDataResponse1 getComputationData(SeriesClientConsoleApp.ServiceReference1.getComputationDataRequest request);
+        SeriesClientConsoleApp.ServiceReference1.getStructuralComponentDataResponse getStructuralComponentData(SeriesClientConsoleApp.ServiceReference1.getStructuralComponentData request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ilm.eng.ox.ac.uk/DOS/getExperimentLoadingDataRequest", ReplyAction="http://ilm.eng.ox.ac.uk/DOS/getExperimentLoadingDataResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompletedResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompleted))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getClosedProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getVersion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentImages))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getStructuralComponentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMyKR))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenImages))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(experimentComputation))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMe))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getOpenProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationImages))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SeriesClientConsoleApp.ServiceReference1.getExperimentLoadingDataResponse getExperimentLoadingData(SeriesClientConsoleApp.ServiceReference1.getExperimentLoadingDataRequest request);
+        SeriesClientConsoleApp.ServiceReference1.testMyKRResponse testMyKR(SeriesClientConsoleApp.ServiceReference1.testMyKR request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ilm.eng.ox.ac.uk/DOS/getComputationLoadingDataRequest", ReplyAction="http://ilm.eng.ox.ac.uk/DOS/getComputationLoadingDataResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompletedResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompleted))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getClosedProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getVersion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentImages))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getStructuralComponentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMyKR))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenImages))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(experimentComputation))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMe))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getOpenProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationImages))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SeriesClientConsoleApp.ServiceReference1.getComputationLoadingDataResponse getComputationLoadingData(SeriesClientConsoleApp.ServiceReference1.getComputationLoadingDataRequest request);
+        SeriesClientConsoleApp.ServiceReference1.getProjectDataResponse getProjectData(SeriesClientConsoleApp.ServiceReference1.getProjectData request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ilm.eng.ox.ac.uk/DOS/getProjectDocumentsRequest", ReplyAction="http://ilm.eng.ox.ac.uk/DOS/getProjectDocumentsResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompletedResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompleted))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getClosedProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getVersion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentImages))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getStructuralComponentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMyKR))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenImages))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(experimentComputation))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMe))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getOpenProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationImages))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SeriesClientConsoleApp.ServiceReference1.getProjectDocumentsResponse getProjectDocuments(SeriesClientConsoleApp.ServiceReference1.getProjectDocumentsRequest request);
+        SeriesClientConsoleApp.ServiceReference1.getSpecimenDataResponse getSpecimenData(SeriesClientConsoleApp.ServiceReference1.getSpecimenData request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ilm.eng.ox.ac.uk/DOS/getSpecimenDocumentsRequest", ReplyAction="http://ilm.eng.ox.ac.uk/DOS/getSpecimenDocumentsResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompletedResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompleted))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getClosedProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getVersion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentImages))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getStructuralComponentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMyKR))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenImages))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(experimentComputation))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMe))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getOpenProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationImages))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SeriesClientConsoleApp.ServiceReference1.getSpecimenDocumentsResponse getSpecimenDocuments(SeriesClientConsoleApp.ServiceReference1.getSpecimenDocumentsRequest request);
+        SeriesClientConsoleApp.ServiceReference1.getComputationImagesResponse getComputationImages(SeriesClientConsoleApp.ServiceReference1.getComputationImages request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ilm.eng.ox.ac.uk/DOS/getSpecimenImagesRequest", ReplyAction="http://ilm.eng.ox.ac.uk/DOS/getSpecimenImagesResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompletedResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompleted))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getClosedProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getVersion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentImages))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getStructuralComponentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMyKR))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenImages))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(experimentComputation))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMe))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getOpenProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationImages))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SeriesClientConsoleApp.ServiceReference1.getSpecimenImagesResponse getSpecimenImages(SeriesClientConsoleApp.ServiceReference1.getSpecimenImagesRequest request);
+        SeriesClientConsoleApp.ServiceReference1.getProjectIDsResponse getProjectIDs(SeriesClientConsoleApp.ServiceReference1.getProjectIDs request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ilm.eng.ox.ac.uk/DOS/getExperimentDocumentsRequest", ReplyAction="http://ilm.eng.ox.ac.uk/DOS/getExperimentDocumentsResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompletedResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompleted))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getClosedProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getVersion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentImages))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getStructuralComponentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMyKR))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenImages))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(experimentComputation))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMe))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getOpenProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationImages))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SeriesClientConsoleApp.ServiceReference1.getExperimentDocumentsResponse getExperimentDocuments(SeriesClientConsoleApp.ServiceReference1.getExperimentDocumentsRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ilm.eng.ox.ac.uk/DOS/getComputationDocumentsRequest", ReplyAction="http://ilm.eng.ox.ac.uk/DOS/getComputationDocumentsResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompletedResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompleted))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getClosedProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getVersion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentImages))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getStructuralComponentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMyKR))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenImages))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(experimentComputation))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMe))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getOpenProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationImages))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SeriesClientConsoleApp.ServiceReference1.getComputationDocumentsResponse getComputationDocuments(SeriesClientConsoleApp.ServiceReference1.getComputationDocumentsRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ilm.eng.ox.ac.uk/DOS/getExperimentImagesRequest", ReplyAction="http://ilm.eng.ox.ac.uk/DOS/getExperimentImagesResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompletedResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompleted))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getClosedProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getVersion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentImages))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getStructuralComponentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMyKR))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenImages))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(experimentComputation))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMe))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getOpenProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationImages))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SeriesClientConsoleApp.ServiceReference1.getExperimentImagesResponse getExperimentImages(SeriesClientConsoleApp.ServiceReference1.getExperimentImagesRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ilm.eng.ox.ac.uk/DOS/getComputationImagesRequest", ReplyAction="http://ilm.eng.ox.ac.uk/DOS/getComputationImagesResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompletedResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompleted))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getClosedProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getVersion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentImages))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getStructuralComponentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMyKR))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenImages))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(experimentComputation))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMe))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getOpenProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationImages))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SeriesClientConsoleApp.ServiceReference1.getComputationImagesResponse getComputationImages(SeriesClientConsoleApp.ServiceReference1.getComputationImagesRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ilm.eng.ox.ac.uk/DOS/getExperimentVideosRequest", ReplyAction="http://ilm.eng.ox.ac.uk/DOS/getExperimentVideosResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompletedResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompleted))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getClosedProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getVersion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentImages))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getStructuralComponentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMyKR))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenImages))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(experimentComputation))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMe))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getOpenProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationImages))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SeriesClientConsoleApp.ServiceReference1.getExperimentVideosResponse getExperimentVideos(SeriesClientConsoleApp.ServiceReference1.getExperimentVideosRequest request);
-        
-        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ilm.eng.ox.ac.uk/DOS/getComputationVideosRequest", ReplyAction="http://ilm.eng.ox.ac.uk/DOS/getComputationVideosResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompletedResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompleted))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getClosedProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getVersion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentImages))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getStructuralComponentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMyKR))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenImages))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(experimentComputation))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMe))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getOpenProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationImages))]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SeriesClientConsoleApp.ServiceReference1.getComputationVideosResponse getComputationVideos(SeriesClientConsoleApp.ServiceReference1.getComputationVideosRequest request);
+        SeriesClientConsoleApp.ServiceReference1.getVersionResponse getVersion(SeriesClientConsoleApp.ServiceReference1.getVersion request);
         
         // CODEGEN: Parameter 'operationID' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ilm.eng.ox.ac.uk/DOS/operationCompletedRequest", ReplyAction="http://ilm.eng.ox.ac.uk/DOS/operationCompletedResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompletedResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompleted))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getClosedProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getVersion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentImages))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getStructuralComponentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMyKR))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenImages))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(experimentComputation))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMe))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getOpenProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationImages))]
-        SeriesClientConsoleApp.ServiceReference1.operationCompletedResponse1 operationCompleted(SeriesClientConsoleApp.ServiceReference1.operationCompletedRequest request);
+        SeriesClientConsoleApp.ServiceReference1.operationCompletedResponse operationCompleted(SeriesClientConsoleApp.ServiceReference1.operationCompleted request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ilm.eng.ox.ac.uk/DOS/getClosedProjectIDsRequest", ReplyAction="http://ilm.eng.ox.ac.uk/DOS/getClosedProjectIDsResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompletedResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompleted))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getClosedProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getVersion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentImages))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getStructuralComponentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMyKR))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenImages))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(experimentComputation))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMe))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getOpenProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationImages))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SeriesClientConsoleApp.ServiceReference1.getClosedProjectIDsResponse getClosedProjectIDs(SeriesClientConsoleApp.ServiceReference1.getClosedProjectIDsRequest request);
+        SeriesClientConsoleApp.ServiceReference1.getSpecimenImagesResponse getSpecimenImages(SeriesClientConsoleApp.ServiceReference1.getSpecimenImages request);
         
         // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
-        [System.ServiceModel.OperationContractAttribute(Action="http://ilm.eng.ox.ac.uk/DOS/getOpenProjectIDsRequest", ReplyAction="http://ilm.eng.ox.ac.uk/DOS/getOpenProjectIDsResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute()]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompletedResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(operationCompleted))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getClosedProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDocuments))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfoResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getCacheInfo))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentLoadingData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getVersion))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentImages))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getExperimentVideos))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getStructuralComponentData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMyKR))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getSpecimenImages))]
         [System.ServiceModel.ServiceKnownTypeAttribute(typeof(experimentComputation))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationDataResponse))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationData))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(testMe))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getOpenProjectIDs))]
-        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(getComputationImages))]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SeriesClientConsoleApp.ServiceReference1.getOpenProjectIDsResponse getOpenProjectIDs(SeriesClientConsoleApp.ServiceReference1.getOpenProjectIDsRequest request);
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getVersion", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class getVersionRequest {
+        SeriesClientConsoleApp.ServiceReference1.getClosedProjectIDsResponse getClosedProjectIDs(SeriesClientConsoleApp.ServiceReference1.getClosedProjectIDs request);
         
-        public getVersionRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getVersionResponse", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class getVersionResponse {
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(experimentComputation))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SeriesClientConsoleApp.ServiceReference1.getComputationDataResponse getComputationData(SeriesClientConsoleApp.ServiceReference1.getComputationData request);
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string[] @return;
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(experimentComputation))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SeriesClientConsoleApp.ServiceReference1.getOpenProjectIDsResponse getOpenProjectIDs(SeriesClientConsoleApp.ServiceReference1.getOpenProjectIDs request);
         
-        public getVersionResponse() {
-        }
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(experimentComputation))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SeriesClientConsoleApp.ServiceReference1.getComputationVideosResponse getComputationVideos(SeriesClientConsoleApp.ServiceReference1.getComputationVideos request);
         
-        public getVersionResponse(string[] @return) {
-            this.@return = @return;
-        }
+        // CODEGEN: Parameter 'return' requires additional schema information that cannot be captured using the parameter mode. The specific attribute is 'System.Xml.Serialization.XmlElementAttribute'.
+        [System.ServiceModel.OperationContractAttribute(Action="", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute()]
+        [System.ServiceModel.ServiceKnownTypeAttribute(typeof(experimentComputation))]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SeriesClientConsoleApp.ServiceReference1.getExperimentLoadingDataResponse getExperimentLoadingData(SeriesClientConsoleApp.ServiceReference1.getExperimentLoadingData request);
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class cacheInfo : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class document : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string cacheVersionField;
+        private string documentAbstractField;
         
-        private System.DateTime creationTimeField;
+        private string documentAuthorField;
         
-        private bool creationTimeFieldSpecified;
+        private System.DateTime documentDateField;
         
-        private string statusField;
+        private bool documentDateFieldSpecified;
         
-        private string versionField;
+        private string documentFormatField;
+        
+        private string documentRoleField;
+        
+        private double documentSizeField;
+        
+        private string documentTitleField;
+        
+        private string idDocumentField;
+        
+        private string privacyField;
+        
+        private string scopeField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string cacheVersion {
+        public string documentAbstract {
             get {
-                return this.cacheVersionField;
+                return this.documentAbstractField;
             }
             set {
-                this.cacheVersionField = value;
-                this.RaisePropertyChanged("cacheVersion");
+                this.documentAbstractField = value;
+                this.RaisePropertyChanged("documentAbstract");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public System.DateTime creationTime {
+        public string documentAuthor {
             get {
-                return this.creationTimeField;
+                return this.documentAuthorField;
             }
             set {
-                this.creationTimeField = value;
-                this.RaisePropertyChanged("creationTime");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool creationTimeSpecified {
-            get {
-                return this.creationTimeFieldSpecified;
-            }
-            set {
-                this.creationTimeFieldSpecified = value;
-                this.RaisePropertyChanged("creationTimeSpecified");
+                this.documentAuthorField = value;
+                this.RaisePropertyChanged("documentAuthor");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string status {
+        public System.DateTime documentDate {
             get {
-                return this.statusField;
+                return this.documentDateField;
             }
             set {
-                this.statusField = value;
-                this.RaisePropertyChanged("status");
+                this.documentDateField = value;
+                this.RaisePropertyChanged("documentDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool documentDateSpecified {
+            get {
+                return this.documentDateFieldSpecified;
+            }
+            set {
+                this.documentDateFieldSpecified = value;
+                this.RaisePropertyChanged("documentDateSpecified");
             }
         }
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string version {
+        public string documentFormat {
             get {
-                return this.versionField;
+                return this.documentFormatField;
             }
             set {
-                this.versionField = value;
-                this.RaisePropertyChanged("version");
+                this.documentFormatField = value;
+                this.RaisePropertyChanged("documentFormat");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string documentRole {
+            get {
+                return this.documentRoleField;
+            }
+            set {
+                this.documentRoleField = value;
+                this.RaisePropertyChanged("documentRole");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public double documentSize {
+            get {
+                return this.documentSizeField;
+            }
+            set {
+                this.documentSizeField = value;
+                this.RaisePropertyChanged("documentSize");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string documentTitle {
+            get {
+                return this.documentTitleField;
+            }
+            set {
+                this.documentTitleField = value;
+                this.RaisePropertyChanged("documentTitle");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public string idDocument {
+            get {
+                return this.idDocumentField;
+            }
+            set {
+                this.idDocumentField = value;
+                this.RaisePropertyChanged("idDocument");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public string privacy {
+            get {
+                return this.privacyField;
+            }
+            set {
+                this.privacyField = value;
+                this.RaisePropertyChanged("privacy");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public string scope {
+            get {
+                return this.scopeField;
+            }
+            set {
+                this.scopeField = value;
+                this.RaisePropertyChanged("scope");
             }
         }
         
@@ -989,24 +349,38 @@ namespace SeriesClientConsoleApp.ServiceReference1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class getProjectDocuments : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class scaling : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string idProjectField;
+        private double prototypeModelratioField;
+        
+        private string scaledPropertyNameField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string idProject {
+        public double prototypeModelratio {
             get {
-                return this.idProjectField;
+                return this.prototypeModelratioField;
             }
             set {
-                this.idProjectField = value;
-                this.RaisePropertyChanged("idProject");
+                this.prototypeModelratioField = value;
+                this.RaisePropertyChanged("prototypeModelratio");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string scaledPropertyName {
+            get {
+                return this.scaledPropertyNameField;
+            }
+            set {
+                this.scaledPropertyNameField = value;
+                this.RaisePropertyChanged("scaledPropertyName");
             }
         }
         
@@ -1021,24 +395,364 @@ namespace SeriesClientConsoleApp.ServiceReference1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class getComputationLoadingData : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class specimen : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string idComputationField;
+        private System.Nullable<int>[] computationIDsField;
+        
+        private System.Nullable<int>[] experimentIDsField;
+        
+        private string idSpecimenField;
+        
+        private double maxDepthField;
+        
+        private double maxHeightField;
+        
+        private double maxLengthField;
+        
+        private double maxWidthField;
+        
+        private string privacyField;
+        
+        private scaling[] scalingListField;
+        
+        private document[] specimenDocumentsField;
+        
+        private image[] specimenImagesField;
+        
+        private double specimenMassField;
+        
+        private string specimenNameField;
+        
+        private structuralComponent[] structuralComponentsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("computationIDs", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=0)]
+        public System.Nullable<int>[] computationIDs {
+            get {
+                return this.computationIDsField;
+            }
+            set {
+                this.computationIDsField = value;
+                this.RaisePropertyChanged("computationIDs");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("experimentIDs", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
+        public System.Nullable<int>[] experimentIDs {
+            get {
+                return this.experimentIDsField;
+            }
+            set {
+                this.experimentIDsField = value;
+                this.RaisePropertyChanged("experimentIDs");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string idSpecimen {
+            get {
+                return this.idSpecimenField;
+            }
+            set {
+                this.idSpecimenField = value;
+                this.RaisePropertyChanged("idSpecimen");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public double maxDepth {
+            get {
+                return this.maxDepthField;
+            }
+            set {
+                this.maxDepthField = value;
+                this.RaisePropertyChanged("maxDepth");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public double maxHeight {
+            get {
+                return this.maxHeightField;
+            }
+            set {
+                this.maxHeightField = value;
+                this.RaisePropertyChanged("maxHeight");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public double maxLength {
+            get {
+                return this.maxLengthField;
+            }
+            set {
+                this.maxLengthField = value;
+                this.RaisePropertyChanged("maxLength");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public double maxWidth {
+            get {
+                return this.maxWidthField;
+            }
+            set {
+                this.maxWidthField = value;
+                this.RaisePropertyChanged("maxWidth");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public string privacy {
+            get {
+                return this.privacyField;
+            }
+            set {
+                this.privacyField = value;
+                this.RaisePropertyChanged("privacy");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("scalingList", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=8)]
+        public scaling[] scalingList {
+            get {
+                return this.scalingListField;
+            }
+            set {
+                this.scalingListField = value;
+                this.RaisePropertyChanged("scalingList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("specimenDocuments", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=9)]
+        public document[] specimenDocuments {
+            get {
+                return this.specimenDocumentsField;
+            }
+            set {
+                this.specimenDocumentsField = value;
+                this.RaisePropertyChanged("specimenDocuments");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("specimenImages", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=10)]
+        public image[] specimenImages {
+            get {
+                return this.specimenImagesField;
+            }
+            set {
+                this.specimenImagesField = value;
+                this.RaisePropertyChanged("specimenImages");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
+        public double specimenMass {
+            get {
+                return this.specimenMassField;
+            }
+            set {
+                this.specimenMassField = value;
+                this.RaisePropertyChanged("specimenMass");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
+        public string specimenName {
+            get {
+                return this.specimenNameField;
+            }
+            set {
+                this.specimenNameField = value;
+                this.RaisePropertyChanged("specimenName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("structuralComponents", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=13)]
+        public structuralComponent[] structuralComponents {
+            get {
+                return this.structuralComponentsField;
+            }
+            set {
+                this.structuralComponentsField = value;
+                this.RaisePropertyChanged("structuralComponents");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
+    public partial class image : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private string idImageField;
+        
+        private string imageAuthorField;
+        
+        private System.DateTime imageDateField;
+        
+        private bool imageDateFieldSpecified;
+        
+        private string imageFormatField;
+        
+        private string imageNameField;
+        
+        private string imageRoleField;
+        
+        private double imageSizeField;
+        
+        private string privacyField;
+        
+        private string summaryField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string idComputation {
+        public string idImage {
             get {
-                return this.idComputationField;
+                return this.idImageField;
             }
             set {
-                this.idComputationField = value;
-                this.RaisePropertyChanged("idComputation");
+                this.idImageField = value;
+                this.RaisePropertyChanged("idImage");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string imageAuthor {
+            get {
+                return this.imageAuthorField;
+            }
+            set {
+                this.imageAuthorField = value;
+                this.RaisePropertyChanged("imageAuthor");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public System.DateTime imageDate {
+            get {
+                return this.imageDateField;
+            }
+            set {
+                this.imageDateField = value;
+                this.RaisePropertyChanged("imageDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool imageDateSpecified {
+            get {
+                return this.imageDateFieldSpecified;
+            }
+            set {
+                this.imageDateFieldSpecified = value;
+                this.RaisePropertyChanged("imageDateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string imageFormat {
+            get {
+                return this.imageFormatField;
+            }
+            set {
+                this.imageFormatField = value;
+                this.RaisePropertyChanged("imageFormat");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string imageName {
+            get {
+                return this.imageNameField;
+            }
+            set {
+                this.imageNameField = value;
+                this.RaisePropertyChanged("imageName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string imageRole {
+            get {
+                return this.imageRoleField;
+            }
+            set {
+                this.imageRoleField = value;
+                this.RaisePropertyChanged("imageRole");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public double imageSize {
+            get {
+                return this.imageSizeField;
+            }
+            set {
+                this.imageSizeField = value;
+                this.RaisePropertyChanged("imageSize");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public string privacy {
+            get {
+                return this.privacyField;
+            }
+            set {
+                this.privacyField = value;
+                this.RaisePropertyChanged("privacy");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public string summary {
+            get {
+                return this.summaryField;
+            }
+            set {
+                this.summaryField = value;
+                this.RaisePropertyChanged("summary");
             }
         }
         
@@ -1053,42 +767,80 @@ namespace SeriesClientConsoleApp.ServiceReference1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class operationCompletedResponse : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class structuralComponent : object, System.ComponentModel.INotifyPropertyChanged {
         
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        private string materialDescriptionField;
         
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class operationCompleted : object, System.ComponentModel.INotifyPropertyChanged {
+        private document[] structuralComponentDocumentListField;
         
-        private string operationIDField;
+        private material[] structuralComponentMaterialListField;
+        
+        private string structuralComponentNameField;
+        
+        private string structuralComponentTypeField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string operationID {
+        public string materialDescription {
             get {
-                return this.operationIDField;
+                return this.materialDescriptionField;
             }
             set {
-                this.operationIDField = value;
-                this.RaisePropertyChanged("operationID");
+                this.materialDescriptionField = value;
+                this.RaisePropertyChanged("materialDescription");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("structuralComponentDocumentList", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
+        public document[] structuralComponentDocumentList {
+            get {
+                return this.structuralComponentDocumentListField;
+            }
+            set {
+                this.structuralComponentDocumentListField = value;
+                this.RaisePropertyChanged("structuralComponentDocumentList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("structuralComponentMaterialList", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
+        public material[] structuralComponentMaterialList {
+            get {
+                return this.structuralComponentMaterialListField;
+            }
+            set {
+                this.structuralComponentMaterialListField = value;
+                this.RaisePropertyChanged("structuralComponentMaterialList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string structuralComponentName {
+            get {
+                return this.structuralComponentNameField;
+            }
+            set {
+                this.structuralComponentNameField = value;
+                this.RaisePropertyChanged("structuralComponentName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string structuralComponentType {
+            get {
+                return this.structuralComponentTypeField;
+            }
+            set {
+                this.structuralComponentTypeField = value;
+                this.RaisePropertyChanged("structuralComponentType");
             }
         }
         
@@ -1103,7 +855,313 @@ namespace SeriesClientConsoleApp.ServiceReference1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
+    public partial class material : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private actualMeanProperty[] actualMeanPropertyListField;
+        
+        private string idMaterialField;
+        
+        private document[] materialDocumentListField;
+        
+        private string materialNameField;
+        
+        private nominalProperty[] nominalPropertyListField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("actualMeanPropertyList", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=0)]
+        public actualMeanProperty[] actualMeanPropertyList {
+            get {
+                return this.actualMeanPropertyListField;
+            }
+            set {
+                this.actualMeanPropertyListField = value;
+                this.RaisePropertyChanged("actualMeanPropertyList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string idMaterial {
+            get {
+                return this.idMaterialField;
+            }
+            set {
+                this.idMaterialField = value;
+                this.RaisePropertyChanged("idMaterial");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("materialDocumentList", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
+        public document[] materialDocumentList {
+            get {
+                return this.materialDocumentListField;
+            }
+            set {
+                this.materialDocumentListField = value;
+                this.RaisePropertyChanged("materialDocumentList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string materialName {
+            get {
+                return this.materialNameField;
+            }
+            set {
+                this.materialNameField = value;
+                this.RaisePropertyChanged("materialName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("nominalPropertyList", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=4)]
+        public nominalProperty[] nominalPropertyList {
+            get {
+                return this.nominalPropertyListField;
+            }
+            set {
+                this.nominalPropertyListField = value;
+                this.RaisePropertyChanged("nominalPropertyList");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
+    public partial class actualMeanProperty : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private document[] actualMeanPropertyDocumentListField;
+        
+        private string actualMeanPropertyNameField;
+        
+        private string actualMeanPropertyUnitField;
+        
+        private double actualMeanPropertyValueField;
+        
+        private bool actualMeanPropertyValueFieldSpecified;
+        
+        private short numberOfSamplesField;
+        
+        private bool numberOfSamplesFieldSpecified;
+        
+        private string observationsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("actualMeanPropertyDocumentList", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=0)]
+        public document[] actualMeanPropertyDocumentList {
+            get {
+                return this.actualMeanPropertyDocumentListField;
+            }
+            set {
+                this.actualMeanPropertyDocumentListField = value;
+                this.RaisePropertyChanged("actualMeanPropertyDocumentList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string actualMeanPropertyName {
+            get {
+                return this.actualMeanPropertyNameField;
+            }
+            set {
+                this.actualMeanPropertyNameField = value;
+                this.RaisePropertyChanged("actualMeanPropertyName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string actualMeanPropertyUnit {
+            get {
+                return this.actualMeanPropertyUnitField;
+            }
+            set {
+                this.actualMeanPropertyUnitField = value;
+                this.RaisePropertyChanged("actualMeanPropertyUnit");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public double actualMeanPropertyValue {
+            get {
+                return this.actualMeanPropertyValueField;
+            }
+            set {
+                this.actualMeanPropertyValueField = value;
+                this.RaisePropertyChanged("actualMeanPropertyValue");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool actualMeanPropertyValueSpecified {
+            get {
+                return this.actualMeanPropertyValueFieldSpecified;
+            }
+            set {
+                this.actualMeanPropertyValueFieldSpecified = value;
+                this.RaisePropertyChanged("actualMeanPropertyValueSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public short numberOfSamples {
+            get {
+                return this.numberOfSamplesField;
+            }
+            set {
+                this.numberOfSamplesField = value;
+                this.RaisePropertyChanged("numberOfSamples");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool numberOfSamplesSpecified {
+            get {
+                return this.numberOfSamplesFieldSpecified;
+            }
+            set {
+                this.numberOfSamplesFieldSpecified = value;
+                this.RaisePropertyChanged("numberOfSamplesSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string observations {
+            get {
+                return this.observationsField;
+            }
+            set {
+                this.observationsField = value;
+                this.RaisePropertyChanged("observations");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
+    public partial class nominalProperty : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private document[] nominalPropertyDocumentListField;
+        
+        private string nominalPropertyNameField;
+        
+        private string nominalPropertyUnitField;
+        
+        private double nominalPropertyValueField;
+        
+        private string observationsField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("nominalPropertyDocumentList", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=0)]
+        public document[] nominalPropertyDocumentList {
+            get {
+                return this.nominalPropertyDocumentListField;
+            }
+            set {
+                this.nominalPropertyDocumentListField = value;
+                this.RaisePropertyChanged("nominalPropertyDocumentList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string nominalPropertyName {
+            get {
+                return this.nominalPropertyNameField;
+            }
+            set {
+                this.nominalPropertyNameField = value;
+                this.RaisePropertyChanged("nominalPropertyName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string nominalPropertyUnit {
+            get {
+                return this.nominalPropertyUnitField;
+            }
+            set {
+                this.nominalPropertyUnitField = value;
+                this.RaisePropertyChanged("nominalPropertyUnit");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public double nominalPropertyValue {
+            get {
+                return this.nominalPropertyValueField;
+            }
+            set {
+                this.nominalPropertyValueField = value;
+                this.RaisePropertyChanged("nominalPropertyValue");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string observations {
+            get {
+                return this.observationsField;
+            }
+            set {
+                this.observationsField = value;
+                this.RaisePropertyChanged("observations");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1163,7 +1221,7 @@ namespace SeriesClientConsoleApp.ServiceReference1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1202,7 +1260,7 @@ namespace SeriesClientConsoleApp.ServiceReference1 {
         
         private string projectTitleField;
         
-        private System.Nullable<int>[] specimenIDsField;
+        private string[] specimenIDsField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
@@ -1398,7 +1456,7 @@ namespace SeriesClientConsoleApp.ServiceReference1 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("specimenIDs", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=14)]
-        public System.Nullable<int>[] specimenIDs {
+        public string[] specimenIDs {
             get {
                 return this.specimenIDsField;
             }
@@ -1419,179 +1477,7 @@ namespace SeriesClientConsoleApp.ServiceReference1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class document : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string documentAbstractField;
-        
-        private string documentAuthorField;
-        
-        private System.DateTime documentDateField;
-        
-        private bool documentDateFieldSpecified;
-        
-        private string documentFormatField;
-        
-        private string documentRoleField;
-        
-        private double documentSizeField;
-        
-        private string documentTitleField;
-        
-        private string idDocumentField;
-        
-        private string privacyField;
-        
-        private string scopeField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string documentAbstract {
-            get {
-                return this.documentAbstractField;
-            }
-            set {
-                this.documentAbstractField = value;
-                this.RaisePropertyChanged("documentAbstract");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string documentAuthor {
-            get {
-                return this.documentAuthorField;
-            }
-            set {
-                this.documentAuthorField = value;
-                this.RaisePropertyChanged("documentAuthor");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public System.DateTime documentDate {
-            get {
-                return this.documentDateField;
-            }
-            set {
-                this.documentDateField = value;
-                this.RaisePropertyChanged("documentDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool documentDateSpecified {
-            get {
-                return this.documentDateFieldSpecified;
-            }
-            set {
-                this.documentDateFieldSpecified = value;
-                this.RaisePropertyChanged("documentDateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string documentFormat {
-            get {
-                return this.documentFormatField;
-            }
-            set {
-                this.documentFormatField = value;
-                this.RaisePropertyChanged("documentFormat");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string documentRole {
-            get {
-                return this.documentRoleField;
-            }
-            set {
-                this.documentRoleField = value;
-                this.RaisePropertyChanged("documentRole");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public double documentSize {
-            get {
-                return this.documentSizeField;
-            }
-            set {
-                this.documentSizeField = value;
-                this.RaisePropertyChanged("documentSize");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public string documentTitle {
-            get {
-                return this.documentTitleField;
-            }
-            set {
-                this.documentTitleField = value;
-                this.RaisePropertyChanged("documentTitle");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public string idDocument {
-            get {
-                return this.idDocumentField;
-            }
-            set {
-                this.idDocumentField = value;
-                this.RaisePropertyChanged("idDocument");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public string privacy {
-            get {
-                return this.privacyField;
-            }
-            set {
-                this.privacyField = value;
-                this.RaisePropertyChanged("privacy");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        public string scope {
-            get {
-                return this.scopeField;
-            }
-            set {
-                this.scopeField = value;
-                this.RaisePropertyChanged("scope");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1665,7 +1551,7 @@ namespace SeriesClientConsoleApp.ServiceReference1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -1711,24 +1597,94 @@ namespace SeriesClientConsoleApp.ServiceReference1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class getProjectDataResponse : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class meshModel : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private project returnField;
+        private string materialNonlinearityField;
+        
+        private string materialSymmetryTypeField;
+        
+        private document[] meshModelDocumentListField;
+        
+        private image[] meshModelImageListField;
+        
+        private material[] meshModelMaterialListField;
+        
+        private string meshModelNameField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public project @return {
+        public string materialNonlinearity {
             get {
-                return this.returnField;
+                return this.materialNonlinearityField;
             }
             set {
-                this.returnField = value;
-                this.RaisePropertyChanged("return");
+                this.materialNonlinearityField = value;
+                this.RaisePropertyChanged("materialNonlinearity");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string materialSymmetryType {
+            get {
+                return this.materialSymmetryTypeField;
+            }
+            set {
+                this.materialSymmetryTypeField = value;
+                this.RaisePropertyChanged("materialSymmetryType");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("meshModelDocumentList", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
+        public document[] meshModelDocumentList {
+            get {
+                return this.meshModelDocumentListField;
+            }
+            set {
+                this.meshModelDocumentListField = value;
+                this.RaisePropertyChanged("meshModelDocumentList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("meshModelImageList", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=3)]
+        public image[] meshModelImageList {
+            get {
+                return this.meshModelImageListField;
+            }
+            set {
+                this.meshModelImageListField = value;
+                this.RaisePropertyChanged("meshModelImageList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("meshModelMaterialList", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=4)]
+        public material[] meshModelMaterialList {
+            get {
+                return this.meshModelMaterialListField;
+            }
+            set {
+                this.meshModelMaterialListField = value;
+                this.RaisePropertyChanged("meshModelMaterialList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string meshModelName {
+            get {
+                return this.meshModelNameField;
+            }
+            set {
+                this.meshModelNameField = value;
+                this.RaisePropertyChanged("meshModelName");
             }
         }
         
@@ -1743,24 +1699,136 @@ namespace SeriesClientConsoleApp.ServiceReference1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class getProjectData : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class video : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string idProjectField;
+        private string idVideoField;
+        
+        private string privacyField;
+        
+        private string summaryField;
+        
+        private System.DateTime videoDateField;
+        
+        private bool videoDateFieldSpecified;
+        
+        private string videoFormatField;
+        
+        private string videoNameField;
+        
+        private string videoRoleField;
+        
+        private double videoSizeField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string idProject {
+        public string idVideo {
             get {
-                return this.idProjectField;
+                return this.idVideoField;
             }
             set {
-                this.idProjectField = value;
-                this.RaisePropertyChanged("idProject");
+                this.idVideoField = value;
+                this.RaisePropertyChanged("idVideo");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string privacy {
+            get {
+                return this.privacyField;
+            }
+            set {
+                this.privacyField = value;
+                this.RaisePropertyChanged("privacy");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string summary {
+            get {
+                return this.summaryField;
+            }
+            set {
+                this.summaryField = value;
+                this.RaisePropertyChanged("summary");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public System.DateTime videoDate {
+            get {
+                return this.videoDateField;
+            }
+            set {
+                this.videoDateField = value;
+                this.RaisePropertyChanged("videoDate");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool videoDateSpecified {
+            get {
+                return this.videoDateFieldSpecified;
+            }
+            set {
+                this.videoDateFieldSpecified = value;
+                this.RaisePropertyChanged("videoDateSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string videoFormat {
+            get {
+                return this.videoFormatField;
+            }
+            set {
+                this.videoFormatField = value;
+                this.RaisePropertyChanged("videoFormat");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string videoName {
+            get {
+                return this.videoNameField;
+            }
+            set {
+                this.videoNameField = value;
+                this.RaisePropertyChanged("videoName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string videoRole {
+            get {
+                return this.videoRoleField;
+            }
+            set {
+                this.videoRoleField = value;
+                this.RaisePropertyChanged("videoRole");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public double videoSize {
+            get {
+                return this.videoSizeField;
+            }
+            set {
+                this.videoSizeField = value;
+                this.RaisePropertyChanged("videoSize");
             }
         }
         
@@ -1775,24 +1843,164 @@ namespace SeriesClientConsoleApp.ServiceReference1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class getComputationVideos : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class signal : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string idComputationField;
+        private string attributeField;
+        
+        private string directionField;
+        
+        private string idSignalField;
+        
+        private string locationField;
+        
+        private string physicalQuantityField;
+        
+        private string privacyField;
+        
+        private short repetitionNumberField;
+        
+        private bool repetitionNumberFieldSpecified;
+        
+        private string signalLabelField;
+        
+        private string typeField;
+        
+        private string unitField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string idComputation {
+        public string attribute {
             get {
-                return this.idComputationField;
+                return this.attributeField;
             }
             set {
-                this.idComputationField = value;
-                this.RaisePropertyChanged("idComputation");
+                this.attributeField = value;
+                this.RaisePropertyChanged("attribute");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string direction {
+            get {
+                return this.directionField;
+            }
+            set {
+                this.directionField = value;
+                this.RaisePropertyChanged("direction");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public string idSignal {
+            get {
+                return this.idSignalField;
+            }
+            set {
+                this.idSignalField = value;
+                this.RaisePropertyChanged("idSignal");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string location {
+            get {
+                return this.locationField;
+            }
+            set {
+                this.locationField = value;
+                this.RaisePropertyChanged("location");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string physicalQuantity {
+            get {
+                return this.physicalQuantityField;
+            }
+            set {
+                this.physicalQuantityField = value;
+                this.RaisePropertyChanged("physicalQuantity");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
+        public string privacy {
+            get {
+                return this.privacyField;
+            }
+            set {
+                this.privacyField = value;
+                this.RaisePropertyChanged("privacy");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public short repetitionNumber {
+            get {
+                return this.repetitionNumberField;
+            }
+            set {
+                this.repetitionNumberField = value;
+                this.RaisePropertyChanged("repetitionNumber");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlIgnoreAttribute()]
+        public bool repetitionNumberSpecified {
+            get {
+                return this.repetitionNumberFieldSpecified;
+            }
+            set {
+                this.repetitionNumberFieldSpecified = value;
+                this.RaisePropertyChanged("repetitionNumberSpecified");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public string signalLabel {
+            get {
+                return this.signalLabelField;
+            }
+            set {
+                this.signalLabelField = value;
+                this.RaisePropertyChanged("signalLabel");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public string type {
+            get {
+                return this.typeField;
+            }
+            set {
+                this.typeField = value;
+                this.RaisePropertyChanged("type");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public string unit {
+            get {
+                return this.unitField;
+            }
+            set {
+                this.unitField = value;
+                this.RaisePropertyChanged("unit");
             }
         }
         
@@ -1807,42 +2015,150 @@ namespace SeriesClientConsoleApp.ServiceReference1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class getClosedProjectIDs : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class originalLoadingSignal : object, System.ComponentModel.INotifyPropertyChanged {
         
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        private string directionField;
         
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class getExperimentDocuments : object, System.ComponentModel.INotifyPropertyChanged {
+        private signal effectiveInputSignalField;
         
-        private string idExperimentField;
+        private float loadingCoefficientField;
+        
+        private string natureField;
+        
+        private string originalLoadingNameField;
+        
+        private document[] originalLoadingSignalDocumentListField;
+        
+        private string peakExcitationUnitField;
+        
+        private double peakExcitationValueField;
+        
+        private signal signalField;
+        
+        private string sourceField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string idExperiment {
+        public string direction {
             get {
-                return this.idExperimentField;
+                return this.directionField;
             }
             set {
-                this.idExperimentField = value;
-                this.RaisePropertyChanged("idExperiment");
+                this.directionField = value;
+                this.RaisePropertyChanged("direction");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public signal effectiveInputSignal {
+            get {
+                return this.effectiveInputSignalField;
+            }
+            set {
+                this.effectiveInputSignalField = value;
+                this.RaisePropertyChanged("effectiveInputSignal");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public float loadingCoefficient {
+            get {
+                return this.loadingCoefficientField;
+            }
+            set {
+                this.loadingCoefficientField = value;
+                this.RaisePropertyChanged("loadingCoefficient");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string nature {
+            get {
+                return this.natureField;
+            }
+            set {
+                this.natureField = value;
+                this.RaisePropertyChanged("nature");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string originalLoadingName {
+            get {
+                return this.originalLoadingNameField;
+            }
+            set {
+                this.originalLoadingNameField = value;
+                this.RaisePropertyChanged("originalLoadingName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("originalLoadingSignalDocumentList", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=5)]
+        public document[] originalLoadingSignalDocumentList {
+            get {
+                return this.originalLoadingSignalDocumentListField;
+            }
+            set {
+                this.originalLoadingSignalDocumentListField = value;
+                this.RaisePropertyChanged("originalLoadingSignalDocumentList");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
+        public string peakExcitationUnit {
+            get {
+                return this.peakExcitationUnitField;
+            }
+            set {
+                this.peakExcitationUnitField = value;
+                this.RaisePropertyChanged("peakExcitationUnit");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
+        public double peakExcitationValue {
+            get {
+                return this.peakExcitationValueField;
+            }
+            set {
+                this.peakExcitationValueField = value;
+                this.RaisePropertyChanged("peakExcitationValue");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
+        public signal signal {
+            get {
+                return this.signalField;
+            }
+            set {
+                this.signalField = value;
+                this.RaisePropertyChanged("signal");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
+        public string source {
+            get {
+                return this.sourceField;
+            }
+            set {
+                this.sourceField = value;
+                this.RaisePropertyChanged("source");
             }
         }
         
@@ -1857,24 +2173,80 @@ namespace SeriesClientConsoleApp.ServiceReference1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class getExperimentDataResponse : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class detLoadChar : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private experiment returnField;
+        private string additionalParameterField;
+        
+        private originalLoadingSignal[] listOriginalLoadingSignalsField;
+        
+        private float loadingCoefficientField;
+        
+        private string nominalLoadingNameField;
+        
+        private string notesField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public experiment @return {
+        public string additionalParameter {
             get {
-                return this.returnField;
+                return this.additionalParameterField;
             }
             set {
-                this.returnField = value;
-                this.RaisePropertyChanged("return");
+                this.additionalParameterField = value;
+                this.RaisePropertyChanged("additionalParameter");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute("listOriginalLoadingSignals", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
+        public originalLoadingSignal[] listOriginalLoadingSignals {
+            get {
+                return this.listOriginalLoadingSignalsField;
+            }
+            set {
+                this.listOriginalLoadingSignalsField = value;
+                this.RaisePropertyChanged("listOriginalLoadingSignals");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
+        public float loadingCoefficient {
+            get {
+                return this.loadingCoefficientField;
+            }
+            set {
+                this.loadingCoefficientField = value;
+                this.RaisePropertyChanged("loadingCoefficient");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
+        public string nominalLoadingName {
+            get {
+                return this.nominalLoadingNameField;
+            }
+            set {
+                this.nominalLoadingNameField = value;
+                this.RaisePropertyChanged("nominalLoadingName");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
+        public string notes {
+            get {
+                return this.notesField;
+            }
+            set {
+                this.notesField = value;
+                this.RaisePropertyChanged("notes");
             }
         }
         
@@ -1889,18 +2261,9 @@ namespace SeriesClientConsoleApp.ServiceReference1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class experiment : experimentComputation {
-    }
-    
-    /// <remarks/>
-    [System.Xml.Serialization.XmlIncludeAttribute(typeof(experiment))]
     [System.Xml.Serialization.XmlIncludeAttribute(typeof(computation))]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.Xml.Serialization.XmlIncludeAttribute(typeof(experiment))]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2128,727 +2491,7 @@ namespace SeriesClientConsoleApp.ServiceReference1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class detLoadChar : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string additionalParameterField;
-        
-        private originalLoadingSignal[] listOriginalLoadingSignalsField;
-        
-        private float loadingCoefficientField;
-        
-        private string nominalLoadingNameField;
-        
-        private string notesField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string additionalParameter {
-            get {
-                return this.additionalParameterField;
-            }
-            set {
-                this.additionalParameterField = value;
-                this.RaisePropertyChanged("additionalParameter");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("listOriginalLoadingSignals", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
-        public originalLoadingSignal[] listOriginalLoadingSignals {
-            get {
-                return this.listOriginalLoadingSignalsField;
-            }
-            set {
-                this.listOriginalLoadingSignalsField = value;
-                this.RaisePropertyChanged("listOriginalLoadingSignals");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public float loadingCoefficient {
-            get {
-                return this.loadingCoefficientField;
-            }
-            set {
-                this.loadingCoefficientField = value;
-                this.RaisePropertyChanged("loadingCoefficient");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string nominalLoadingName {
-            get {
-                return this.nominalLoadingNameField;
-            }
-            set {
-                this.nominalLoadingNameField = value;
-                this.RaisePropertyChanged("nominalLoadingName");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string notes {
-            get {
-                return this.notesField;
-            }
-            set {
-                this.notesField = value;
-                this.RaisePropertyChanged("notes");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class originalLoadingSignal : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string directionField;
-        
-        private signal effectiveInputSignalField;
-        
-        private float loadingCoefficientField;
-        
-        private string natureField;
-        
-        private string originalLoadingNameField;
-        
-        private document[] originalLoadingSignalDocumentListField;
-        
-        private string peakExcitationUnitField;
-        
-        private double peakExcitationValueField;
-        
-        private signal signalField;
-        
-        private string sourceField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string direction {
-            get {
-                return this.directionField;
-            }
-            set {
-                this.directionField = value;
-                this.RaisePropertyChanged("direction");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public signal effectiveInputSignal {
-            get {
-                return this.effectiveInputSignalField;
-            }
-            set {
-                this.effectiveInputSignalField = value;
-                this.RaisePropertyChanged("effectiveInputSignal");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public float loadingCoefficient {
-            get {
-                return this.loadingCoefficientField;
-            }
-            set {
-                this.loadingCoefficientField = value;
-                this.RaisePropertyChanged("loadingCoefficient");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string nature {
-            get {
-                return this.natureField;
-            }
-            set {
-                this.natureField = value;
-                this.RaisePropertyChanged("nature");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string originalLoadingName {
-            get {
-                return this.originalLoadingNameField;
-            }
-            set {
-                this.originalLoadingNameField = value;
-                this.RaisePropertyChanged("originalLoadingName");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("originalLoadingSignalDocumentList", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=5)]
-        public document[] originalLoadingSignalDocumentList {
-            get {
-                return this.originalLoadingSignalDocumentListField;
-            }
-            set {
-                this.originalLoadingSignalDocumentListField = value;
-                this.RaisePropertyChanged("originalLoadingSignalDocumentList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public string peakExcitationUnit {
-            get {
-                return this.peakExcitationUnitField;
-            }
-            set {
-                this.peakExcitationUnitField = value;
-                this.RaisePropertyChanged("peakExcitationUnit");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public double peakExcitationValue {
-            get {
-                return this.peakExcitationValueField;
-            }
-            set {
-                this.peakExcitationValueField = value;
-                this.RaisePropertyChanged("peakExcitationValue");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public signal signal {
-            get {
-                return this.signalField;
-            }
-            set {
-                this.signalField = value;
-                this.RaisePropertyChanged("signal");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        public string source {
-            get {
-                return this.sourceField;
-            }
-            set {
-                this.sourceField = value;
-                this.RaisePropertyChanged("source");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class signal : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string attributeField;
-        
-        private string directionField;
-        
-        private string idSignalField;
-        
-        private string locationField;
-        
-        private string physicalQuantityField;
-        
-        private string privacyField;
-        
-        private short repetitionNumberField;
-        
-        private bool repetitionNumberFieldSpecified;
-        
-        private string signalLabelField;
-        
-        private string typeField;
-        
-        private string unitField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string attribute {
-            get {
-                return this.attributeField;
-            }
-            set {
-                this.attributeField = value;
-                this.RaisePropertyChanged("attribute");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string direction {
-            get {
-                return this.directionField;
-            }
-            set {
-                this.directionField = value;
-                this.RaisePropertyChanged("direction");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string idSignal {
-            get {
-                return this.idSignalField;
-            }
-            set {
-                this.idSignalField = value;
-                this.RaisePropertyChanged("idSignal");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string location {
-            get {
-                return this.locationField;
-            }
-            set {
-                this.locationField = value;
-                this.RaisePropertyChanged("location");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string physicalQuantity {
-            get {
-                return this.physicalQuantityField;
-            }
-            set {
-                this.physicalQuantityField = value;
-                this.RaisePropertyChanged("physicalQuantity");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string privacy {
-            get {
-                return this.privacyField;
-            }
-            set {
-                this.privacyField = value;
-                this.RaisePropertyChanged("privacy");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public short repetitionNumber {
-            get {
-                return this.repetitionNumberField;
-            }
-            set {
-                this.repetitionNumberField = value;
-                this.RaisePropertyChanged("repetitionNumber");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool repetitionNumberSpecified {
-            get {
-                return this.repetitionNumberFieldSpecified;
-            }
-            set {
-                this.repetitionNumberFieldSpecified = value;
-                this.RaisePropertyChanged("repetitionNumberSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public string signalLabel {
-            get {
-                return this.signalLabelField;
-            }
-            set {
-                this.signalLabelField = value;
-                this.RaisePropertyChanged("signalLabel");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public string type {
-            get {
-                return this.typeField;
-            }
-            set {
-                this.typeField = value;
-                this.RaisePropertyChanged("type");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=9)]
-        public string unit {
-            get {
-                return this.unitField;
-            }
-            set {
-                this.unitField = value;
-                this.RaisePropertyChanged("unit");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class image : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string documentRoleField;
-        
-        private string idImageField;
-        
-        private string imageAuthorField;
-        
-        private System.DateTime imageDateField;
-        
-        private bool imageDateFieldSpecified;
-        
-        private string imageFormatField;
-        
-        private string imageNameField;
-        
-        private double imageSizeField;
-        
-        private string privacyField;
-        
-        private string summaryField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string documentRole {
-            get {
-                return this.documentRoleField;
-            }
-            set {
-                this.documentRoleField = value;
-                this.RaisePropertyChanged("documentRole");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string idImage {
-            get {
-                return this.idImageField;
-            }
-            set {
-                this.idImageField = value;
-                this.RaisePropertyChanged("idImage");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string imageAuthor {
-            get {
-                return this.imageAuthorField;
-            }
-            set {
-                this.imageAuthorField = value;
-                this.RaisePropertyChanged("imageAuthor");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public System.DateTime imageDate {
-            get {
-                return this.imageDateField;
-            }
-            set {
-                this.imageDateField = value;
-                this.RaisePropertyChanged("imageDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool imageDateSpecified {
-            get {
-                return this.imageDateFieldSpecified;
-            }
-            set {
-                this.imageDateFieldSpecified = value;
-                this.RaisePropertyChanged("imageDateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string imageFormat {
-            get {
-                return this.imageFormatField;
-            }
-            set {
-                this.imageFormatField = value;
-                this.RaisePropertyChanged("imageFormat");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string imageName {
-            get {
-                return this.imageNameField;
-            }
-            set {
-                this.imageNameField = value;
-                this.RaisePropertyChanged("imageName");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public double imageSize {
-            get {
-                return this.imageSizeField;
-            }
-            set {
-                this.imageSizeField = value;
-                this.RaisePropertyChanged("imageSize");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public string privacy {
-            get {
-                return this.privacyField;
-            }
-            set {
-                this.privacyField = value;
-                this.RaisePropertyChanged("privacy");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=8)]
-        public string summary {
-            get {
-                return this.summaryField;
-            }
-            set {
-                this.summaryField = value;
-                this.RaisePropertyChanged("summary");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class video : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string idVideoField;
-        
-        private string privacyField;
-        
-        private string summaryField;
-        
-        private System.DateTime videoDateField;
-        
-        private bool videoDateFieldSpecified;
-        
-        private string videoFormatField;
-        
-        private string videoNameField;
-        
-        private string videoRoleField;
-        
-        private double videoSizeField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string idVideo {
-            get {
-                return this.idVideoField;
-            }
-            set {
-                this.idVideoField = value;
-                this.RaisePropertyChanged("idVideo");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string privacy {
-            get {
-                return this.privacyField;
-            }
-            set {
-                this.privacyField = value;
-                this.RaisePropertyChanged("privacy");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string summary {
-            get {
-                return this.summaryField;
-            }
-            set {
-                this.summaryField = value;
-                this.RaisePropertyChanged("summary");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public System.DateTime videoDate {
-            get {
-                return this.videoDateField;
-            }
-            set {
-                this.videoDateField = value;
-                this.RaisePropertyChanged("videoDate");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool videoDateSpecified {
-            get {
-                return this.videoDateFieldSpecified;
-            }
-            set {
-                this.videoDateFieldSpecified = value;
-                this.RaisePropertyChanged("videoDateSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string videoFormat {
-            get {
-                return this.videoFormatField;
-            }
-            set {
-                this.videoFormatField = value;
-                this.RaisePropertyChanged("videoFormat");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string videoName {
-            get {
-                return this.videoNameField;
-            }
-            set {
-                this.videoNameField = value;
-                this.RaisePropertyChanged("videoName");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public string videoRole {
-            get {
-                return this.videoRoleField;
-            }
-            set {
-                this.videoRoleField = value;
-                this.RaisePropertyChanged("videoRole");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public double videoSize {
-            get {
-                return this.videoSizeField;
-            }
-            set {
-                this.videoSizeField = value;
-                this.RaisePropertyChanged("videoSize");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
@@ -2885,1859 +2528,28 @@ namespace SeriesClientConsoleApp.ServiceReference1 {
     }
     
     /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.2102.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class meshModel : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string materialNonlinearityField;
-        
-        private string materialSymmetryTypeField;
-        
-        private document[] meshModelDocumentListField;
-        
-        private image[] meshModelImageListField;
-        
-        private material[] meshModelMaterialListField;
-        
-        private string meshModelNameField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string materialNonlinearity {
-            get {
-                return this.materialNonlinearityField;
-            }
-            set {
-                this.materialNonlinearityField = value;
-                this.RaisePropertyChanged("materialNonlinearity");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string materialSymmetryType {
-            get {
-                return this.materialSymmetryTypeField;
-            }
-            set {
-                this.materialSymmetryTypeField = value;
-                this.RaisePropertyChanged("materialSymmetryType");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("meshModelDocumentList", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
-        public document[] meshModelDocumentList {
-            get {
-                return this.meshModelDocumentListField;
-            }
-            set {
-                this.meshModelDocumentListField = value;
-                this.RaisePropertyChanged("meshModelDocumentList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("meshModelImageList", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=3)]
-        public image[] meshModelImageList {
-            get {
-                return this.meshModelImageListField;
-            }
-            set {
-                this.meshModelImageListField = value;
-                this.RaisePropertyChanged("meshModelImageList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("meshModelMaterialList", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=4)]
-        public material[] meshModelMaterialList {
-            get {
-                return this.meshModelMaterialListField;
-            }
-            set {
-                this.meshModelMaterialListField = value;
-                this.RaisePropertyChanged("meshModelMaterialList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string meshModelName {
-            get {
-                return this.meshModelNameField;
-            }
-            set {
-                this.meshModelNameField = value;
-                this.RaisePropertyChanged("meshModelName");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class material : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private actualMeanProperty[] actualMeanPropertyListField;
-        
-        private string idMaterialField;
-        
-        private document[] materialDocumentListField;
-        
-        private string materialNameField;
-        
-        private nominalProperty[] nominalPropertyListField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("actualMeanPropertyList", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=0)]
-        public actualMeanProperty[] actualMeanPropertyList {
-            get {
-                return this.actualMeanPropertyListField;
-            }
-            set {
-                this.actualMeanPropertyListField = value;
-                this.RaisePropertyChanged("actualMeanPropertyList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string idMaterial {
-            get {
-                return this.idMaterialField;
-            }
-            set {
-                this.idMaterialField = value;
-                this.RaisePropertyChanged("idMaterial");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("materialDocumentList", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
-        public document[] materialDocumentList {
-            get {
-                return this.materialDocumentListField;
-            }
-            set {
-                this.materialDocumentListField = value;
-                this.RaisePropertyChanged("materialDocumentList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string materialName {
-            get {
-                return this.materialNameField;
-            }
-            set {
-                this.materialNameField = value;
-                this.RaisePropertyChanged("materialName");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("nominalPropertyList", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=4)]
-        public nominalProperty[] nominalPropertyList {
-            get {
-                return this.nominalPropertyListField;
-            }
-            set {
-                this.nominalPropertyListField = value;
-                this.RaisePropertyChanged("nominalPropertyList");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class actualMeanProperty : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private document[] actualMeanPropertyDocumentListField;
-        
-        private string actualMeanPropertyNameField;
-        
-        private string actualMeanPropertyUnitField;
-        
-        private double actualMeanPropertyValueField;
-        
-        private bool actualMeanPropertyValueFieldSpecified;
-        
-        private short numberOfSamplesField;
-        
-        private bool numberOfSamplesFieldSpecified;
-        
-        private string observationsField;
-        
-        private byte[] valueVectorXField;
-        
-        private byte[] valueVectorYField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("actualMeanPropertyDocumentList", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=0)]
-        public document[] actualMeanPropertyDocumentList {
-            get {
-                return this.actualMeanPropertyDocumentListField;
-            }
-            set {
-                this.actualMeanPropertyDocumentListField = value;
-                this.RaisePropertyChanged("actualMeanPropertyDocumentList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string actualMeanPropertyName {
-            get {
-                return this.actualMeanPropertyNameField;
-            }
-            set {
-                this.actualMeanPropertyNameField = value;
-                this.RaisePropertyChanged("actualMeanPropertyName");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string actualMeanPropertyUnit {
-            get {
-                return this.actualMeanPropertyUnitField;
-            }
-            set {
-                this.actualMeanPropertyUnitField = value;
-                this.RaisePropertyChanged("actualMeanPropertyUnit");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public double actualMeanPropertyValue {
-            get {
-                return this.actualMeanPropertyValueField;
-            }
-            set {
-                this.actualMeanPropertyValueField = value;
-                this.RaisePropertyChanged("actualMeanPropertyValue");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool actualMeanPropertyValueSpecified {
-            get {
-                return this.actualMeanPropertyValueFieldSpecified;
-            }
-            set {
-                this.actualMeanPropertyValueFieldSpecified = value;
-                this.RaisePropertyChanged("actualMeanPropertyValueSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public short numberOfSamples {
-            get {
-                return this.numberOfSamplesField;
-            }
-            set {
-                this.numberOfSamplesField = value;
-                this.RaisePropertyChanged("numberOfSamples");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlIgnoreAttribute()]
-        public bool numberOfSamplesSpecified {
-            get {
-                return this.numberOfSamplesFieldSpecified;
-            }
-            set {
-                this.numberOfSamplesFieldSpecified = value;
-                this.RaisePropertyChanged("numberOfSamplesSpecified");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public string observations {
-            get {
-                return this.observationsField;
-            }
-            set {
-                this.observationsField = value;
-                this.RaisePropertyChanged("observations");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=6)]
-        public byte[] valueVectorX {
-            get {
-                return this.valueVectorXField;
-            }
-            set {
-                this.valueVectorXField = value;
-                this.RaisePropertyChanged("valueVectorX");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=7)]
-        public byte[] valueVectorY {
-            get {
-                return this.valueVectorYField;
-            }
-            set {
-                this.valueVectorYField = value;
-                this.RaisePropertyChanged("valueVectorY");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class nominalProperty : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private document[] nominalPropertyDocumentListField;
-        
-        private string nominalPropertyNameField;
-        
-        private string nominalPropertyUnitField;
-        
-        private double nominalPropertyValueField;
-        
-        private string observationsField;
-        
-        private byte[] valueVectorXField;
-        
-        private byte[] valueVectorYField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("nominalPropertyDocumentList", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=0)]
-        public document[] nominalPropertyDocumentList {
-            get {
-                return this.nominalPropertyDocumentListField;
-            }
-            set {
-                this.nominalPropertyDocumentListField = value;
-                this.RaisePropertyChanged("nominalPropertyDocumentList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string nominalPropertyName {
-            get {
-                return this.nominalPropertyNameField;
-            }
-            set {
-                this.nominalPropertyNameField = value;
-                this.RaisePropertyChanged("nominalPropertyName");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string nominalPropertyUnit {
-            get {
-                return this.nominalPropertyUnitField;
-            }
-            set {
-                this.nominalPropertyUnitField = value;
-                this.RaisePropertyChanged("nominalPropertyUnit");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public double nominalPropertyValue {
-            get {
-                return this.nominalPropertyValueField;
-            }
-            set {
-                this.nominalPropertyValueField = value;
-                this.RaisePropertyChanged("nominalPropertyValue");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string observations {
-            get {
-                return this.observationsField;
-            }
-            set {
-                this.observationsField = value;
-                this.RaisePropertyChanged("observations");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=5)]
-        public byte[] valueVectorX {
-            get {
-                return this.valueVectorXField;
-            }
-            set {
-                this.valueVectorXField = value;
-                this.RaisePropertyChanged("valueVectorX");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, DataType="base64Binary", Order=6)]
-        public byte[] valueVectorY {
-            get {
-                return this.valueVectorYField;
-            }
-            set {
-                this.valueVectorYField = value;
-                this.RaisePropertyChanged("valueVectorY");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class getExperimentData : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string idExperimentField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string idExperiment {
-            get {
-                return this.idExperimentField;
-            }
-            set {
-                this.idExperimentField = value;
-                this.RaisePropertyChanged("idExperiment");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class getSpecimenDocuments : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string idSpecimenField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string idSpecimen {
-            get {
-                return this.idSpecimenField;
-            }
-            set {
-                this.idSpecimenField = value;
-                this.RaisePropertyChanged("idSpecimen");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class getProjectIDs : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class getComputationDocuments : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string idComputationField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string idComputation {
-            get {
-                return this.idComputationField;
-            }
-            set {
-                this.idComputationField = value;
-                this.RaisePropertyChanged("idComputation");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class getCacheInfoResponse : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private cacheInfo returnField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public cacheInfo @return {
-            get {
-                return this.returnField;
-            }
-            set {
-                this.returnField = value;
-                this.RaisePropertyChanged("return");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class getCacheInfo : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class getExperimentLoadingData : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string idExperimentField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string idExperiment {
-            get {
-                return this.idExperimentField;
-            }
-            set {
-                this.idExperimentField = value;
-                this.RaisePropertyChanged("idExperiment");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class getVersion : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class getExperimentImages : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string idExperimentField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string idExperiment {
-            get {
-                return this.idExperimentField;
-            }
-            set {
-                this.idExperimentField = value;
-                this.RaisePropertyChanged("idExperiment");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class getExperimentVideos : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string idExperimentField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string idExperiment {
-            get {
-                return this.idExperimentField;
-            }
-            set {
-                this.idExperimentField = value;
-                this.RaisePropertyChanged("idExperiment");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class scaling : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private double prototypeModelratioField;
-        
-        private string scaledPropertyNameField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public double prototypeModelratio {
-            get {
-                return this.prototypeModelratioField;
-            }
-            set {
-                this.prototypeModelratioField = value;
-                this.RaisePropertyChanged("prototypeModelratio");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string scaledPropertyName {
-            get {
-                return this.scaledPropertyNameField;
-            }
-            set {
-                this.scaledPropertyNameField = value;
-                this.RaisePropertyChanged("scaledPropertyName");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class specimen : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private System.Nullable<int>[] computationIDsField;
-        
-        private System.Nullable<int>[] experimentIDsField;
-        
-        private string idSpecimenField;
-        
-        private double maxDepthField;
-        
-        private double maxHeightField;
-        
-        private double maxLengthField;
-        
-        private double maxWidthField;
-        
-        private string privacyField;
-        
-        private scaling[] scalingListField;
-        
-        private document[] specimenDocumentsField;
-        
-        private image[] specimenImagesField;
-        
-        private double specimenMassField;
-        
-        private string specimenNameField;
-        
-        private structuralComponent[] structuralComponentsField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("computationIDs", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=0)]
-        public System.Nullable<int>[] computationIDs {
-            get {
-                return this.computationIDsField;
-            }
-            set {
-                this.computationIDsField = value;
-                this.RaisePropertyChanged("computationIDs");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("experimentIDs", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
-        public System.Nullable<int>[] experimentIDs {
-            get {
-                return this.experimentIDsField;
-            }
-            set {
-                this.experimentIDsField = value;
-                this.RaisePropertyChanged("experimentIDs");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=2)]
-        public string idSpecimen {
-            get {
-                return this.idSpecimenField;
-            }
-            set {
-                this.idSpecimenField = value;
-                this.RaisePropertyChanged("idSpecimen");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public double maxDepth {
-            get {
-                return this.maxDepthField;
-            }
-            set {
-                this.maxDepthField = value;
-                this.RaisePropertyChanged("maxDepth");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public double maxHeight {
-            get {
-                return this.maxHeightField;
-            }
-            set {
-                this.maxHeightField = value;
-                this.RaisePropertyChanged("maxHeight");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=5)]
-        public double maxLength {
-            get {
-                return this.maxLengthField;
-            }
-            set {
-                this.maxLengthField = value;
-                this.RaisePropertyChanged("maxLength");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=6)]
-        public double maxWidth {
-            get {
-                return this.maxWidthField;
-            }
-            set {
-                this.maxWidthField = value;
-                this.RaisePropertyChanged("maxWidth");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=7)]
-        public string privacy {
-            get {
-                return this.privacyField;
-            }
-            set {
-                this.privacyField = value;
-                this.RaisePropertyChanged("privacy");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("scalingList", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=8)]
-        public scaling[] scalingList {
-            get {
-                return this.scalingListField;
-            }
-            set {
-                this.scalingListField = value;
-                this.RaisePropertyChanged("scalingList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("specimenDocuments", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=9)]
-        public document[] specimenDocuments {
-            get {
-                return this.specimenDocumentsField;
-            }
-            set {
-                this.specimenDocumentsField = value;
-                this.RaisePropertyChanged("specimenDocuments");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("specimenImages", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=10)]
-        public image[] specimenImages {
-            get {
-                return this.specimenImagesField;
-            }
-            set {
-                this.specimenImagesField = value;
-                this.RaisePropertyChanged("specimenImages");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=11)]
-        public double specimenMass {
-            get {
-                return this.specimenMassField;
-            }
-            set {
-                this.specimenMassField = value;
-                this.RaisePropertyChanged("specimenMass");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=12)]
-        public string specimenName {
-            get {
-                return this.specimenNameField;
-            }
-            set {
-                this.specimenNameField = value;
-                this.RaisePropertyChanged("specimenName");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("structuralComponents", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=13)]
-        public structuralComponent[] structuralComponents {
-            get {
-                return this.structuralComponentsField;
-            }
-            set {
-                this.structuralComponentsField = value;
-                this.RaisePropertyChanged("structuralComponents");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class structuralComponent : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string materialDescriptionField;
-        
-        private document[] structuralComponentDocumentListField;
-        
-        private material[] structuralComponentMaterialListField;
-        
-        private string structuralComponentNameField;
-        
-        private string structuralComponentTypeField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string materialDescription {
-            get {
-                return this.materialDescriptionField;
-            }
-            set {
-                this.materialDescriptionField = value;
-                this.RaisePropertyChanged("materialDescription");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("structuralComponentDocumentList", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
-        public document[] structuralComponentDocumentList {
-            get {
-                return this.structuralComponentDocumentListField;
-            }
-            set {
-                this.structuralComponentDocumentListField = value;
-                this.RaisePropertyChanged("structuralComponentDocumentList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute("structuralComponentMaterialList", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=2)]
-        public material[] structuralComponentMaterialList {
-            get {
-                return this.structuralComponentMaterialListField;
-            }
-            set {
-                this.structuralComponentMaterialListField = value;
-                this.RaisePropertyChanged("structuralComponentMaterialList");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=3)]
-        public string structuralComponentName {
-            get {
-                return this.structuralComponentNameField;
-            }
-            set {
-                this.structuralComponentNameField = value;
-                this.RaisePropertyChanged("structuralComponentName");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=4)]
-        public string structuralComponentType {
-            get {
-                return this.structuralComponentTypeField;
-            }
-            set {
-                this.structuralComponentTypeField = value;
-                this.RaisePropertyChanged("structuralComponentType");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class getSpecimenDataResponse : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private specimen returnField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public specimen @return {
-            get {
-                return this.returnField;
-            }
-            set {
-                this.returnField = value;
-                this.RaisePropertyChanged("return");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class getSpecimenData : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string idSpecimenField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string idSpecimen {
-            get {
-                return this.idSpecimenField;
-            }
-            set {
-                this.idSpecimenField = value;
-                this.RaisePropertyChanged("idSpecimen");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class getStructuralComponentData : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string idSpecimenField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string idSpecimen {
-            get {
-                return this.idSpecimenField;
-            }
-            set {
-                this.idSpecimenField = value;
-                this.RaisePropertyChanged("idSpecimen");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class testMyKR : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class getSpecimenImages : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string idSpecimenField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string idSpecimen {
-            get {
-                return this.idSpecimenField;
-            }
-            set {
-                this.idSpecimenField = value;
-                this.RaisePropertyChanged("idSpecimen");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class getComputationDataResponse : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private computation returnField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public computation @return {
-            get {
-                return this.returnField;
-            }
-            set {
-                this.returnField = value;
-                this.RaisePropertyChanged("return");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class getComputationData : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string idComputationField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string idComputation {
-            get {
-                return this.idComputationField;
-            }
-            set {
-                this.idComputationField = value;
-                this.RaisePropertyChanged("idComputation");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class testMe : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class getOpenProjectIDs : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.6.1586.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
-    public partial class getComputationImages : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private string idComputationField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string idComputation {
-            get {
-                return this.idComputationField;
-            }
-            set {
-                this.idComputationField = value;
-                this.RaisePropertyChanged("idComputation");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getCacheInfo", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class getCacheInfoRequest {
-        
-        public getCacheInfoRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getCacheInfoResponse", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class getCacheInfoResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SeriesClientConsoleApp.ServiceReference1.cacheInfo @return;
-        
-        public getCacheInfoResponse1() {
-        }
-        
-        public getCacheInfoResponse1(SeriesClientConsoleApp.ServiceReference1.cacheInfo @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="testMe", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class testMeRequest {
-        
-        public testMeRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="testMeResponse", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class testMeResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public object[] @return;
-        
-        public testMeResponse() {
-        }
-        
-        public testMeResponse(object[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="testMyKR", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class testMyKRRequest {
-        
-        public testMyKRRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="testMyKRResponse", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class testMyKRResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public object[] @return;
-        
-        public testMyKRResponse() {
-        }
-        
-        public testMyKRResponse(object[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getProjectIDs", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class getProjectIDsRequest {
-        
-        public getProjectIDsRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getProjectIDsResponse", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class getProjectIDsResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public object[] @return;
-        
-        public getProjectIDsResponse() {
-        }
-        
-        public getProjectIDsResponse(object[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getProjectData", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class getProjectDataRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string idProject;
-        
-        public getProjectDataRequest() {
-        }
-        
-        public getProjectDataRequest(string idProject) {
-            this.idProject = idProject;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getProjectDataResponse", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class getProjectDataResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SeriesClientConsoleApp.ServiceReference1.project @return;
-        
-        public getProjectDataResponse1() {
-        }
-        
-        public getProjectDataResponse1(SeriesClientConsoleApp.ServiceReference1.project @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getSpecimenData", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class getSpecimenDataRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string idSpecimen;
-        
-        public getSpecimenDataRequest() {
-        }
-        
-        public getSpecimenDataRequest(string idSpecimen) {
-            this.idSpecimen = idSpecimen;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getSpecimenDataResponse", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class getSpecimenDataResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SeriesClientConsoleApp.ServiceReference1.specimen @return;
-        
-        public getSpecimenDataResponse1() {
-        }
-        
-        public getSpecimenDataResponse1(SeriesClientConsoleApp.ServiceReference1.specimen @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getStructuralComponentData", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class getStructuralComponentDataRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string idSpecimen;
-        
-        public getStructuralComponentDataRequest() {
-        }
-        
-        public getStructuralComponentDataRequest(string idSpecimen) {
-            this.idSpecimen = idSpecimen;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getStructuralComponentDataResponse", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class getStructuralComponentDataResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SeriesClientConsoleApp.ServiceReference1.structuralComponent[] @return;
-        
-        public getStructuralComponentDataResponse() {
-        }
-        
-        public getStructuralComponentDataResponse(SeriesClientConsoleApp.ServiceReference1.structuralComponent[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getExperimentData", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class getExperimentDataRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string idExperiment;
-        
-        public getExperimentDataRequest() {
-        }
-        
-        public getExperimentDataRequest(string idExperiment) {
-            this.idExperiment = idExperiment;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getExperimentDataResponse", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class getExperimentDataResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SeriesClientConsoleApp.ServiceReference1.experiment @return;
-        
-        public getExperimentDataResponse1() {
-        }
-        
-        public getExperimentDataResponse1(SeriesClientConsoleApp.ServiceReference1.experiment @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getComputationData", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class getComputationDataRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string idComputation;
-        
-        public getComputationDataRequest() {
-        }
-        
-        public getComputationDataRequest(string idComputation) {
-            this.idComputation = idComputation;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getComputationDataResponse", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class getComputationDataResponse1 {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SeriesClientConsoleApp.ServiceReference1.computation @return;
-        
-        public getComputationDataResponse1() {
-        }
-        
-        public getComputationDataResponse1(SeriesClientConsoleApp.ServiceReference1.computation @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getExperimentLoadingData", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class getExperimentLoadingDataRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string idExperiment;
-        
-        public getExperimentLoadingDataRequest() {
-        }
-        
-        public getExperimentLoadingDataRequest(string idExperiment) {
-            this.idExperiment = idExperiment;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getExperimentLoadingDataResponse", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class getExperimentLoadingDataResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SeriesClientConsoleApp.ServiceReference1.detLoadChar[] @return;
-        
-        public getExperimentLoadingDataResponse() {
-        }
-        
-        public getExperimentLoadingDataResponse(SeriesClientConsoleApp.ServiceReference1.detLoadChar[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getComputationLoadingData", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class getComputationLoadingDataRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string idComputation;
-        
-        public getComputationLoadingDataRequest() {
-        }
-        
-        public getComputationLoadingDataRequest(string idComputation) {
-            this.idComputation = idComputation;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getComputationLoadingDataResponse", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class getComputationLoadingDataResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SeriesClientConsoleApp.ServiceReference1.detLoadChar[] @return;
-        
-        public getComputationLoadingDataResponse() {
-        }
-        
-        public getComputationLoadingDataResponse(SeriesClientConsoleApp.ServiceReference1.detLoadChar[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getProjectDocuments", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class getProjectDocumentsRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string idProject;
-        
-        public getProjectDocumentsRequest() {
-        }
-        
-        public getProjectDocumentsRequest(string idProject) {
-            this.idProject = idProject;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getProjectDocumentsResponse", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class getProjectDocumentsResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SeriesClientConsoleApp.ServiceReference1.document[] @return;
-        
-        public getProjectDocumentsResponse() {
-        }
-        
-        public getProjectDocumentsResponse(SeriesClientConsoleApp.ServiceReference1.document[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getSpecimenDocuments", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class getSpecimenDocumentsRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string idSpecimen;
-        
-        public getSpecimenDocumentsRequest() {
-        }
-        
-        public getSpecimenDocumentsRequest(string idSpecimen) {
-            this.idSpecimen = idSpecimen;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getSpecimenDocumentsResponse", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class getSpecimenDocumentsResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SeriesClientConsoleApp.ServiceReference1.document[] @return;
-        
-        public getSpecimenDocumentsResponse() {
-        }
-        
-        public getSpecimenDocumentsResponse(SeriesClientConsoleApp.ServiceReference1.document[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getSpecimenImages", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class getSpecimenImagesRequest {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string idSpecimen;
-        
-        public getSpecimenImagesRequest() {
-        }
-        
-        public getSpecimenImagesRequest(string idSpecimen) {
-            this.idSpecimen = idSpecimen;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getSpecimenImagesResponse", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class getSpecimenImagesResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SeriesClientConsoleApp.ServiceReference1.image[] @return;
-        
-        public getSpecimenImagesResponse() {
-        }
-        
-        public getSpecimenImagesResponse(SeriesClientConsoleApp.ServiceReference1.image[] @return) {
-            this.@return = @return;
-        }
+    public partial class experiment : experimentComputation {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="getExperimentDocuments", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class getExperimentDocumentsRequest {
+    public partial class getExperimentDocuments {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string idExperiment;
         
-        public getExperimentDocumentsRequest() {
+        public getExperimentDocuments() {
         }
         
-        public getExperimentDocumentsRequest(string idExperiment) {
+        public getExperimentDocuments(string idExperiment) {
             this.idExperiment = idExperiment;
         }
     }
@@ -4764,16 +2576,16 @@ namespace SeriesClientConsoleApp.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="getComputationDocuments", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class getComputationDocumentsRequest {
+    public partial class getComputationDocuments {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string idComputation;
         
-        public getComputationDocumentsRequest() {
+        public getComputationDocuments() {
         }
         
-        public getComputationDocumentsRequest(string idComputation) {
+        public getComputationDocuments(string idComputation) {
             this.idComputation = idComputation;
         }
     }
@@ -4799,17 +2611,89 @@ namespace SeriesClientConsoleApp.ServiceReference1 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getExperimentImages", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class getExperimentImagesRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getExperimentData", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
+    public partial class getExperimentData {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string idExperiment;
         
-        public getExperimentImagesRequest() {
+        public getExperimentData() {
         }
         
-        public getExperimentImagesRequest(string idExperiment) {
+        public getExperimentData(string idExperiment) {
+            this.idExperiment = idExperiment;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getExperimentDataResponse", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
+    public partial class getExperimentDataResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SeriesClientConsoleApp.ServiceReference1.experiment @return;
+        
+        public getExperimentDataResponse() {
+        }
+        
+        public getExperimentDataResponse(SeriesClientConsoleApp.ServiceReference1.experiment @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getProjectDocuments", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
+    public partial class getProjectDocuments {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string idProject;
+        
+        public getProjectDocuments() {
+        }
+        
+        public getProjectDocuments(string idProject) {
+            this.idProject = idProject;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getProjectDocumentsResponse", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
+    public partial class getProjectDocumentsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SeriesClientConsoleApp.ServiceReference1.document[] @return;
+        
+        public getProjectDocumentsResponse() {
+        }
+        
+        public getProjectDocumentsResponse(SeriesClientConsoleApp.ServiceReference1.document[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getExperimentImages", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
+    public partial class getExperimentImages {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string idExperiment;
+        
+        public getExperimentImages() {
+        }
+        
+        public getExperimentImages(string idExperiment) {
             this.idExperiment = idExperiment;
         }
     }
@@ -4835,35 +2719,27 @@ namespace SeriesClientConsoleApp.ServiceReference1 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getComputationImages", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class getComputationImagesRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="testMe", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
+    public partial class testMe {
         
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string idComputation;
-        
-        public getComputationImagesRequest() {
-        }
-        
-        public getComputationImagesRequest(string idComputation) {
-            this.idComputation = idComputation;
+        public testMe() {
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getComputationImagesResponse", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class getComputationImagesResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="testMeResponse", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
+    public partial class testMeResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SeriesClientConsoleApp.ServiceReference1.image[] @return;
+        public string[] @return;
         
-        public getComputationImagesResponse() {
+        public testMeResponse() {
         }
         
-        public getComputationImagesResponse(SeriesClientConsoleApp.ServiceReference1.image[] @return) {
+        public testMeResponse(string[] @return) {
             this.@return = @return;
         }
     }
@@ -4872,16 +2748,16 @@ namespace SeriesClientConsoleApp.ServiceReference1 {
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="getExperimentVideos", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class getExperimentVideosRequest {
+    public partial class getExperimentVideos {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string idExperiment;
         
-        public getExperimentVideosRequest() {
+        public getExperimentVideos() {
         }
         
-        public getExperimentVideosRequest(string idExperiment) {
+        public getExperimentVideos(string idExperiment) {
             this.idExperiment = idExperiment;
         }
     }
@@ -4907,17 +2783,473 @@ namespace SeriesClientConsoleApp.ServiceReference1 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getComputationVideos", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class getComputationVideosRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getSpecimenDocuments", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
+    public partial class getSpecimenDocuments {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string idSpecimen;
+        
+        public getSpecimenDocuments() {
+        }
+        
+        public getSpecimenDocuments(string idSpecimen) {
+            this.idSpecimen = idSpecimen;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getSpecimenDocumentsResponse", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
+    public partial class getSpecimenDocumentsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SeriesClientConsoleApp.ServiceReference1.document[] @return;
+        
+        public getSpecimenDocumentsResponse() {
+        }
+        
+        public getSpecimenDocumentsResponse(SeriesClientConsoleApp.ServiceReference1.document[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getComputationLoadingData", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
+    public partial class getComputationLoadingData {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string idComputation;
         
-        public getComputationVideosRequest() {
+        public getComputationLoadingData() {
         }
         
-        public getComputationVideosRequest(string idComputation) {
+        public getComputationLoadingData(string idComputation) {
+            this.idComputation = idComputation;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getComputationLoadingDataResponse", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
+    public partial class getComputationLoadingDataResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SeriesClientConsoleApp.ServiceReference1.detLoadChar[] @return;
+        
+        public getComputationLoadingDataResponse() {
+        }
+        
+        public getComputationLoadingDataResponse(SeriesClientConsoleApp.ServiceReference1.detLoadChar[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getStructuralComponentData", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
+    public partial class getStructuralComponentData {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string idSpecimen;
+        
+        public getStructuralComponentData() {
+        }
+        
+        public getStructuralComponentData(string idSpecimen) {
+            this.idSpecimen = idSpecimen;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getStructuralComponentDataResponse", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
+    public partial class getStructuralComponentDataResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SeriesClientConsoleApp.ServiceReference1.structuralComponent[] @return;
+        
+        public getStructuralComponentDataResponse() {
+        }
+        
+        public getStructuralComponentDataResponse(SeriesClientConsoleApp.ServiceReference1.structuralComponent[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="testMyKR", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
+    public partial class testMyKR {
+        
+        public testMyKR() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="testMyKRResponse", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
+    public partial class testMyKRResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string[] @return;
+        
+        public testMyKRResponse() {
+        }
+        
+        public testMyKRResponse(string[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getProjectData", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
+    public partial class getProjectData {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string idProject;
+        
+        public getProjectData() {
+        }
+        
+        public getProjectData(string idProject) {
+            this.idProject = idProject;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getProjectDataResponse", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
+    public partial class getProjectDataResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SeriesClientConsoleApp.ServiceReference1.project @return;
+        
+        public getProjectDataResponse() {
+        }
+        
+        public getProjectDataResponse(SeriesClientConsoleApp.ServiceReference1.project @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getSpecimenData", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
+    public partial class getSpecimenData {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string idSpecimen;
+        
+        public getSpecimenData() {
+        }
+        
+        public getSpecimenData(string idSpecimen) {
+            this.idSpecimen = idSpecimen;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getSpecimenDataResponse", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
+    public partial class getSpecimenDataResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SeriesClientConsoleApp.ServiceReference1.specimen @return;
+        
+        public getSpecimenDataResponse() {
+        }
+        
+        public getSpecimenDataResponse(SeriesClientConsoleApp.ServiceReference1.specimen @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getComputationImages", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
+    public partial class getComputationImages {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string idComputation;
+        
+        public getComputationImages() {
+        }
+        
+        public getComputationImages(string idComputation) {
+            this.idComputation = idComputation;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getComputationImagesResponse", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
+    public partial class getComputationImagesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SeriesClientConsoleApp.ServiceReference1.image[] @return;
+        
+        public getComputationImagesResponse() {
+        }
+        
+        public getComputationImagesResponse(SeriesClientConsoleApp.ServiceReference1.image[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getProjectIDs", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
+    public partial class getProjectIDs {
+        
+        public getProjectIDs() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getProjectIDsResponse", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
+    public partial class getProjectIDsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string[] @return;
+        
+        public getProjectIDsResponse() {
+        }
+        
+        public getProjectIDsResponse(string[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getVersion", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
+    public partial class getVersion {
+        
+        public getVersion() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getVersionResponse", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
+    public partial class getVersionResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string[] @return;
+        
+        public getVersionResponse() {
+        }
+        
+        public getVersionResponse(string[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="operationCompleted", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
+    public partial class operationCompleted {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string operationID;
+        
+        public operationCompleted() {
+        }
+        
+        public operationCompleted(string operationID) {
+            this.operationID = operationID;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="operationCompletedResponse", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
+    public partial class operationCompletedResponse {
+        
+        public operationCompletedResponse() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getSpecimenImages", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
+    public partial class getSpecimenImages {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string idSpecimen;
+        
+        public getSpecimenImages() {
+        }
+        
+        public getSpecimenImages(string idSpecimen) {
+            this.idSpecimen = idSpecimen;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getSpecimenImagesResponse", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
+    public partial class getSpecimenImagesResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SeriesClientConsoleApp.ServiceReference1.image[] @return;
+        
+        public getSpecimenImagesResponse() {
+        }
+        
+        public getSpecimenImagesResponse(SeriesClientConsoleApp.ServiceReference1.image[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getClosedProjectIDs", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
+    public partial class getClosedProjectIDs {
+        
+        public getClosedProjectIDs() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getClosedProjectIDsResponse", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
+    public partial class getClosedProjectIDsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string[] @return;
+        
+        public getClosedProjectIDsResponse() {
+        }
+        
+        public getClosedProjectIDsResponse(string[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getComputationData", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
+    public partial class getComputationData {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string idComputation;
+        
+        public getComputationData() {
+        }
+        
+        public getComputationData(string idComputation) {
+            this.idComputation = idComputation;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getComputationDataResponse", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
+    public partial class getComputationDataResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SeriesClientConsoleApp.ServiceReference1.computation @return;
+        
+        public getComputationDataResponse() {
+        }
+        
+        public getComputationDataResponse(SeriesClientConsoleApp.ServiceReference1.computation @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getOpenProjectIDs", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
+    public partial class getOpenProjectIDs {
+        
+        public getOpenProjectIDs() {
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getOpenProjectIDsResponse", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
+    public partial class getOpenProjectIDsResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string[] @return;
+        
+        public getOpenProjectIDsResponse() {
+        }
+        
+        public getOpenProjectIDsResponse(string[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getComputationVideos", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
+    public partial class getComputationVideos {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string idComputation;
+        
+        public getComputationVideos() {
+        }
+        
+        public getComputationVideos(string idComputation) {
             this.idComputation = idComputation;
         }
     }
@@ -4943,83 +3275,35 @@ namespace SeriesClientConsoleApp.ServiceReference1 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="operationCompleted", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class operationCompletedRequest {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getExperimentLoadingData", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
+    public partial class getExperimentLoadingData {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string operationID;
+        public string idExperiment;
         
-        public operationCompletedRequest() {
+        public getExperimentLoadingData() {
         }
         
-        public operationCompletedRequest(string operationID) {
-            this.operationID = operationID;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="operationCompletedResponse", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class operationCompletedResponse1 {
-        
-        public operationCompletedResponse1() {
+        public getExperimentLoadingData(string idExperiment) {
+            this.idExperiment = idExperiment;
         }
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getClosedProjectIDs", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class getClosedProjectIDsRequest {
-        
-        public getClosedProjectIDsRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getClosedProjectIDsResponse", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class getClosedProjectIDsResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getExperimentLoadingDataResponse", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
+    public partial class getExperimentLoadingDataResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string[] @return;
+        public SeriesClientConsoleApp.ServiceReference1.detLoadChar[] @return;
         
-        public getClosedProjectIDsResponse() {
+        public getExperimentLoadingDataResponse() {
         }
         
-        public getClosedProjectIDsResponse(string[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getOpenProjectIDs", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class getOpenProjectIDsRequest {
-        
-        public getOpenProjectIDsRequest() {
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getOpenProjectIDsResponse", WrapperNamespace="http://ilm.eng.ox.ac.uk/", IsWrapped=true)]
-    public partial class getOpenProjectIDsResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://ilm.eng.ox.ac.uk/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string[] @return;
-        
-        public getOpenProjectIDsResponse() {
-        }
-        
-        public getOpenProjectIDsResponse(string[] @return) {
+        public getExperimentLoadingDataResponse(SeriesClientConsoleApp.ServiceReference1.detLoadChar[] @return) {
             this.@return = @return;
         }
     }
@@ -5052,282 +3336,271 @@ namespace SeriesClientConsoleApp.ServiceReference1 {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SeriesClientConsoleApp.ServiceReference1.getVersionResponse SeriesClientConsoleApp.ServiceReference1.DOS.getVersion(SeriesClientConsoleApp.ServiceReference1.getVersionRequest request) {
-            return base.Channel.getVersion(request);
-        }
-        
-        public string[] getVersion() {
-            SeriesClientConsoleApp.ServiceReference1.getVersionRequest inValue = new SeriesClientConsoleApp.ServiceReference1.getVersionRequest();
-            SeriesClientConsoleApp.ServiceReference1.getVersionResponse retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).getVersion(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SeriesClientConsoleApp.ServiceReference1.getCacheInfoResponse1 SeriesClientConsoleApp.ServiceReference1.DOS.getCacheInfo(SeriesClientConsoleApp.ServiceReference1.getCacheInfoRequest request) {
-            return base.Channel.getCacheInfo(request);
-        }
-        
-        public SeriesClientConsoleApp.ServiceReference1.cacheInfo getCacheInfo() {
-            SeriesClientConsoleApp.ServiceReference1.getCacheInfoRequest inValue = new SeriesClientConsoleApp.ServiceReference1.getCacheInfoRequest();
-            SeriesClientConsoleApp.ServiceReference1.getCacheInfoResponse1 retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).getCacheInfo(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SeriesClientConsoleApp.ServiceReference1.testMeResponse SeriesClientConsoleApp.ServiceReference1.DOS.testMe(SeriesClientConsoleApp.ServiceReference1.testMeRequest request) {
-            return base.Channel.testMe(request);
-        }
-        
-        public object[] testMe() {
-            SeriesClientConsoleApp.ServiceReference1.testMeRequest inValue = new SeriesClientConsoleApp.ServiceReference1.testMeRequest();
-            SeriesClientConsoleApp.ServiceReference1.testMeResponse retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).testMe(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SeriesClientConsoleApp.ServiceReference1.testMyKRResponse SeriesClientConsoleApp.ServiceReference1.DOS.testMyKR(SeriesClientConsoleApp.ServiceReference1.testMyKRRequest request) {
-            return base.Channel.testMyKR(request);
-        }
-        
-        public object[] testMyKR() {
-            SeriesClientConsoleApp.ServiceReference1.testMyKRRequest inValue = new SeriesClientConsoleApp.ServiceReference1.testMyKRRequest();
-            SeriesClientConsoleApp.ServiceReference1.testMyKRResponse retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).testMyKR(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SeriesClientConsoleApp.ServiceReference1.getProjectIDsResponse SeriesClientConsoleApp.ServiceReference1.DOS.getProjectIDs(SeriesClientConsoleApp.ServiceReference1.getProjectIDsRequest request) {
-            return base.Channel.getProjectIDs(request);
-        }
-        
-        public object[] getProjectIDs() {
-            SeriesClientConsoleApp.ServiceReference1.getProjectIDsRequest inValue = new SeriesClientConsoleApp.ServiceReference1.getProjectIDsRequest();
-            SeriesClientConsoleApp.ServiceReference1.getProjectIDsResponse retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).getProjectIDs(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SeriesClientConsoleApp.ServiceReference1.getProjectDataResponse1 SeriesClientConsoleApp.ServiceReference1.DOS.getProjectData(SeriesClientConsoleApp.ServiceReference1.getProjectDataRequest request) {
-            return base.Channel.getProjectData(request);
-        }
-        
-        public SeriesClientConsoleApp.ServiceReference1.project getProjectData(string idProject) {
-            SeriesClientConsoleApp.ServiceReference1.getProjectDataRequest inValue = new SeriesClientConsoleApp.ServiceReference1.getProjectDataRequest();
-            inValue.idProject = idProject;
-            SeriesClientConsoleApp.ServiceReference1.getProjectDataResponse1 retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).getProjectData(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SeriesClientConsoleApp.ServiceReference1.getSpecimenDataResponse1 SeriesClientConsoleApp.ServiceReference1.DOS.getSpecimenData(SeriesClientConsoleApp.ServiceReference1.getSpecimenDataRequest request) {
-            return base.Channel.getSpecimenData(request);
-        }
-        
-        public SeriesClientConsoleApp.ServiceReference1.specimen getSpecimenData(string idSpecimen) {
-            SeriesClientConsoleApp.ServiceReference1.getSpecimenDataRequest inValue = new SeriesClientConsoleApp.ServiceReference1.getSpecimenDataRequest();
-            inValue.idSpecimen = idSpecimen;
-            SeriesClientConsoleApp.ServiceReference1.getSpecimenDataResponse1 retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).getSpecimenData(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SeriesClientConsoleApp.ServiceReference1.getStructuralComponentDataResponse SeriesClientConsoleApp.ServiceReference1.DOS.getStructuralComponentData(SeriesClientConsoleApp.ServiceReference1.getStructuralComponentDataRequest request) {
-            return base.Channel.getStructuralComponentData(request);
-        }
-        
-        public SeriesClientConsoleApp.ServiceReference1.structuralComponent[] getStructuralComponentData(string idSpecimen) {
-            SeriesClientConsoleApp.ServiceReference1.getStructuralComponentDataRequest inValue = new SeriesClientConsoleApp.ServiceReference1.getStructuralComponentDataRequest();
-            inValue.idSpecimen = idSpecimen;
-            SeriesClientConsoleApp.ServiceReference1.getStructuralComponentDataResponse retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).getStructuralComponentData(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SeriesClientConsoleApp.ServiceReference1.getExperimentDataResponse1 SeriesClientConsoleApp.ServiceReference1.DOS.getExperimentData(SeriesClientConsoleApp.ServiceReference1.getExperimentDataRequest request) {
-            return base.Channel.getExperimentData(request);
-        }
-        
-        public SeriesClientConsoleApp.ServiceReference1.experiment getExperimentData(string idExperiment) {
-            SeriesClientConsoleApp.ServiceReference1.getExperimentDataRequest inValue = new SeriesClientConsoleApp.ServiceReference1.getExperimentDataRequest();
-            inValue.idExperiment = idExperiment;
-            SeriesClientConsoleApp.ServiceReference1.getExperimentDataResponse1 retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).getExperimentData(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SeriesClientConsoleApp.ServiceReference1.getComputationDataResponse1 SeriesClientConsoleApp.ServiceReference1.DOS.getComputationData(SeriesClientConsoleApp.ServiceReference1.getComputationDataRequest request) {
-            return base.Channel.getComputationData(request);
-        }
-        
-        public SeriesClientConsoleApp.ServiceReference1.computation getComputationData(string idComputation) {
-            SeriesClientConsoleApp.ServiceReference1.getComputationDataRequest inValue = new SeriesClientConsoleApp.ServiceReference1.getComputationDataRequest();
-            inValue.idComputation = idComputation;
-            SeriesClientConsoleApp.ServiceReference1.getComputationDataResponse1 retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).getComputationData(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SeriesClientConsoleApp.ServiceReference1.getExperimentLoadingDataResponse SeriesClientConsoleApp.ServiceReference1.DOS.getExperimentLoadingData(SeriesClientConsoleApp.ServiceReference1.getExperimentLoadingDataRequest request) {
-            return base.Channel.getExperimentLoadingData(request);
-        }
-        
-        public SeriesClientConsoleApp.ServiceReference1.detLoadChar[] getExperimentLoadingData(string idExperiment) {
-            SeriesClientConsoleApp.ServiceReference1.getExperimentLoadingDataRequest inValue = new SeriesClientConsoleApp.ServiceReference1.getExperimentLoadingDataRequest();
-            inValue.idExperiment = idExperiment;
-            SeriesClientConsoleApp.ServiceReference1.getExperimentLoadingDataResponse retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).getExperimentLoadingData(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SeriesClientConsoleApp.ServiceReference1.getComputationLoadingDataResponse SeriesClientConsoleApp.ServiceReference1.DOS.getComputationLoadingData(SeriesClientConsoleApp.ServiceReference1.getComputationLoadingDataRequest request) {
-            return base.Channel.getComputationLoadingData(request);
-        }
-        
-        public SeriesClientConsoleApp.ServiceReference1.detLoadChar[] getComputationLoadingData(string idComputation) {
-            SeriesClientConsoleApp.ServiceReference1.getComputationLoadingDataRequest inValue = new SeriesClientConsoleApp.ServiceReference1.getComputationLoadingDataRequest();
-            inValue.idComputation = idComputation;
-            SeriesClientConsoleApp.ServiceReference1.getComputationLoadingDataResponse retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).getComputationLoadingData(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SeriesClientConsoleApp.ServiceReference1.getProjectDocumentsResponse SeriesClientConsoleApp.ServiceReference1.DOS.getProjectDocuments(SeriesClientConsoleApp.ServiceReference1.getProjectDocumentsRequest request) {
-            return base.Channel.getProjectDocuments(request);
-        }
-        
-        public SeriesClientConsoleApp.ServiceReference1.document[] getProjectDocuments(string idProject) {
-            SeriesClientConsoleApp.ServiceReference1.getProjectDocumentsRequest inValue = new SeriesClientConsoleApp.ServiceReference1.getProjectDocumentsRequest();
-            inValue.idProject = idProject;
-            SeriesClientConsoleApp.ServiceReference1.getProjectDocumentsResponse retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).getProjectDocuments(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SeriesClientConsoleApp.ServiceReference1.getSpecimenDocumentsResponse SeriesClientConsoleApp.ServiceReference1.DOS.getSpecimenDocuments(SeriesClientConsoleApp.ServiceReference1.getSpecimenDocumentsRequest request) {
-            return base.Channel.getSpecimenDocuments(request);
-        }
-        
-        public SeriesClientConsoleApp.ServiceReference1.document[] getSpecimenDocuments(string idSpecimen) {
-            SeriesClientConsoleApp.ServiceReference1.getSpecimenDocumentsRequest inValue = new SeriesClientConsoleApp.ServiceReference1.getSpecimenDocumentsRequest();
-            inValue.idSpecimen = idSpecimen;
-            SeriesClientConsoleApp.ServiceReference1.getSpecimenDocumentsResponse retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).getSpecimenDocuments(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SeriesClientConsoleApp.ServiceReference1.getSpecimenImagesResponse SeriesClientConsoleApp.ServiceReference1.DOS.getSpecimenImages(SeriesClientConsoleApp.ServiceReference1.getSpecimenImagesRequest request) {
-            return base.Channel.getSpecimenImages(request);
-        }
-        
-        public SeriesClientConsoleApp.ServiceReference1.image[] getSpecimenImages(string idSpecimen) {
-            SeriesClientConsoleApp.ServiceReference1.getSpecimenImagesRequest inValue = new SeriesClientConsoleApp.ServiceReference1.getSpecimenImagesRequest();
-            inValue.idSpecimen = idSpecimen;
-            SeriesClientConsoleApp.ServiceReference1.getSpecimenImagesResponse retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).getSpecimenImages(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SeriesClientConsoleApp.ServiceReference1.getExperimentDocumentsResponse SeriesClientConsoleApp.ServiceReference1.DOS.getExperimentDocuments(SeriesClientConsoleApp.ServiceReference1.getExperimentDocumentsRequest request) {
+        SeriesClientConsoleApp.ServiceReference1.getExperimentDocumentsResponse SeriesClientConsoleApp.ServiceReference1.DOS.getExperimentDocuments(SeriesClientConsoleApp.ServiceReference1.getExperimentDocuments request) {
             return base.Channel.getExperimentDocuments(request);
         }
         
         public SeriesClientConsoleApp.ServiceReference1.document[] getExperimentDocuments(string idExperiment) {
-            SeriesClientConsoleApp.ServiceReference1.getExperimentDocumentsRequest inValue = new SeriesClientConsoleApp.ServiceReference1.getExperimentDocumentsRequest();
+            SeriesClientConsoleApp.ServiceReference1.getExperimentDocuments inValue = new SeriesClientConsoleApp.ServiceReference1.getExperimentDocuments();
             inValue.idExperiment = idExperiment;
             SeriesClientConsoleApp.ServiceReference1.getExperimentDocumentsResponse retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).getExperimentDocuments(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SeriesClientConsoleApp.ServiceReference1.getComputationDocumentsResponse SeriesClientConsoleApp.ServiceReference1.DOS.getComputationDocuments(SeriesClientConsoleApp.ServiceReference1.getComputationDocumentsRequest request) {
+        SeriesClientConsoleApp.ServiceReference1.getComputationDocumentsResponse SeriesClientConsoleApp.ServiceReference1.DOS.getComputationDocuments(SeriesClientConsoleApp.ServiceReference1.getComputationDocuments request) {
             return base.Channel.getComputationDocuments(request);
         }
         
         public SeriesClientConsoleApp.ServiceReference1.document[] getComputationDocuments(string idComputation) {
-            SeriesClientConsoleApp.ServiceReference1.getComputationDocumentsRequest inValue = new SeriesClientConsoleApp.ServiceReference1.getComputationDocumentsRequest();
+            SeriesClientConsoleApp.ServiceReference1.getComputationDocuments inValue = new SeriesClientConsoleApp.ServiceReference1.getComputationDocuments();
             inValue.idComputation = idComputation;
             SeriesClientConsoleApp.ServiceReference1.getComputationDocumentsResponse retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).getComputationDocuments(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SeriesClientConsoleApp.ServiceReference1.getExperimentImagesResponse SeriesClientConsoleApp.ServiceReference1.DOS.getExperimentImages(SeriesClientConsoleApp.ServiceReference1.getExperimentImagesRequest request) {
+        SeriesClientConsoleApp.ServiceReference1.getExperimentDataResponse SeriesClientConsoleApp.ServiceReference1.DOS.getExperimentData(SeriesClientConsoleApp.ServiceReference1.getExperimentData request) {
+            return base.Channel.getExperimentData(request);
+        }
+        
+        public SeriesClientConsoleApp.ServiceReference1.experiment getExperimentData(string idExperiment) {
+            SeriesClientConsoleApp.ServiceReference1.getExperimentData inValue = new SeriesClientConsoleApp.ServiceReference1.getExperimentData();
+            inValue.idExperiment = idExperiment;
+            SeriesClientConsoleApp.ServiceReference1.getExperimentDataResponse retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).getExperimentData(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SeriesClientConsoleApp.ServiceReference1.getProjectDocumentsResponse SeriesClientConsoleApp.ServiceReference1.DOS.getProjectDocuments(SeriesClientConsoleApp.ServiceReference1.getProjectDocuments request) {
+            return base.Channel.getProjectDocuments(request);
+        }
+        
+        public SeriesClientConsoleApp.ServiceReference1.document[] getProjectDocuments(string idProject) {
+            SeriesClientConsoleApp.ServiceReference1.getProjectDocuments inValue = new SeriesClientConsoleApp.ServiceReference1.getProjectDocuments();
+            inValue.idProject = idProject;
+            SeriesClientConsoleApp.ServiceReference1.getProjectDocumentsResponse retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).getProjectDocuments(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SeriesClientConsoleApp.ServiceReference1.getExperimentImagesResponse SeriesClientConsoleApp.ServiceReference1.DOS.getExperimentImages(SeriesClientConsoleApp.ServiceReference1.getExperimentImages request) {
             return base.Channel.getExperimentImages(request);
         }
         
         public SeriesClientConsoleApp.ServiceReference1.image[] getExperimentImages(string idExperiment) {
-            SeriesClientConsoleApp.ServiceReference1.getExperimentImagesRequest inValue = new SeriesClientConsoleApp.ServiceReference1.getExperimentImagesRequest();
+            SeriesClientConsoleApp.ServiceReference1.getExperimentImages inValue = new SeriesClientConsoleApp.ServiceReference1.getExperimentImages();
             inValue.idExperiment = idExperiment;
             SeriesClientConsoleApp.ServiceReference1.getExperimentImagesResponse retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).getExperimentImages(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SeriesClientConsoleApp.ServiceReference1.getComputationImagesResponse SeriesClientConsoleApp.ServiceReference1.DOS.getComputationImages(SeriesClientConsoleApp.ServiceReference1.getComputationImagesRequest request) {
-            return base.Channel.getComputationImages(request);
+        SeriesClientConsoleApp.ServiceReference1.testMeResponse SeriesClientConsoleApp.ServiceReference1.DOS.testMe(SeriesClientConsoleApp.ServiceReference1.testMe request) {
+            return base.Channel.testMe(request);
         }
         
-        public SeriesClientConsoleApp.ServiceReference1.image[] getComputationImages(string idComputation) {
-            SeriesClientConsoleApp.ServiceReference1.getComputationImagesRequest inValue = new SeriesClientConsoleApp.ServiceReference1.getComputationImagesRequest();
-            inValue.idComputation = idComputation;
-            SeriesClientConsoleApp.ServiceReference1.getComputationImagesResponse retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).getComputationImages(inValue);
+        public string[] testMe() {
+            SeriesClientConsoleApp.ServiceReference1.testMe inValue = new SeriesClientConsoleApp.ServiceReference1.testMe();
+            SeriesClientConsoleApp.ServiceReference1.testMeResponse retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).testMe(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SeriesClientConsoleApp.ServiceReference1.getExperimentVideosResponse SeriesClientConsoleApp.ServiceReference1.DOS.getExperimentVideos(SeriesClientConsoleApp.ServiceReference1.getExperimentVideosRequest request) {
+        SeriesClientConsoleApp.ServiceReference1.getExperimentVideosResponse SeriesClientConsoleApp.ServiceReference1.DOS.getExperimentVideos(SeriesClientConsoleApp.ServiceReference1.getExperimentVideos request) {
             return base.Channel.getExperimentVideos(request);
         }
         
         public SeriesClientConsoleApp.ServiceReference1.video[] getExperimentVideos(string idExperiment) {
-            SeriesClientConsoleApp.ServiceReference1.getExperimentVideosRequest inValue = new SeriesClientConsoleApp.ServiceReference1.getExperimentVideosRequest();
+            SeriesClientConsoleApp.ServiceReference1.getExperimentVideos inValue = new SeriesClientConsoleApp.ServiceReference1.getExperimentVideos();
             inValue.idExperiment = idExperiment;
             SeriesClientConsoleApp.ServiceReference1.getExperimentVideosResponse retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).getExperimentVideos(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SeriesClientConsoleApp.ServiceReference1.getComputationVideosResponse SeriesClientConsoleApp.ServiceReference1.DOS.getComputationVideos(SeriesClientConsoleApp.ServiceReference1.getComputationVideosRequest request) {
+        SeriesClientConsoleApp.ServiceReference1.getSpecimenDocumentsResponse SeriesClientConsoleApp.ServiceReference1.DOS.getSpecimenDocuments(SeriesClientConsoleApp.ServiceReference1.getSpecimenDocuments request) {
+            return base.Channel.getSpecimenDocuments(request);
+        }
+        
+        public SeriesClientConsoleApp.ServiceReference1.document[] getSpecimenDocuments(string idSpecimen) {
+            SeriesClientConsoleApp.ServiceReference1.getSpecimenDocuments inValue = new SeriesClientConsoleApp.ServiceReference1.getSpecimenDocuments();
+            inValue.idSpecimen = idSpecimen;
+            SeriesClientConsoleApp.ServiceReference1.getSpecimenDocumentsResponse retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).getSpecimenDocuments(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SeriesClientConsoleApp.ServiceReference1.getComputationLoadingDataResponse SeriesClientConsoleApp.ServiceReference1.DOS.getComputationLoadingData(SeriesClientConsoleApp.ServiceReference1.getComputationLoadingData request) {
+            return base.Channel.getComputationLoadingData(request);
+        }
+        
+        public SeriesClientConsoleApp.ServiceReference1.detLoadChar[] getComputationLoadingData(string idComputation) {
+            SeriesClientConsoleApp.ServiceReference1.getComputationLoadingData inValue = new SeriesClientConsoleApp.ServiceReference1.getComputationLoadingData();
+            inValue.idComputation = idComputation;
+            SeriesClientConsoleApp.ServiceReference1.getComputationLoadingDataResponse retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).getComputationLoadingData(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SeriesClientConsoleApp.ServiceReference1.getStructuralComponentDataResponse SeriesClientConsoleApp.ServiceReference1.DOS.getStructuralComponentData(SeriesClientConsoleApp.ServiceReference1.getStructuralComponentData request) {
+            return base.Channel.getStructuralComponentData(request);
+        }
+        
+        public SeriesClientConsoleApp.ServiceReference1.structuralComponent[] getStructuralComponentData(string idSpecimen) {
+            SeriesClientConsoleApp.ServiceReference1.getStructuralComponentData inValue = new SeriesClientConsoleApp.ServiceReference1.getStructuralComponentData();
+            inValue.idSpecimen = idSpecimen;
+            SeriesClientConsoleApp.ServiceReference1.getStructuralComponentDataResponse retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).getStructuralComponentData(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SeriesClientConsoleApp.ServiceReference1.testMyKRResponse SeriesClientConsoleApp.ServiceReference1.DOS.testMyKR(SeriesClientConsoleApp.ServiceReference1.testMyKR request) {
+            return base.Channel.testMyKR(request);
+        }
+        
+        public string[] testMyKR() {
+            SeriesClientConsoleApp.ServiceReference1.testMyKR inValue = new SeriesClientConsoleApp.ServiceReference1.testMyKR();
+            SeriesClientConsoleApp.ServiceReference1.testMyKRResponse retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).testMyKR(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SeriesClientConsoleApp.ServiceReference1.getProjectDataResponse SeriesClientConsoleApp.ServiceReference1.DOS.getProjectData(SeriesClientConsoleApp.ServiceReference1.getProjectData request) {
+            return base.Channel.getProjectData(request);
+        }
+        
+        public SeriesClientConsoleApp.ServiceReference1.project getProjectData(string idProject) {
+            SeriesClientConsoleApp.ServiceReference1.getProjectData inValue = new SeriesClientConsoleApp.ServiceReference1.getProjectData();
+            inValue.idProject = idProject;
+            SeriesClientConsoleApp.ServiceReference1.getProjectDataResponse retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).getProjectData(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SeriesClientConsoleApp.ServiceReference1.getSpecimenDataResponse SeriesClientConsoleApp.ServiceReference1.DOS.getSpecimenData(SeriesClientConsoleApp.ServiceReference1.getSpecimenData request) {
+            return base.Channel.getSpecimenData(request);
+        }
+        
+        public SeriesClientConsoleApp.ServiceReference1.specimen getSpecimenData(string idSpecimen) {
+            SeriesClientConsoleApp.ServiceReference1.getSpecimenData inValue = new SeriesClientConsoleApp.ServiceReference1.getSpecimenData();
+            inValue.idSpecimen = idSpecimen;
+            SeriesClientConsoleApp.ServiceReference1.getSpecimenDataResponse retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).getSpecimenData(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SeriesClientConsoleApp.ServiceReference1.getComputationImagesResponse SeriesClientConsoleApp.ServiceReference1.DOS.getComputationImages(SeriesClientConsoleApp.ServiceReference1.getComputationImages request) {
+            return base.Channel.getComputationImages(request);
+        }
+        
+        public SeriesClientConsoleApp.ServiceReference1.image[] getComputationImages(string idComputation) {
+            SeriesClientConsoleApp.ServiceReference1.getComputationImages inValue = new SeriesClientConsoleApp.ServiceReference1.getComputationImages();
+            inValue.idComputation = idComputation;
+            SeriesClientConsoleApp.ServiceReference1.getComputationImagesResponse retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).getComputationImages(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SeriesClientConsoleApp.ServiceReference1.getProjectIDsResponse SeriesClientConsoleApp.ServiceReference1.DOS.getProjectIDs(SeriesClientConsoleApp.ServiceReference1.getProjectIDs request) {
+            return base.Channel.getProjectIDs(request);
+        }
+        
+        public string[] getProjectIDs() {
+            SeriesClientConsoleApp.ServiceReference1.getProjectIDs inValue = new SeriesClientConsoleApp.ServiceReference1.getProjectIDs();
+            SeriesClientConsoleApp.ServiceReference1.getProjectIDsResponse retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).getProjectIDs(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SeriesClientConsoleApp.ServiceReference1.getVersionResponse SeriesClientConsoleApp.ServiceReference1.DOS.getVersion(SeriesClientConsoleApp.ServiceReference1.getVersion request) {
+            return base.Channel.getVersion(request);
+        }
+        
+        public string[] getVersion() {
+            SeriesClientConsoleApp.ServiceReference1.getVersion inValue = new SeriesClientConsoleApp.ServiceReference1.getVersion();
+            SeriesClientConsoleApp.ServiceReference1.getVersionResponse retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).getVersion(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SeriesClientConsoleApp.ServiceReference1.operationCompletedResponse SeriesClientConsoleApp.ServiceReference1.DOS.operationCompleted(SeriesClientConsoleApp.ServiceReference1.operationCompleted request) {
+            return base.Channel.operationCompleted(request);
+        }
+        
+        public void operationCompleted(string operationID) {
+            SeriesClientConsoleApp.ServiceReference1.operationCompleted inValue = new SeriesClientConsoleApp.ServiceReference1.operationCompleted();
+            inValue.operationID = operationID;
+            SeriesClientConsoleApp.ServiceReference1.operationCompletedResponse retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).operationCompleted(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SeriesClientConsoleApp.ServiceReference1.getSpecimenImagesResponse SeriesClientConsoleApp.ServiceReference1.DOS.getSpecimenImages(SeriesClientConsoleApp.ServiceReference1.getSpecimenImages request) {
+            return base.Channel.getSpecimenImages(request);
+        }
+        
+        public SeriesClientConsoleApp.ServiceReference1.image[] getSpecimenImages(string idSpecimen) {
+            SeriesClientConsoleApp.ServiceReference1.getSpecimenImages inValue = new SeriesClientConsoleApp.ServiceReference1.getSpecimenImages();
+            inValue.idSpecimen = idSpecimen;
+            SeriesClientConsoleApp.ServiceReference1.getSpecimenImagesResponse retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).getSpecimenImages(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SeriesClientConsoleApp.ServiceReference1.getClosedProjectIDsResponse SeriesClientConsoleApp.ServiceReference1.DOS.getClosedProjectIDs(SeriesClientConsoleApp.ServiceReference1.getClosedProjectIDs request) {
+            return base.Channel.getClosedProjectIDs(request);
+        }
+        
+        public string[] getClosedProjectIDs() {
+            SeriesClientConsoleApp.ServiceReference1.getClosedProjectIDs inValue = new SeriesClientConsoleApp.ServiceReference1.getClosedProjectIDs();
+            SeriesClientConsoleApp.ServiceReference1.getClosedProjectIDsResponse retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).getClosedProjectIDs(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SeriesClientConsoleApp.ServiceReference1.getComputationDataResponse SeriesClientConsoleApp.ServiceReference1.DOS.getComputationData(SeriesClientConsoleApp.ServiceReference1.getComputationData request) {
+            return base.Channel.getComputationData(request);
+        }
+        
+        public SeriesClientConsoleApp.ServiceReference1.computation getComputationData(string idComputation) {
+            SeriesClientConsoleApp.ServiceReference1.getComputationData inValue = new SeriesClientConsoleApp.ServiceReference1.getComputationData();
+            inValue.idComputation = idComputation;
+            SeriesClientConsoleApp.ServiceReference1.getComputationDataResponse retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).getComputationData(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SeriesClientConsoleApp.ServiceReference1.getOpenProjectIDsResponse SeriesClientConsoleApp.ServiceReference1.DOS.getOpenProjectIDs(SeriesClientConsoleApp.ServiceReference1.getOpenProjectIDs request) {
+            return base.Channel.getOpenProjectIDs(request);
+        }
+        
+        public string[] getOpenProjectIDs() {
+            SeriesClientConsoleApp.ServiceReference1.getOpenProjectIDs inValue = new SeriesClientConsoleApp.ServiceReference1.getOpenProjectIDs();
+            SeriesClientConsoleApp.ServiceReference1.getOpenProjectIDsResponse retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).getOpenProjectIDs(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SeriesClientConsoleApp.ServiceReference1.getComputationVideosResponse SeriesClientConsoleApp.ServiceReference1.DOS.getComputationVideos(SeriesClientConsoleApp.ServiceReference1.getComputationVideos request) {
             return base.Channel.getComputationVideos(request);
         }
         
         public SeriesClientConsoleApp.ServiceReference1.video[] getComputationVideos(string idComputation) {
-            SeriesClientConsoleApp.ServiceReference1.getComputationVideosRequest inValue = new SeriesClientConsoleApp.ServiceReference1.getComputationVideosRequest();
+            SeriesClientConsoleApp.ServiceReference1.getComputationVideos inValue = new SeriesClientConsoleApp.ServiceReference1.getComputationVideos();
             inValue.idComputation = idComputation;
             SeriesClientConsoleApp.ServiceReference1.getComputationVideosResponse retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).getComputationVideos(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SeriesClientConsoleApp.ServiceReference1.operationCompletedResponse1 SeriesClientConsoleApp.ServiceReference1.DOS.operationCompleted(SeriesClientConsoleApp.ServiceReference1.operationCompletedRequest request) {
-            return base.Channel.operationCompleted(request);
+        SeriesClientConsoleApp.ServiceReference1.getExperimentLoadingDataResponse SeriesClientConsoleApp.ServiceReference1.DOS.getExperimentLoadingData(SeriesClientConsoleApp.ServiceReference1.getExperimentLoadingData request) {
+            return base.Channel.getExperimentLoadingData(request);
         }
         
-        public void operationCompleted(string operationID) {
-            SeriesClientConsoleApp.ServiceReference1.operationCompletedRequest inValue = new SeriesClientConsoleApp.ServiceReference1.operationCompletedRequest();
-            inValue.operationID = operationID;
-            SeriesClientConsoleApp.ServiceReference1.operationCompletedResponse1 retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).operationCompleted(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SeriesClientConsoleApp.ServiceReference1.getClosedProjectIDsResponse SeriesClientConsoleApp.ServiceReference1.DOS.getClosedProjectIDs(SeriesClientConsoleApp.ServiceReference1.getClosedProjectIDsRequest request) {
-            return base.Channel.getClosedProjectIDs(request);
-        }
-        
-        public string[] getClosedProjectIDs() {
-            SeriesClientConsoleApp.ServiceReference1.getClosedProjectIDsRequest inValue = new SeriesClientConsoleApp.ServiceReference1.getClosedProjectIDsRequest();
-            SeriesClientConsoleApp.ServiceReference1.getClosedProjectIDsResponse retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).getClosedProjectIDs(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SeriesClientConsoleApp.ServiceReference1.getOpenProjectIDsResponse SeriesClientConsoleApp.ServiceReference1.DOS.getOpenProjectIDs(SeriesClientConsoleApp.ServiceReference1.getOpenProjectIDsRequest request) {
-            return base.Channel.getOpenProjectIDs(request);
-        }
-        
-        public string[] getOpenProjectIDs() {
-            SeriesClientConsoleApp.ServiceReference1.getOpenProjectIDsRequest inValue = new SeriesClientConsoleApp.ServiceReference1.getOpenProjectIDsRequest();
-            SeriesClientConsoleApp.ServiceReference1.getOpenProjectIDsResponse retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).getOpenProjectIDs(inValue);
+        public SeriesClientConsoleApp.ServiceReference1.detLoadChar[] getExperimentLoadingData(string idExperiment) {
+            SeriesClientConsoleApp.ServiceReference1.getExperimentLoadingData inValue = new SeriesClientConsoleApp.ServiceReference1.getExperimentLoadingData();
+            inValue.idExperiment = idExperiment;
+            SeriesClientConsoleApp.ServiceReference1.getExperimentLoadingDataResponse retVal = ((SeriesClientConsoleApp.ServiceReference1.DOS)(this)).getExperimentLoadingData(inValue);
             return retVal.@return;
         }
     }
