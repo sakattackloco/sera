@@ -43,3 +43,22 @@ C:\Documents and Settings\xpuser\My Documents\Dropbox\Douleia\site\internalrep\L
 C:\Documents and Settings\xpuser\My Documents\Dropbox\Douleia\site\internalrep\LastOneFromScratch\obj\Debug\ResolveAssemblyReference.cache
 C:\Documents and Settings\xpuser\My Documents\Dropbox\Douleia\site\internalrep\LastOneFromScratch\obj\Debug\LastOneFromScratch.dll
 C:\Documents and Settings\xpuser\My Documents\Dropbox\Douleia\site\internalrep\LastOneFromScratch\obj\Debug\LastOneFromScratch.pdb
+C:\Users\HCI\Downloads\SERIES\series code\D.A.P.Website\bin\LastOneFromScratch.dll.config
+C:\Users\HCI\Downloads\SERIES\series code\D.A.P.Website\bin\LastOneFromScratch.dll
+C:\Users\HCI\Downloads\SERIES\series code\D.A.P.Website\bin\LastOneFromScratch.pdb
+C:\Users\HCI\Downloads\SERIES\series code\D.A.P.Website\obj\Debug\SERIESnew_db.csprojResolveAssemblyReference.cache
+C:\Users\HCI\Downloads\SERIES\series code\D.A.P.Website\obj\Debug\LastOneFromScratch.dll
+C:\Users\HCI\Downloads\SERIES\series code\D.A.P.Website\obj\Debug\LastOneFromScratch.pdb
+C:\Users\HCI\Downloads\SERIES\series code\D.A.P.Website\obj\Debug\SERIESnew_db.csproj.CoreCompileInputs.cache
+E:\series code\D.A.P.Website\bin\LastOneFromScratch.dll
+E:\series code\D.A.P.Website\bin\LastOneFromScratch.pdb
+E:\series code\D.A.P.Website\obj\Debug\SERIESnew_db.csprojResolveAssemblyReference.cache
+E:\series code\D.A.P.Website\obj\Debug\SERIESnew_db.csproj.CoreCompileInputs.cache
+E:\series code\D.A.P.Website\obj\Debug\LastOneFromScratch.dll
+E:\series code\D.A.P.Website\obj\Debug\LastOneFromScratch.pdb
+C:\Users\Sakis Ntourmas\Desktop\SERA project\p2\series code\D.A.P.Website\bin\LastOneFromScratch.dll
+C:\Users\Sakis Ntourmas\Desktop\SERA project\p2\series code\D.A.P.Website\bin\LastOneFromScratch.pdb
+C:\Users\Sakis Ntourmas\Desktop\SERA project\p2\series code\D.A.P.Website\obj\Debug\SERIESnew_db.csprojResolveAssemblyReference.cache
+C:\Users\Sakis Ntourmas\Desktop\SERA project\p2\series code\D.A.P.Website\obj\Debug\SERIESnew_db.csproj.CoreCompileInputs.cache
+C:\Users\Sakis Ntourmas\Desktop\SERA project\p2\series code\D.A.P.Website\obj\Debug\LastOneFromScratch.dll
+C:\Users\Sakis Ntourmas\Desktop\SERA project\p2\series code\D.A.P.Website\obj\Debug\LastOneFromScratch.pdb

@@ -42,13 +42,15 @@ namespace SeriesClientConsoleApp
                 WSClient = new DOSClient("DOSPort10");
             else if (LabName.Equals("ITU"))
                 WSClient = new DOSClient("DOSPort11");
+            else if (LabName.Equals("CELESTEST"))
+                WSClient = new DOSClient("DOSPort12");
         }
 
         static void Main(string[] args)
         {
 
-            UOXFGetData CallUOXFServices = new UOXFGetData("ITU");
-            CallUOXFServices.Initialization("ITU");
+            UOXFGetData CallUOXFServices = new UOXFGetData("CELESTEST");
+            CallUOXFServices.Initialization("CELESTEST");
            
 
         }
@@ -109,6 +111,8 @@ namespace SeriesClientConsoleApp
 
             }
             */
+
+            /*
             string[] ProjectOpenLocalIDS = WSClient.getOpenProjectIDs();
             if (ProjectOpenLocalIDS != null)
             {
@@ -118,6 +122,52 @@ namespace SeriesClientConsoleApp
                     //int CurrentInt = Convert.ToInt16(ProjectLocalID);
                     project CurrentProject = WSClient.getProjectData(ProjectLocalIDString);
                     InsertProjectLevel(LabID, CurrentProject);
+                }
+            }
+            */
+
+            string[] ProjectOpenLocalIDS = WSClient.getOpenProjectIDs();
+                        
+            if (ProjectOpenLocalIDS != null)
+            {
+                System.Console.WriteLine("1");
+                System.Console.WriteLine(ProjectOpenLocalIDS.ToString());
+                //System.Console.WriteLine(WSClient.testMe());
+                //System.Console.WriteLine(WSClient.testMyKR());
+
+
+                project cp = WSClient.getProjectData("http://jrc.ec.europa.eu/celestina#project193");
+                if (cp != null)
+                {
+                    System.Console.WriteLine(cp.projectTitle);
+                    System.Console.WriteLine(cp.idProject);
+                }
+                else
+                {
+                    System.Console.WriteLine("It is null");
+              }
+
+                foreach (object x in WSClient.testMe())
+                {
+                    System.Console.WriteLine(x.ToString());
+                }
+
+                foreach (object y in WSClient.testMyKR())
+                {
+                    System.Console.WriteLine(y.ToString());
+                }
+
+                foreach (string ProjectLocalID in ProjectOpenLocalIDS)
+                {
+                    System.Console.WriteLine("2");
+                    string ProjectLocalIDString = ProjectLocalID.ToString();
+                    System.Console.WriteLine("Project Local ID String: " + ProjectLocalIDString);
+                    //int CurrentInt = Convert.ToInt16(ProjectLocalID);
+                    project CurrentProject = WSClient.getProjectData(ProjectLocalIDString);
+                    System.Console.WriteLine("Current Project: " + CurrentProject);
+                    System.Console.WriteLine("3");
+                    InsertProjectLevel(LabID, CurrentProject);
+                    System.Console.WriteLine("4");
                 }
             }
 
@@ -133,9 +183,9 @@ namespace SeriesClientConsoleApp
                 }
             }
 
-            dbOps.UpdateSearch();
+            dbOps.UpdateSearch(); //kanei ena update ton pinaka search
 
-            dbOps.insertLabLastUpdate(DateTime.UtcNow.ToString("yyyy/MM/dd HH:mm:ss"), LabID);
+            dbOps.insertLabLastUpdate(DateTime.UtcNow.ToString("yyyy/MM/dd HH:mm:ss"), LabID); //kanei ena update sto laboratory
 
             dbOps.CloseConnection();
         }
@@ -149,13 +199,13 @@ namespace SeriesClientConsoleApp
 
             if (CurrentProject != null)
             {
-
+                System.Console.WriteLine("Project ID: " + CurrentProject.idProject);
 
                 ProjectId = dbOps.InsertProject(LabID, CurrentProject);
-                
+                //////////////////////
                 dbOps.DeleteSpecimen(ProjectId);
 
-                CrLogger.CreateLogIntro("insert", DateTime.UtcNow.ToString("yyyy/MM/dd HH:mm:ss"), ProjectId, "project");
+                CrLogger.CreateLogIntro("insert", DateTime.UtcNow.ToString("yyyy/MM/dd HH:mm:ss"), ProjectId, "project");// kati san istoriko to kanei insert
                 infrastructure[] infrastrArray = CurrentProject.infrastructure;
                 if (infrastrArray != null)
                 {
@@ -167,7 +217,7 @@ namespace SeriesClientConsoleApp
                         CrLogger.CreateLogIntro("insert", DateTime.UtcNow.ToString("yyyy/MM/dd HH:mm:ss"), ProjectId, "PrHasLocation");
                     }
                 }
-
+                ////////////////
                 person[] PersonArray = CurrentProject.projectPerson;
                 if (PersonArray != null)
                 {
@@ -215,7 +265,8 @@ namespace SeriesClientConsoleApp
                     }//end of specimen array
 
                 }
-
+                ////////////
+                
             }
 
         }
@@ -374,7 +425,7 @@ namespace SeriesClientConsoleApp
             {
                 for (int ExpCount = 0; ExpCount < RunningSpecimen.experimentIDs.Length; ExpCount++)
                 {
-
+                    System.Console.WriteLine("Running specimen: " + RunningSpecimen.experimentIDs[ExpCount].ToString());
                     RunningExp = WSClient.getExperimentData(RunningSpecimen.experimentIDs[ExpCount].ToString());
                     InsertExpLevel(SpecimenID, RunningExp);
 

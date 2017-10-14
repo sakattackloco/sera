@@ -11,3 +11,17 @@ C:\Documents and Settings\xpuser\My Documents\Visual Studio 2008\Projects\Series
 C:\Documents and Settings\xpuser\My Documents\Visual Studio 2008\Projects\SeriesClientConsoleApp\SeriesClientConsoleApp\bin\Debug\SeriesClientConsoleApp.pdb
 C:\Documents and Settings\xpuser\My Documents\Visual Studio 2008\Projects\SeriesClientConsoleApp\SeriesClientConsoleApp\obj\Debug\ResolveAssemblyReference.cache
 C:\Documents and Settings\xpuser\My Documents\Visual Studio 2008\Projects\SeriesClientConsoleApp\SeriesClientConsoleApp\bin\Debug\MySql.Data.dll
+C:\Users\HCI\Downloads\SERIES\series code\Web Service For retrieving lab data\SeriesClientConsoleApp\bin\Debug\SeriesClientConsoleApp.exe.config
+C:\Users\HCI\Downloads\SERIES\series code\Web Service For retrieving lab data\SeriesClientConsoleApp\bin\Debug\SeriesClientConsoleApp.exe
+C:\Users\HCI\Downloads\SERIES\series code\Web Service For retrieving lab data\SeriesClientConsoleApp\bin\Debug\SeriesClientConsoleApp.pdb
+C:\Users\HCI\Downloads\SERIES\series code\Web Service For retrieving lab data\SeriesClientConsoleApp\obj\Debug\SeriesClientConsoleApp.csprojResolveAssemblyReference.cache
+C:\Users\HCI\Downloads\SERIES\series code\Web Service For retrieving lab data\SeriesClientConsoleApp\obj\Debug\SeriesClientConsoleApp.exe
+C:\Users\HCI\Downloads\SERIES\series code\Web Service For retrieving lab data\SeriesClientConsoleApp\obj\Debug\SeriesClientConsoleApp.pdb
+C:\Users\HCI\Downloads\SERIES\series code\Web Service For retrieving lab data\SeriesClientConsoleApp\obj\Debug\SeriesClientConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\Sakis Ntourmas\Desktop\SERA project\p2\series code\Web Service For retrieving lab data\SeriesClientConsoleApp\bin\Debug\SeriesClientConsoleApp.exe.config
+C:\Users\Sakis Ntourmas\Desktop\SERA project\p2\series code\Web Service For retrieving lab data\SeriesClientConsoleApp\bin\Debug\SeriesClientConsoleApp.exe
+C:\Users\Sakis Ntourmas\Desktop\SERA project\p2\series code\Web Service For retrieving lab data\SeriesClientConsoleApp\bin\Debug\SeriesClientConsoleApp.pdb
+C:\Users\Sakis Ntourmas\Desktop\SERA project\p2\series code\Web Service For retrieving lab data\SeriesClientConsoleApp\obj\Debug\SeriesClientConsoleApp.csprojResolveAssemblyReference.cache
+C:\Users\Sakis Ntourmas\Desktop\SERA project\p2\series code\Web Service For retrieving lab data\SeriesClientConsoleApp\obj\Debug\SeriesClientConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\Sakis Ntourmas\Desktop\SERA project\p2\series code\Web Service For retrieving lab data\SeriesClientConsoleApp\obj\Debug\SeriesClientConsoleApp.exe
+C:\Users\Sakis Ntourmas\Desktop\SERA project\p2\series code\Web Service For retrieving lab data\SeriesClientConsoleApp\obj\Debug\SeriesClientConsoleApp.pdb

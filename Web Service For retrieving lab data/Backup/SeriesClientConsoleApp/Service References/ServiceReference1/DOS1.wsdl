@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsp1_2="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:tns="http://ilm.eng.ox.ac.uk/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="DOS" targetNamespace="http://ilm.eng.ox.ac.uk/" xmlns="http://schemas.xmlsoap.org/wsdl/">
+  <types>
+    <xsd:schema>
+      <xsd:import schemaLocation="http://engs-uknees.eng.ox.ac.uk:53135/DatOX/DOS?xsd=1" namespace="http://ilm.eng.ox.ac.uk/" />
+    </xsd:schema>
+  </types>
+  <message name="getVersion">
+    <part name="parameters" element="tns:getVersion" />
+  </message>
+  <message name="getVersionResponse">
+    <part name="parameters" element="tns:getVersionResponse" />
+  </message>
+  <message name="getCacheInfo">
+    <part name="parameters" element="tns:getCacheInfo" />
+  </message>
+  <message name="getCacheInfoResponse">
+    <part name="parameters" element="tns:getCacheInfoResponse" />
+  </message>
+  <message name="testMe">
+    <part name="parameters" element="tns:testMe" />
+  </message>
+  <message name="testMeResponse">
+    <part name="parameters" element="tns:testMeResponse" />
+  </message>
+  <message name="testMyKR">
+    <part name="parameters" element="tns:testMyKR" />
+  </message>
+  <message name="testMyKRResponse">
+    <part name="parameters" element="tns:testMyKRResponse" />
+  </message>
+  <message name="getProjectIDs">
+    <part name="parameters" element="tns:getProjectIDs" />
+  </message>
+  <message name="getProjectIDsResponse">
+    <part name="parameters" element="tns:getProjectIDsResponse" />
+  </message>
+  <message name="getProjectData">
+    <part name="parameters" element="tns:getProjectData" />
+  </message>
+  <message name="getProjectDataResponse">
+    <part name="parameters" element="tns:getProjectDataResponse" />
+  </message>
+  <message name="getSpecimenData">
+    <part name="parameters" element="tns:getSpecimenData" />
+  </message>
+  <message name="getSpecimenDataResponse">
+    <part name="parameters" element="tns:getSpecimenDataResponse" />
+  </message>
+  <message name="getStructuralComponentData">
+    <part name="parameters" element="tns:getStructuralComponentData" />
+  </message>
+  <message name="getStructuralComponentDataResponse">
+    <part name="parameters" element="tns:getStructuralComponentDataResponse" />
+  </message>
+  <message name="getExperimentData">
+    <part name="parameters" element="tns:getExperimentData" />
+  </message>
+  <message name="getExperimentDataResponse">
+    <part name="parameters" element="tns:getExperimentDataResponse" />
+  </message>
+  <message name="getComputationData">
+    <part name="parameters" element="tns:getComputationData" />
+  </message>
+  <message name="getComputationDataResponse">
+    <part name="parameters" element="tns:getComputationDataResponse" />
+  </message>
+  <message name="getExperimentLoadingData">
+    <part name="parameters" element="tns:getExperimentLoadingData" />
+  </message>
+  <message name="getExperimentLoadingDataResponse">
+    <part name="parameters" element="tns:getExperimentLoadingDataResponse" />
+  </message>
+  <message name="getComputationLoadingData">
+    <part name="parameters" element="tns:getComputationLoadingData" />
+  </message>
+  <message name="getComputationLoadingDataResponse">
+    <part name="parameters" element="tns:getComputationLoadingDataResponse" />
+  </message>
+  <message name="getProjectDocuments">
+    <part name="parameters" element="tns:getProjectDocuments" />
+  </message>
+  <message name="getProjectDocumentsResponse">
+    <part name="parameters" element="tns:getProjectDocumentsResponse" />
+  </message>
+  <message name="getSpecimenDocuments">
+    <part name="parameters" element="tns:getSpecimenDocuments" />
+  </message>
+  <message name="getSpecimenDocumentsResponse">
+    <part name="parameters" element="tns:getSpecimenDocumentsResponse" />
+  </message>
+  <message name="getSpecimenImages">
+    <part name="parameters" element="tns:getSpecimenImages" />
+  </message>
+  <message name="getSpecimenImagesResponse">
+    <part name="parameters" element="tns:getSpecimenImagesResponse" />
+  </message>
+  <message name="getExperimentDocuments">
+    <part name="parameters" element="tns:getExperimentDocuments" />
+  </message>
+  <message name="getExperimentDocumentsResponse">
+    <part name="parameters" element="tns:getExperimentDocumentsResponse" />
+  </message>
+  <message name="getComputationDocuments">
+    <part name="parameters" element="tns:getComputationDocuments" />
+  </message>
+  <message name="getComputationDocumentsResponse">
+    <part name="parameters" element="tns:getComputationDocumentsResponse" />
+  </message>
+  <message name="getExperimentImages">
+    <part name="parameters" element="tns:getExperimentImages" />
+  </message>
+  <message name="getExperimentImagesResponse">
+    <part name="parameters" element="tns:getExperimentImagesResponse" />
+  </message>
+  <message name="getComputationImages">
+    <part name="parameters" element="tns:getComputationImages" />
+  </message>
+  <message name="getComputationImagesResponse">
+    <part name="parameters" element="tns:getComputationImagesResponse" />
+  </message>
+  <message name="getExperimentVideos">
+    <part name="parameters" element="tns:getExperimentVideos" />
+  </message>
+  <message name="getExperimentVideosResponse">
+    <part name="parameters" element="tns:getExperimentVideosResponse" />
+  </message>
+  <message name="getComputationVideos">
+    <part name="parameters" element="tns:getComputationVideos" />
+  </message>
+  <message name="getComputationVideosResponse">
+    <part name="parameters" element="tns:getComputationVideosResponse" />
+  </message>
+  <message name="operationCompleted">
+    <part name="parameters" element="tns:operationCompleted" />
+  </message>
+  <message name="operationCompletedResponse">
+    <part name="parameters" element="tns:operationCompletedResponse" />
+  </message>
+  <message name="getClosedProjectIDs">
+    <part name="parameters" element="tns:getClosedProjectIDs" />
+  </message>
+  <message name="getClosedProjectIDsResponse">
+    <part name="parameters" element="tns:getClosedProjectIDsResponse" />
+  </message>
+  <message name="getOpenProjectIDs">
+    <part name="parameters" element="tns:getOpenProjectIDs" />
+  </message>
+  <message name="getOpenProjectIDsResponse">
+    <part name="parameters" element="tns:getOpenProjectIDsResponse" />
+  </message>
+  <portType name="DOS">
+    <operation name="getVersion">
+      <input wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getVersionRequest" message="tns:getVersion" />
+      <output wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getVersionResponse" message="tns:getVersionResponse" />
+    </operation>
+    <operation name="getCacheInfo">
+      <input wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getCacheInfoRequest" message="tns:getCacheInfo" />
+      <output wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getCacheInfoResponse" message="tns:getCacheInfoResponse" />
+    </operation>
+    <operation name="testMe">
+      <input wsam:Action="http://ilm.eng.ox.ac.uk/DOS/testMeRequest" message="tns:testMe" />
+      <output wsam:Action="http://ilm.eng.ox.ac.uk/DOS/testMeResponse" message="tns:testMeResponse" />
+    </operation>
+    <operation name="testMyKR">
+      <input wsam:Action="http://ilm.eng.ox.ac.uk/DOS/testMyKRRequest" message="tns:testMyKR" />
+      <output wsam:Action="http://ilm.eng.ox.ac.uk/DOS/testMyKRResponse" message="tns:testMyKRResponse" />
+    </operation>
+    <operation name="getProjectIDs">
+      <input wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getProjectIDsRequest" message="tns:getProjectIDs" />
+      <output wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getProjectIDsResponse" message="tns:getProjectIDsResponse" />
+    </operation>
+    <operation name="getProjectData">
+      <input wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getProjectDataRequest" message="tns:getProjectData" />
+      <output wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getProjectDataResponse" message="tns:getProjectDataResponse" />
+    </operation>
+    <operation name="getSpecimenData">
+      <input wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getSpecimenDataRequest" message="tns:getSpecimenData" />
+      <output wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getSpecimenDataResponse" message="tns:getSpecimenDataResponse" />
+    </operation>
+    <operation name="getStructuralComponentData">
+      <input wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getStructuralComponentDataRequest" message="tns:getStructuralComponentData" />
+      <output wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getStructuralComponentDataResponse" message="tns:getStructuralComponentDataResponse" />
+    </operation>
+    <operation name="getExperimentData">
+      <input wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getExperimentDataRequest" message="tns:getExperimentData" />
+      <output wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getExperimentDataResponse" message="tns:getExperimentDataResponse" />
+    </operation>
+    <operation name="getComputationData">
+      <input wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getComputationDataRequest" message="tns:getComputationData" />
+      <output wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getComputationDataResponse" message="tns:getComputationDataResponse" />
+    </operation>
+    <operation name="getExperimentLoadingData">
+      <input wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getExperimentLoadingDataRequest" message="tns:getExperimentLoadingData" />
+      <output wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getExperimentLoadingDataResponse" message="tns:getExperimentLoadingDataResponse" />
+    </operation>
+    <operation name="getComputationLoadingData">
+      <input wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getComputationLoadingDataRequest" message="tns:getComputationLoadingData" />
+      <output wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getComputationLoadingDataResponse" message="tns:getComputationLoadingDataResponse" />
+    </operation>
+    <operation name="getProjectDocuments">
+      <input wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getProjectDocumentsRequest" message="tns:getProjectDocuments" />
+      <output wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getProjectDocumentsResponse" message="tns:getProjectDocumentsResponse" />
+    </operation>
+    <operation name="getSpecimenDocuments">
+      <input wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getSpecimenDocumentsRequest" message="tns:getSpecimenDocuments" />
+      <output wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getSpecimenDocumentsResponse" message="tns:getSpecimenDocumentsResponse" />
+    </operation>
+    <operation name="getSpecimenImages">
+      <input wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getSpecimenImagesRequest" message="tns:getSpecimenImages" />
+      <output wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getSpecimenImagesResponse" message="tns:getSpecimenImagesResponse" />
+    </operation>
+    <operation name="getExperimentDocuments">
+      <input wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getExperimentDocumentsRequest" message="tns:getExperimentDocuments" />
+      <output wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getExperimentDocumentsResponse" message="tns:getExperimentDocumentsResponse" />
+    </operation>
+    <operation name="getComputationDocuments">
+      <input wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getComputationDocumentsRequest" message="tns:getComputationDocuments" />
+      <output wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getComputationDocumentsResponse" message="tns:getComputationDocumentsResponse" />
+    </operation>
+    <operation name="getExperimentImages">
+      <input wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getExperimentImagesRequest" message="tns:getExperimentImages" />
+      <output wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getExperimentImagesResponse" message="tns:getExperimentImagesResponse" />
+    </operation>
+    <operation name="getComputationImages">
+      <input wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getComputationImagesRequest" message="tns:getComputationImages" />
+      <output wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getComputationImagesResponse" message="tns:getComputationImagesResponse" />
+    </operation>
+    <operation name="getExperimentVideos">
+      <input wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getExperimentVideosRequest" message="tns:getExperimentVideos" />
+      <output wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getExperimentVideosResponse" message="tns:getExperimentVideosResponse" />
+    </operation>
+    <operation name="getComputationVideos">
+      <input wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getComputationVideosRequest" message="tns:getComputationVideos" />
+      <output wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getComputationVideosResponse" message="tns:getComputationVideosResponse" />
+    </operation>
+    <operation name="operationCompleted">
+      <input wsam:Action="http://ilm.eng.ox.ac.uk/DOS/operationCompletedRequest" message="tns:operationCompleted" />
+      <output wsam:Action="http://ilm.eng.ox.ac.uk/DOS/operationCompletedResponse" message="tns:operationCompletedResponse" />
+    </operation>
+    <operation name="getClosedProjectIDs">
+      <input wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getClosedProjectIDsRequest" message="tns:getClosedProjectIDs" />
+      <output wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getClosedProjectIDsResponse" message="tns:getClosedProjectIDsResponse" />
+    </operation>
+    <operation name="getOpenProjectIDs">
+      <input wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getOpenProjectIDsRequest" message="tns:getOpenProjectIDs" />
+      <output wsam:Action="http://ilm.eng.ox.ac.uk/DOS/getOpenProjectIDsResponse" message="tns:getOpenProjectIDsResponse" />
+    </operation>
+  </portType>
+  <binding name="DOSPortBinding" type="tns:DOS">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <operation name="getVersion">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getCacheInfo">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="testMe">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="testMyKR">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getProjectIDs">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getProjectData">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getSpecimenData">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getStructuralComponentData">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getExperimentData">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getComputationData">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getExperimentLoadingData">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getComputationLoadingData">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getProjectDocuments">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getSpecimenDocuments">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getSpecimenImages">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getExperimentDocuments">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getComputationDocuments">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getExperimentImages">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getComputationImages">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getExperimentVideos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getComputationVideos">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="operationCompleted">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getClosedProjectIDs">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="getOpenProjectIDs">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+  </binding>
+  <service name="DOS">
+    <port name="DOSPort" binding="tns:DOSPortBinding">
+      <soap:address location="http://engs-uknees.eng.ox.ac.uk:53135/DatOX/DOS" />
+    </port>
+  </service>
+</definitions>

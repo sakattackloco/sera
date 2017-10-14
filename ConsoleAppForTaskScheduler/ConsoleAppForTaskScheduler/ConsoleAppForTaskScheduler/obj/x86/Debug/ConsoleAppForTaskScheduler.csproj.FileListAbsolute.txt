@@ -6,3 +6,6 @@ C:\Users\giannis\documents\visual studio 2010\Projects\ConsoleAppForTaskSchedule
 C:\Users\giannis\documents\visual studio 2010\Projects\ConsoleAppForTaskScheduler\ConsoleAppForTaskScheduler\obj\x86\Debug\ResolveAssemblyReference.cache
 C:\Users\giannis\documents\visual studio 2010\Projects\ConsoleAppForTaskScheduler\ConsoleAppForTaskScheduler\obj\x86\Debug\ConsoleAppForTaskScheduler.exe
 C:\Users\giannis\documents\visual studio 2010\Projects\ConsoleAppForTaskScheduler\ConsoleAppForTaskScheduler\obj\x86\Debug\ConsoleAppForTaskScheduler.pdb
+C:\Users\HCI\Downloads\SERIES\series code\consoleappfortaskscheduler\consoleappfortaskscheduler\consoleappfortaskscheduler\obj\x86\Debug\ConsoleAppForTaskScheduler.csprojResolveAssemblyReference.cache
+C:\Users\HCI\Downloads\SERIES\series code\consoleappfortaskscheduler\consoleappfortaskscheduler\consoleappfortaskscheduler\obj\x86\Debug\ConsoleAppForTaskScheduler.exe
+C:\Users\HCI\Downloads\SERIES\series code\consoleappfortaskscheduler\consoleappfortaskscheduler\consoleappfortaskscheduler\obj\x86\Debug\ConsoleAppForTaskScheduler.pdb

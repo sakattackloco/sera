@@ -1,0 +1,2 @@
+C:\Users\Sakis Ntourmas\Desktop\SERA project\p2\series code\Web Service For retrieving lab data\Backup\SeriesClientConsoleApp\obj\Debug\SeriesClientConsoleApp.csprojResolveAssemblyReference.cache
+C:\Users\Sakis Ntourmas\Desktop\SERA project\p2\series code\Web Service For retrieving lab data\Backup\SeriesClientConsoleApp\obj\Debug\SeriesClientConsoleApp.csproj.CoreCompileInputs.cache
