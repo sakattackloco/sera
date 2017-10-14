@@ -1,0 +1,325 @@
+﻿
+html, body{
+height:100%;width:100%;
+margin:0;padding:0;  font-family:Verdana; font-size:14px;
+/*edw eixe overflow hidden?????*/
+}
+#header{position:absolute; width:100%; background:#648bdd;height:32px; background:url(newcss/top_back.jpg) repeat-x}/* Header */
+#footer{ position:absolute;bottom:0;left:0;width:100%; height:80px; background:url(newcss/consortium.png) no-repeat; background-position:center;border-style:solid;border-color:#000;}
+
+#LogoTitle
+{   margin:7px auto 2px auto;
+	 position:relative;
+	 width:100px;
+      font-family:Verdana;
+      font-size:14px; color:#fff;	 
+	}
+	
+#splitterContainer {/* Main splitter element */
+height:85%;width:100%; margin-top:32px; padding:0; overflow:hidden; position:absolute;  
+}
+
+#leftPane{ position:relative;
+float:left;width:15%;height:100%; 
+overflow:auto;
+}
+.TreeTitleText 
+{
+	color:#FFFFFF; font-size:14px;  margin: 2px 0px 2px 20px;
+	}
+
+
+#rightPane{	/*Contains toolbar and horizontal splitter*/
+float:right;width:85%;height:100%;
+background:#f4f4f4;position:relative;
+}
+#rightSplitterContainer{/*horizontal splitter*/	
+width:100%;  height:98%;
+background:#FFFFFF;border-top:solid 1px #9cbdff; overflow:auto;visibility:hidden;
+ 
+} 
+
+#rightTopPane{/*Top nested in horizontal splitter */
+width:100%;overflow:auto;background:#f4f4f4; display:none;
+}
+#rightBottomPane{/*Bottom nested in horizontal splitter */
+background:#f4f4f4;width:100%;overflow:auto;
+}
+
+/* Splitbar styles; these are the default class names and required styles */
+.splitbarV {
+float:left;width:6px;height:100%;
+line-height:0px;font-size:0px;
+border-left:solid 1px #9cbdff;border-right:solid 1px #9cbdff;
+background:#cbe1fb url(img/panev.gif) 0% 50%;
+}
+.splitbarH {
+height:6px;text-align:left;line-height:0px;font-size:0px;
+border-top:solid 1px #9cbdff;border-bottom:solid 1px #9cbdff;
+background:#cbe1fb url(img/paneh.gif) 50% 0%;
+}
+
+.splitbuttonV{
+margin-top:-41px;margin-left:-4px;top:50%;position:relative;
+height:83px;width:10px;
+background:transparent url(img/panevc.gif) 10px 50%;
+}
+.splitbuttonV.invert{
+margin-left:0px;background:transparent url(img/panevc.gif) 0px 50%;
+}
+.splitbuttonH{
+margin-left:-41px;left:50%;position:relative;
+height:10px !important;width:83px;
+background:transparent url(img/panehc.gif) 50% 0px;
+}
+.splitbuttonH.invert{
+margin-top:-4px;background:transparent url(img/panehc.gif) 50% -10px;
+}
+.splitbarV.working,.splitbarH.working,.splitbuttonV.working,.splitbuttonH.working{
+ -moz-opacity:.50; filter:alpha(opacity=50); opacity:.50;
+}
+
+   
+#Div1
+{
+	height:100%;overflow:auto;padding:0px;margin:6px 0px 0px 4px;
+	}
+
+#Div2
+{
+	height:0%;overflow:auto;padding:0px;margin:6px 0px 0px 4px;
+	}
+	
+	#toolbar
+	{ background-color:#d5dfe1;
+		height:33px;text-align:center;
+		}
+
+#SearchToolTip
+{
+	 margin-left:14px; color:#777777; font-size:12px;
+	}
+		
+.category
+{
+	width:100%; 
+	height:10%;
+	float:left;
+	background-color:#e3e3e3;
+	 padding-left:15px;
+}
+
+
+.LabelAndListBox
+{
+	width:23%;
+	float:left;
+	height:100%;
+	margin-bottom:10px;
+	 
+}
+
+.ListBox
+{  color:#666666;
+    margin-top:2px;
+   	}
+
+.Label
+{  font-family:Verdana;
+   font-size:12px; 
+   font-weight:bold;
+   color:#545050;
+    
+	}
+
+
+.space
+{
+	width:1%;
+	float:left;
+	height:100%;
+}
+
+.button
+{  margin-left:30px;
+  padding:5px 12px 5px 12px;
+	font-size:14px;
+	}
+
+
+				
+.demo-show {
+	  width: 100%; 
+ 	  
+}
+
+.demo-show h4 , #DetailedInfo h4, #Download h4
+{
+	 	 font-family:Verdana;
+	 font-size:12px;
+	cursor:pointer;
+	 width:100%;
+	 float:left;
+	  margin: 0;
+	  padding: 2px 2px 0px 2px;
+	  color:#ffffff;
+	  border-top: 1px solid #386785;
+	   background-repeat:repeat-x;
+  height:25px;
+	    background-image:url(newcss/inside_back2.jpg) ;
+}
+
+.demo-show a.expanded ,#DetailedInfo  a.expanded , #Download a.expanded{
+	background:url(images/arrow-icon-Down.gif) no-repeat;
+	background-position:left;
+}
+.demo-show a.collapsed ,#DetailedInfo  a.collapsed, #Download a.collapsed{
+	background: url(images/arrow-icon.gif) no-repeat ; 
+		background-position:left;
+}
+.demo-show a:hover {
+	text-decoration: none;
+}
+
+#SearchDiv
+{
+	
+	 border-color:#d4ddf5;
+		}
+		
+		
+		ul.tabs {
+	margin: 0;
+	padding: 0;
+	float: left;
+	list-style: none;
+	font-size:14px;
+	height: 32px; /*--Set height of tabs--*/
+	border-bottom: 1px solid #999;
+	border-left: 1px solid #999;
+	width: 100%;
+}
+ul.tabs li {
+	float: left;
+	margin: 0;
+	padding: 0;
+	height: 31px; /*--Subtract 1px from the height of the unordered list--*/
+	line-height: 31px; /*--Vertically aligns the text within the tab--*/
+	border: 1px solid #999;
+	border-left: none;
+	margin-bottom: -1px; /*--Pull the list item down 1px--*/
+	overflow: hidden;
+	position: relative;
+	background: #e0e0e0;
+}
+ul.tabs li a {
+	text-decoration: none;
+	color: #000;
+	display: block;
+	font-size:14px;
+	padding: 0 20px;
+	border: 1px solid #fff; /*--Gives the bevel look with a 1px white border inside the list item--*/
+	outline: none;
+}
+ul.tabs li a:hover {
+	background: #ccc;
+}
+html ul.tabs li.active, html ul.tabs li.active a:hover  { /*--Makes sure that the active tab does not listen to the hover properties--*/
+	background: #fff;
+	border-bottom: 1px solid #fff; /*--Makes the active tab look like it's connected with its content--*/
+}
+
+
+.tab_container {
+	border: 1px solid #999;
+	border-top: none;
+	overflow:auto;
+	clear: both;
+	float: left; width: 100%;
+	background: #fff;
+	
+}
+.tab_content 
+{
+
+	padding: 20px;
+	font-size: 1.2em;
+	overflow:hidden;
+}
+
+
+    
+  .mGrid { width: 100%; background-color: #fff; margin: 5px 0 10px 0; border: solid 1px #525252; border-collapse:collapse; }
+    .mGrid td { padding: 2px; border: solid 1px #c1c1c1; color: #717171; }
+    .mGrid th { padding: 4px 2px; color: #fff; background: #424242 url(images/grd_head.png) repeat-x top; border-left: solid 1px #525252; font-size: 0.9em; }
+.mGrid .alt { background: #fcfcfc url(images/grd_alt.png) repeat-x top; }
+.mGrid .pgr {background: #424242 url(images/grd_pgr.png) repeat-x top; }
+    .mGrid .pgr table { margin: 5px 0; }
+    .mGrid .pgr td { border-width: 0; padding: 0 6px; border-left: solid 1px #666; font-weight: bold; color: #fff; line-height: 12px; }   
+    .mGrid .pgr a { color: #666; text-decoration: none; }
+    .mGrid .pgr a:hover { color: #000; text-decoration: none; }
+   
+   
+   
+   	
+	#SearchArea
+	{  border: 1px solid #999;
+	   background-color:#9cb0c8;
+	  height:25px;
+	  cursor:pointer;
+		}
+		
+
+
+
+ .rbroundbox { background: url(images/nt.gif) repeat; }
+.rbtop div { background: url(images/tl.gif) no-repeat top left; }
+.rbtop { background: url(images/tr.gif) no-repeat top right; }
+.rbbot div { background: url(images/bl.gif) no-repeat bottom left; }
+.rbbot { background: url(images/br.gif) no-repeat bottom right; }
+
+/* height and width stuff, width not really nessisary. */
+.rbtop div, .rbtop, .rbbot div, .rbbot {
+width: 100%;
+height: 7px;
+font-size: 1px;
+}
+.rbcontent { margin: 0 7px; }
+.rbroundbox { width: 50%; margin: 1em auto; }
+
+
+
+#ProjectTitleDiv
+{  width:80%;
+	margin:10px auto 2px auto; 
+  float:left;
+	}
+	
+	.TreeTitleDiv
+	{ height:25px; width:100%;  background: url(newcss/title_back.jpg) repeat-x; 
+		}
+		
+		
+.menuitem
+{
+	font-family:Verdana;
+	font-size:12px;
+	width:100px;
+	color:Blue;
+	text-decoration:underline;
+	 }
+	
+	.menuitemClicked
+{
+	font-family:Verdana;
+	font-size:12px;
+	color:Black;
+	text-decoration:none;
+	}
+	
+	.HighlightedRow
+	{
+		color:Black;
+		 font-weight: bold;
+		
+		}

@@ -1,0 +1,5 @@
+C:\Users\hciuser7\Documents\Visual Studio 2008\Projects\LastOneFromScratch\LastOneFromScratch\bin\LastOneFromScratch.dll
+C:\Users\hciuser7\Documents\Visual Studio 2008\Projects\LastOneFromScratch\LastOneFromScratch\bin\LastOneFromScratch.pdb
+C:\Users\hciuser7\Documents\Visual Studio 2008\Projects\LastOneFromScratch\LastOneFromScratch\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\hciuser7\Documents\Visual Studio 2008\Projects\LastOneFromScratch\LastOneFromScratch\obj\Debug\LastOneFromScratch.dll
+C:\Users\hciuser7\Documents\Visual Studio 2008\Projects\LastOneFromScratch\LastOneFromScratch\obj\Debug\LastOneFromScratch.pdb

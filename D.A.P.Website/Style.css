@@ -1,0 +1,1303 @@
+﻿
+html, body 
+{
+	height:100%;
+	width:100%;
+	margin:0;padding:0; 
+	color: #52463F;
+	
+/*edw eixe overflow hidden?????*/}
+
+#header 
+{
+	width:100%;
+	 color:#fff;
+	 height:90px; 
+	 background-color:#3269B4; 
+	 }/* Header */
+
+#LoginDiv 
+{
+	float:right; 
+	margin-right:5px; 
+	 }
+
+
+			
+#header-inner
+{
+	margin: 0 auto;
+	max-width: 1200px;
+	position: relative;
+	padding: 0 20px;			
+}
+
+#content
+{
+	position: absolute;
+	top: 5px;
+	right: 10px;
+}
+
+#content ul li 
+{
+	list-style-image: none;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	float: left;
+	border-right: 1px white solid;
+	font-size: 11px;
+	line-height: 1.1em;
+ 
+}
+
+
+#LogoTitle 
+{
+	float:left;  
+	}
+
+
+#SiteImg 
+{
+	position:absolute;  
+	margin:0% 20%; 
+	top:35px; 
+	background:url(images/series_sitename_impact.png) no-repeat top left; 
+	width:615px; 
+	height:48px;
+	}
+
+
+#FreeSearch 
+{
+	display:none;
+	
+	}
+	
+	
+	#Search_Criteria
+	{ margin-left:50px;
+	  margin-bottom:10px;
+		}
+	
+	
+#Txt_FreeSearch	 
+{
+	height:28px;
+	width:600px;
+    font-size:12pt;
+    }
+		
+#searchbox
+{  
+	color: black;
+	font-size: 11px;
+	margin: 0;
+	position: absolute;
+	right: 28px;
+	top: 2px;
+	width: 146px;
+
+	}
+
+
+#BtnLogin
+{
+	background: url("images/text-box-shadow-ddd.jpg") repeat-x scroll left top transparent;
+    border: 1px solid #DDDDDD;
+    color: #2E61A6;
+    float: right;
+    font-weight: bold;
+    font-size:10px;
+    height: 18px;
+    margin-right:5px;
+    width: 80px;
+	}
+
+
+#footer
+{
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:100%; 
+	height:80px; 
+	background:url(newcss/consortium.png) no-repeat; 
+	background-position:center;
+	border-style:solid;
+	border-color:#000;
+	}
+
+.textBox  
+{
+	width:80px; 
+	}
+
+#LoggedDiv
+{ 
+	display:none;
+	float:right;
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif, Tahoma, Calibri, Verdana,"Bitstream Vera Sans" ;
+	font-size: 0.85em;
+	margin:50px 0px;
+	}
+	
+#lnlbtn_logout
+{
+	color:#DC143C;
+	}
+
+     	
+#div_wrongPass 
+{
+	display:none; 
+	float:right;  
+	font-size: 14px;
+	color:#dccf46;}
+
+#splitterContainer-inner
+{
+	margin: 0 auto;
+	height:100%;
+	max-width: 1200px;
+	overflow: hidden;
+	position: relative;
+	padding: 0 20px;
+	}
+	
+	
+	
+#splitterContainer 
+{
+	/* Main splitter element */ 
+    margin: 0 auto ;
+    border-left: 2px solid #CCCAC8;
+    border-right: 2px solid #CCCAC8;
+    max-width: 1200px;
+	overflow:auto;
+	min-height:700px;
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif, Tahoma, Calibri, Verdana,"Bitstream Vera Sans" ;
+	 background-image:url('~/images/icon_separator.gif');
+	  background-repeat:repeat-y;
+	
+
+                      
+}
+	
+#leftPane 
+{
+	position:relative;
+    float:left;
+    width:20%;
+   	overflow:hidden;
+   	min-height:700px;
+
+
+}
+
+#rightPane	
+{
+	/*Contains toolbar and horizontal splitter*/
+	
+    float:left;
+    width:79%;
+    position:relative;
+  	overflow:hidden;  
+   	  border-left:2px solid #CCCAC8;
+}
+
+#splitterer
+{
+	
+    float:left;
+	width:6px;
+	overflow:auto;
+
+	border-left:solid 1px #9cbdff;
+	border-right:solid 1px #9cbdff;
+	background-color:#ccd4de ;
+	position:relative;
+	}
+
+
+
+#toolbar
+{
+	
+	height:33px;
+	line-height: 1.5em;
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif, Tahoma, Calibri, Verdana,'Bitstream Vera Sans' ;
+	color: #2E61A6;
+	background: #DFDCDA;
+	border-bottom: 1px solid #DCDAD8;
+	box-shadow: 0 1px 4px #888274, 0 2px 3px #DCDAD8 inset;
+	-moz-box-shadow: 0 1px 4px #888274, 0 2px 3px #DCDAD8 inset;
+	-webkit-box-shadow: 0 1px 4px #888274, 0 2px 3px #DCDAD8 inset;
+	font-size: 12px;
+	font-weight: bold;
+	padding-bottom: 0.1em;
+	padding-left: 13px;
+	padding-top: 5px;
+	text-shadow: 1px 0 3px white;
+	
+	
+	
+	}
+		
+		
+#rightSplitterContainer
+{
+	background:#FFFFFF;
+	border-top:solid 1px #9cbdff;
+	overflow:hidden;
+	visibility:hidden;
+	width:100%;
+	
+	
+
+} 
+
+
+
+#rightTopPane{/*Top nested in horizontal splitter */
+	width:100%;
+    overflow:visible;
+    background:#f4f4f4; 
+    display:none;
+              
+}
+
+
+#HomeDiv
+{
+	width:100%;
+}
+
+.HomeContent
+{
+	color:#666666;
+	margin:30px 30px 30px 30px;
+	text-align: justify;
+	line-height: 1.5em;
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif, Tahoma, Calibri, Verdana,"Bitstream Vera Sans" ;
+	font-size: 0.85em;
+	color: #52463F;
+	
+}
+				
+.HomeContent h2
+{
+	text-align:left;
+	font-family: Arial, Times New Roman, Serif, Georgia;
+	margin-top: 10px;
+	color: #3269B4;	
+	}
+	
+
+
+.orderby
+{
+	height:33px;
+	line-height: 1.5em;
+font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif, Tahoma, Calibri, Verdana,"Bitstream Vera Sans" ;
+
+color: #52463F;
+
+background: #DFDCDA;
+border-bottom: 1px solid #DCDAD8;
+box-shadow: 0 1px 4px #888274, 0 2px 3px #DCDAD8 inset;
+-moz-box-shadow: 0 1px 4px #888274, 0 2px 3px #DCDAD8 inset;
+-webkit-box-shadow: 0 1px 4px #888274, 0 2px 3px #DCDAD8 inset;
+
+font-size: 11px;
+padding-bottom: 0.1em;
+padding-left: 13px;
+padding-top: 5px;
+text-shadow: 1px 0 3px white;
+
+
+
+	}
+
+.TreeTitleText 
+{
+	color:#FFFFFF; 
+	 line-height: 1.5em;
+font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif, Tahoma, Calibri, Verdana,"Bitstream Vera Sans" ;
+font-size: 0.85em;
+	margin: 2px 0px 2px 30px;
+}
+
+
+.TreeTitleTextCollapsed
+{
+	color:#FFFFFF; 
+	 line-height: 1.5em;
+font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif, Tahoma, Calibri, Verdana,"Bitstream Vera Sans" ;
+font-size: 0.85em;
+	margin: 2px 0px 2px 30px;
+}
+
+	
+#Div2Title,#DivPartnerPr
+{
+	height:25px; 
+	width:100%;  
+	background: url(newcss/title_back.jpg) repeat-x;  
+	display:none;
+	cursor:pointer;
+}
+		
+.TreeTitleDiv
+{ 
+	height:25px; 
+	width:100%;  
+	background: url(newcss/title_back.jpg) repeat-x; 
+	cursor:pointer;
+}
+
+		
+		   
+#Div1
+{
+	height:95%;
+	overflow:auto;
+	padding:0px;
+	margin:6px 0px 0px 0px; 
+	background-color:#FFFFFF;
+	min-height:350px;
+	
+	}
+
+#Div2,#DivPartnerTree
+{
+	height:0%;
+	overflow:auto;
+	padding:0px;
+	margin:6px 0px 0px 0px;
+	background-color:#FFFFFF;
+	min-height:350px;
+	display:none
+	}
+
+
+
+
+#rightBottomPane
+{
+	/*Bottom nested in horizontal splitter */	
+	background:#f4f4f4;
+	width:100%;
+	overflow:auto;
+}
+
+/* Splitbar styles; these are the default class names and required styles */
+.splitbarV 
+{
+	float:left;
+	width:6px;
+	height:100%;
+	line-height:0px;
+	font-size:0px;
+	border-left:solid 1px #9cbdff;
+	border-right:solid 1px #9cbdff;
+	background:#cbe1fb url(img/panev.gif) 0% 50%;
+}
+.splitbarH 
+{
+	height:6px;
+	text-align:left;
+	line-height:0px;
+	font-size:0px;
+	border-top:solid 1px #9cbdff;
+	border-bottom:solid 1px #9cbdff;
+	background:#cbe1fb url(img/paneh.gif) 50% 0%;
+}
+
+.splitbuttonV{
+	margin-top:-41px;
+	margin-left:-4px;
+	top:50%;
+	position:relative;
+	height:83px;
+	width:10px;
+	background:transparent url(img/panevc.gif) 10px 50%;
+}
+.splitbuttonV.invert{
+	margin-left:0px;
+	background:transparent url(img/panevc.gif) 0px 50%;
+}
+.splitbuttonH{
+	margin-left:-41px;
+	left:50%;
+	position:relative;
+	height:10px !important;
+	width:83px;
+	background:transparent url(img/panehc.gif) 50% 0px;
+}
+
+.splitbuttonH.invert{
+	margin-top:-4px;
+	background:transparent url(img/panehc.gif) 50% -10px;
+}
+
+.SearchToolTip
+{
+	 margin-left:14px; 
+	 color:#777777; 
+	 font-size:12px;
+	}
+		
+.category
+{
+	width:100%; 
+	height:10%;
+	float:left;
+	padding-left:15px;
+	background-color:#E3E3E3;
+}
+
+
+.LabelAndListBox
+{
+	width:23%;
+	float:left;
+	height:100%;
+	margin-bottom:10px;
+	 
+}
+
+.ListBox
+{  color:#666666;
+    margin-top:2px;
+    Width:90%;
+    Height:100px; 
+   	}
+
+.Label
+{  
+   
+    
+	}
+
+
+.space
+{
+	width:1%;
+	float:left;
+	height:100%;
+}
+
+.button
+{  margin-left:30px;
+  padding:5px 12px 5px 12px;
+	font-size:14px;
+	}
+
+
+				
+.demo-show {
+	  width: 100%; 
+}
+
+.demo-show h4 , #DetailedInfo h4, #Download h4
+{
+	 font-weight:normal;
+
+	cursor:pointer;
+	width:100%;
+	float:left;
+	margin: 0;
+	padding: 2px 2px 0px 2px;
+	color:#ffffff;
+	border-top: 1px solid #386785;
+	background-repeat:repeat-x;
+	height:25px;
+	background-image:url(newcss/inside_back2.jpg) ;
+}
+
+.demo-show a.expanded ,#DetailedInfo  a.expanded , #Download a.expanded{
+	background:url(images/arrow-icon-Down.gif) no-repeat;
+	background-position:left;
+}
+.demo-show a.collapsed ,#DetailedInfo  a.collapsed, #Download a.collapsed{
+	background: url(images/arrow-icon.gif) no-repeat ; 
+	background-position:left;
+}
+.demo-show a:hover {
+	text-decoration: none;
+}
+
+#SearchDiv
+{
+	 border-color:#d4ddf5;
+	 overflow:visible; 
+	 
+	}
+		
+
+#NavBar2
+{
+	float:left;
+    width:100%;
+    background:#DAE0D2 url("newcss/bg.gif") repeat-x bottom;
+    font-size:83%;
+    line-height:normal;
+    }
+				
+ul.tabs 
+{
+	margin:0;
+    padding:10px 10px 0;
+    list-style:none;
+}
+
+
+ul.tabs li 
+{
+	float:left;
+    background:url("newcss/norm_right.gif")  no-repeat right top;
+    margin:0;
+    padding:0;
+}
+
+ul.tabs li a 
+{
+	float:left;
+    display:block;
+    background:url("newcss/norm_left.gif") no-repeat left top;
+    padding:5px 15px;
+	text-decoration:none;
+    font-weight:bold;
+    color:#765;
+    padding:5px 15px 4px;
+      
+}
+
+ul.tabs li a:hover {
+	 color:#333;
+}
+
+
+/* Commented Backslash Hack
+     hides rule from IE5-Mac \*/
+  #NavBar a {float:none;}
+  /* End IE5-Mac hack */
+    
+	
+ html ul.tabs li.active a 
+ {
+	background-image:url("newcss/norm_left_on.gif");
+   color:#333;
+   padding-bottom:5px;
+    }
+    
+html ul.tabs li.active 
+{
+	background-image:url("newcss/norm_right_on.gif");
+    
+    }
+
+
+
+.tab_container {
+	border: 1px solid #999;
+	border-top: none;
+	overflow:visible;
+	clear: both;
+	float: left; width: 100%;
+	background: #fff;
+	
+	
+	
+}
+.tab_content 
+{
+
+	padding: 10px 20px;
+	
+	overflow:visible;
+	text-align: justify;
+	
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif, Tahoma, Calibri, Verdana,"Bitstream Vera Sans" ;
+	font-size: 0.85em;
+	color: #52463F;
+	margin: 1em 0;
+}
+
+
+    
+  .mGrid {  width: 100%; background-color: #fff; margin: 5px 0 10px 0; border: solid 1px #525252; border-collapse:collapse;   text-align:center;}
+    .mGrid td { padding: 2px; border: solid 1px #c1c1c1; color: #717171; }
+    .mGrid th { padding: 4px 2px; color: #fff; background: #424242 url(images/grd_head.png) repeat-x top; border-left: solid 1px #525252;  }
+.mGrid .alt { background: #fcfcfc url(images/grd_alt.png) repeat-x top; }
+.mGrid .pgr {background: #424242 url(images/grd_pgr.png) repeat-x top; }
+    .mGrid .pgr table { margin: 5px 0; }
+    .mGrid .pgr td { border-width: 0; padding: 0 6px; border-left: solid 1px #666; font-weight: bold; color: #fff; line-height: 12px; }   
+    .mGrid .pgr a { color: #666; text-decoration: none; }
+    .mGrid .pgr a:hover { color: #000; text-decoration: none; }
+   
+   
+   
+   	
+	#SearchArea
+	{  border: 1px solid #999;
+	   background-color:#9cb0c8;
+	  height:25px;
+	  cursor:pointer;
+		}
+		
+
+
+
+
+
+/* height and width stuff, width not really nessisary. */
+.rbtop div, .rbtop, .rbbot div, .rbbot {
+width: 100%;
+height: 7px;
+font-size: 1px;
+}
+.rbcontent { margin: 0 7px; }
+.rbroundbox { width: 50%; margin: 1em auto; }
+
+
+
+#ProjectTitleDiv
+{  width:70%;
+	margin:10px auto 2px auto; 
+  float:left;
+	}
+	
+
+		
+		
+.menuitem
+{
+	width:100px;
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif, Tahoma, Calibri, Verdana,"Bitstream Vera Sans" ;
+	 }
+	
+	.menuitemClicked
+	{
+	font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif, Tahoma, Calibri, Verdana,"Bitstream Vera Sans" ;
+	color: #52463F;
+	text-decoration:none;
+	}
+	
+	.HighlightedRow
+	{
+		color:Black;
+		font-weight: bold;
+	}
+		
+		
+					
+					
+
+
+.SimpleEntertainmentTreeView div.AspNet-TreeView ul li
+{
+    white-space: nowrap;
+    padding: 3px 0 2px 0; 
+}
+
+.SimpleEntertainmentTreeView div.AspNet-TreeView ul ul
+{
+    margin: 2px 0 2px 10px;
+}
+
+.SimpleEntertainmentTreeView div.AspNet-TreeView ul li img
+{
+    border: none;
+    vertical-align: middle;
+    margin: 0 2px 0 0;
+}
+
+.SimpleEntertainmentTreeView div.AspNet-TreeView li a
+{
+	  font-size:10pt;
+
+	  color:Black;
+	  text-decoration:none;
+}
+
+.SimpleEntertainmentTreeView div.AspNet-TreeView li.AspNet-TreeView-Leaf
+{
+    margin-left: 18px;
+}
+
+.SimpleEntertainmentTreeView div.AspNet-TreeView .AspNet-TreeView-ClickableNonlink
+{
+    cursor: pointer;
+}
+
+.SimpleEntertainmentTreeView div.AspNet-TreeView .AspNet-TreeView-Collapse
+{
+    background: url(images/collapse.gif) 0 -2px no-repeat;
+    width: 15px;
+    float:left;
+    cursor: pointer;
+}
+
+.SimpleEntertainmentTreeView div.AspNet-TreeView .AspNet-TreeView-Expand
+{
+    background: url(images/expand.gif) 0 -2px no-repeat;
+    width: 15px;
+    float:left;
+    cursor: pointer;
+}
+
+.SimpleEntertainmentTreeView .AspNet-TreeView-Selected
+{
+    background-color: #FAFAD2 !important;
+}
+
+.SimpleEntertainmentTreeView .AspNet-TreeView-ChildSelected
+{
+    background-color: #E8E8E8 !important;
+}
+
+.SimpleEntertainmentTreeView .AspNet-TreeView-ParentSelected
+{
+    background-color: #FFE4E1 !important;
+    
+}
+
+
+
+/* User login */
+/*header login*/
+ #LoginDiv {
+background:none repeat scroll 0 0 transparent;
+font-size:10px;
+padding-top:35px;
+width:210px;
+ 
+
+
+}
+
+
+#LoginDiv #edit-name-wrapper  label{
+background:transparent url(images/login_user_icon_trans.png) no-repeat scroll left top;
+clear:none;
+color:#222222;
+float:left;
+font-size:0;
+height:13px;
+line-height:0.5em;
+
+padding:0;
+width:10px;
+}
+ #LoginDiv input {
+background:#FFFFFF;
+border-width:2px;border-style:solid;border-color:#E8E8E8 #F0F0F0 #F8F8F8;
+clear:none;
+color:#2E61A6;
+font-weight:bold;
+font-size:10px;
+height:16px;
+line-height:1em;
+margin:3px 0;
+padding:0;
+width:74px;
+}
+#LoginDiv #edit-pass-wrapper  label{
+background:transparent url(images/login_pass_icon_trans.png) no-repeat scroll left top;
+clear:none;
+color:#222222;
+float:left;
+font-size:0;
+height:13px;
+line-height:0.5em;
+margin:5px 4px 3px 5px;
+padding:0;
+width:13px;
+}
+ #LoginDiv h3 {display:none;}
+ #LoginDiv input.form-submit {
+    background: url("images/bleeds.png") repeat-x scroll 0 -41px #F4F4F4;
+    border-color: #DDDDDD #DDDDDD #CCCCCC;
+    border-radius: 3px 3px 3px 3px;-moz-border-radius:3px;-webkit-border-radius:3px;khtml-border-radius:3px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 1px #AAAAAA;
+    color: #333333;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: normal;
+    margin: 4px 10px 7px 0;
+    padding: 0 10px 16px;
+    text-align: center;
+    width: 83px;
+    float:right;
+}
+#LoginDiv input.form-submit:hover {background: url("images/bleeds.png") repeat-x scroll 0 0 #888;border-color:#999999 #999999 #888888; color:#fff;}
+ #block-user-0 .item-list ul li {text-align:center; margin-top:10px;display:none; }
+
+
+
+/* login dropdown */
+div.toggleLoginButton {
+    border-radius: 5px 5px 5px 5px;
+    padding: 0;
+    text-align: right;
+    
+}
+
+a.toggleLoginButtonLink {
+   
+    background: url(images/series-login-icon2.png) no-repeat scroll 17px 7px #2D5FA5;
+border-radius: 8px 8px 8px 8px;
+color: white;
+display: inline-block;
+font-family: Frutiger,"Frutiger Linotype",Univers,Calibri,"Gill Sans","Gill Sans MT","Myriad Pro",Myriad,"DejaVu Sans Condensed","Liberation Sans","Nimbus Sans L",Tahoma,Geneva,"Helvetica Neue",Helvetica,Arial,sans-serif;
+font-size: 11px;
+padding: 8px 18px 6px 38px;
+text-shadow: 0 1px black;
+text-transform: uppercase;
+width: 96px;
+border: 1px solid #1F5296;
+    
+    
+}
+.toggleLoginButton a.active { background:#f8f6f5 url(images/series-login-icon2-black.png) no-repeat 17px 7px; color:#333;border-radius:5px 5px 0 0; border-color:#fff; text-shadow:0 1px #fff;}
+
+ div#LoginDiv.loginDropdown { z-index:6; position:relative;}
+
+div#LoginDiv .block-inner {
+display:none;
+    background: #EBE8E5;
+    border: 5px solid #F8F6F5;
+    border-radius: 5px 0 5px 5px;
+    box-shadow: 0 2px 2px #676767;
+    padding: 0;
+    position:absolute;
+    right:0;
+    z-index:5;
+}
+
+/*************************************/
+/* general classes */
+* {
+    margin: 0;
+    padding: 0;
+}
+.clear-block:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+ul, ol, dl {
+    margin: 0 0 1em 1em;
+}
+
+ul {
+    list-style-type: disc;
+}
+
+ul, ol {
+    margin-left: 0;
+    padding-left: 2em;
+}    
+
+.block ul, .item-list ul {
+    margin: 1em 0;
+    padding: 0 0 0 1em;
+}
+
+li {
+    line-height: 1.5em;
+    margin-left: 1.5em;
+}
+
+/*end - general classes */
+/*************************************/
+
+
+/*************************************/
+/* dropdown menu */
+/*************************************/
+
+/* theming the container */
+.block-nice_menus {
+    line-height: normal;
+    z-index: 3;
+    margin-bottom: 0;
+}
+
+
+#navbar {
+
+    margin-left: 0;
+    margin-right: -100%;
+    width: 100%;
+    z-index:4;
+}
+
+#navbar {
+    background: none repeat scroll 0 0 #EBE8E5;
+    word-wrap:break-word;
+}
+
+#navbar {
+    border-bottom: 1px solid #CCCCCC;
+    box-shadow: 0 0 2px #B8B2A4;
+    color: blue;
+    display: block;
+    font-family: arial,verdana,tahoma,times;
+    height: 39px;
+    overflow: visible;
+    position: relative;
+   
+}
+
+#navbar-inner {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 30px;
+    position: relative;
+}
+
+#navigation-top, #navigation {
+    left: -10000px;
+    position: absolute;
+}
+/* end - theming the container */
+
+
+/*************************************/
+/* 1st level */
+/*************************************/
+/* theming the ul */
+ul.nice-menu:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+} /* clear-block*/
+
+
+ul.nice-menu, ul.nice-menu ul {
+    position: absolute;
+    z-index: 2;
+}
+
+ul.nice-menu, ul.nice-menu ul {
+    border-top: 1px solid #CCCCCC;
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+
+ul.nice-menu-down {
+    border: 0 none;
+    float: left;
+}
+
+
+/*overriding some default behavior*/
+#navbar ul {
+    padding: 0;
+    text-align: left;
+    float: left;
+    margin: 0;
+    overflow: visible;
+    position: absolute;
+    top: 0;
+}
+
+/*#navbar ul#nice-menu-1 {*/
+#navbar ul.nice-menu {
+    height: 35px;
+
+    padding-top: 6px;
+}
+/*end- theming the ul*/
+
+/*************************************/
+/* theming the li */
+/*************************************/
+ul.nice-menu li {
+    position: relative;
+}
+
+/*
+ul.nice-menu li { border-right: 1px solid rgb(204, 204, 204); border-width: 0pt 1px 1px; border-style: none solid solid; border-color: -moz-use-text-color rgb(204, 204, 204) rgb(204, 204, 204); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; -moz-border-image: none; float: left; background-color: rgb(238, 238, 238); margin: 0pt; padding-left: 0pt; background-image: none; }
+*/
+
+ul.nice-menu li {
+    background: none repeat scroll 0 0 transparent;
+    border: 0 none;
+}
+
+#navbar li {
+    float: left;
+    padding: 0 10px 0 0;
+}
+
+#navbar ul li {
+    background: none repeat scroll 0 0 transparent;
+    display: inline-block;
+    font-size: 12px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* li:hover */
+ul.nice-menu-down li.menuparent:hover, #navbar ul.nice-menu-down li.menuparent:hover { background: none repeat scroll 0 0 transparent; }            
+/* end - li:hover */
+
+/* end - theming the li */
+
+/*************************************/
+/* theming the links inside the li */
+/*************************************/
+ul.nice-menu-down .menuparent a {
+    padding-right: 0;
+    width: auto;
+}    
+
+#navbar ul.nice-menu li a {
+    display: block;
+    position: relative;
+    text-decoration: none;    
+    background: none repeat scroll 0 0 transparent;
+    border-radius: 5px 5px 5px 5px;
+    color: #2E61A6;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    margin-right: 1px;
+    padding: 5px 10px;
+    text-shadow: 0 1px 0 #FFFFFF;
+}
+/* li a:hover */
+#navbar ul li a:hover {
+    background-color: inherit;
+}
+#navbar ul.nice-menu li a:hover, #navbar ul.nice-menu li a.active {
+    color:#333;
+    background:#DCDAD8;
+    padding:4px 9px;
+    border:1px solid #ccc;
+    border-color:#ccc #ddd #fff;
+}
+/* end - li a:hover */
+/* end - theming the links inside the li */    
+
+/* end - 1st level */
+
+
+/*************************************/
+/* 2nd level */    
+/*************************************/    
+
+/* theming the ul>li>ul */    
+ul.nice-menu ul, #header-region ul.nice-menu ul {
+    position: absolute;
+    visibility: hidden;
+    margin-right:0;
+}
+ul.nice-menu-down ul {
+    left: 0;
+}
+ul.nice-menu li.menuparent ul, #header-region ul.nice-menu li.menuparent ul {
+    overflow: visible !important;
+}
+
+#navbar ul li ul {
+    width:auto;
+    padding-top:0px;
+    top:24px;
+    border:2px #d9d9d9 solid;
+    border-top:0;
+}
+#navbar ul.nice-menu li.menuparent ul {
+    background: none repeat scroll 0 0 #EBE8E5;
+    border-color: #BBBBBB;
+    border-radius: 0 0 5px 5px;
+    top: 28px;
+    width: 200px;
+}
+
+/* ul>li>ul:hover */
+ul.nice-menu li:hover ul, ul.nice-menu li.menuparent li:hover ul, ul.nice-menu li.menuparent li.menuparent li:hover ul, ul.nice-menu li.menuparent li.menuparent li.menuparent li:hover ul, ul.nice-menu li.over ul, ul.nice-menu li.menuparent li.over ul, ul.nice-menu li.menuparent li.menuparent li.over ul, ul.nice-menu li.menuparent li.menuparent li.menuparent li.over ul, #header-region ul.nice-menu li:hover ul, #header-region ul.nice-menu li.menuparent li:hover ul, #header-region ul.nice-menu li.menuparent li.menuparent li:hover ul, #header-region ul.nice-menu li.over ul, #header-region ul.nice-menu li.menuparent li.over ul, #header-region ul.nice-menu li.menuparent li.menuparent li.over ul {
+    visibility: visible;
+}    
+/* end - ul>li>ul:hover */
+
+/* end - theming the ul>li>ul */
+
+/* theming the ul>li>ul>li */    
+ul.nice-menu-down ul li {
+    clear: both;
+}        
+#navbar ul li ul li {
+    background: none repeat scroll 0 0 #EBE8E5;
+    width: 190px;
+    border-top: 0 solid #25579E;
+    font-size: 11px;
+    text-align: left;
+}
+/* end-theming the ul>li>ul>li */    
+
+/* theming the ul>li>ul>li>a */        
+#navbar ul.nice-menu li ul li a {
+    color: #32261F;
+    font-size: 13px;
+}
+/* end - theming the ul>li>ul>li>a */                
+/* end - 2nd level */    
+
+/* 3rd level could be added as well */
+
+
+/***************
+IE 6 Fixes
+***************/
+
+/* Iframe to fix z-index bug when menu hovers over <select> fields. */
+ul.nice-menu li.menuparent ul,
+#header-region ul.nice-menu li.menuparent ul {
+    overflow: visible !important;
+    /* overflow: hidden; */
+}
+
+ul.nice-menu li.menuparent ul iframe,
+#header-region ul.nice-menu li.menuparent ul iframe {
+    display: none;
+    display/**/: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    filter: mask();
+    width: 20px;
+    height: 20px;
+}    
+
+/* end - dropdown menu*/
+
+
+/* bootom wrapper*/
+
+
+			
+.region-bottom
+{
+		width:100%;
+
+	 height:90px; 
+	 background-color:#FAF7F5; 
+	 clear:both;	 
+	 background-color: #FAF7F5;
+	border-bottom: 1px solid #DCDAD8;
+	border-top: 1px solid #DCDAD8;
+	-moz-box-shadow: 0 2px 4px rgba(220, 218, 216, 0.75) inset;
+	-webkit-box-shadow: 0 2px 4px rgba(220, 218, 216, 0.75) inset;
+	box-shadow: 0 2px 4px rgba(220, 218, 216, 0.75) inset;
+	margin-top: -1px;
+	padding-top: 0.5em;
+	padding-bottom: 0.5em;
+	color: #52463F;
+	overflow:visible;
+	position:absolute;			
+}
+
+			
+#bottom-wrapper-inner
+{
+	margin: 0 auto;
+	max-width: 1200px;
+
+	padding: 0 20px;		
+}
+
+.subcolumns
+{
+	
+	width:50%;
+	float:left;
+	}
+	
+	
+.wrapper 
+{
+	min-height: 100%;
+	height: auto !important;
+	height: 100%;
+	margin: 0 auto -110px;
+}
+	
+	.clearfooter {
+   height: 110px;
+   clear: both;
+
+}
+
+
+#OpenSearchDiv
+{
+	padding-left:50px;
+	 padding-top:50px;
+	}
+	
+	
+	.pics { float: right; width:40%;}
+.pics img { padding: 15px; border: 1px solid #ccc; background-color: #eee; }
+
+
+#News
+{ background-color:#EBE8E5; width:100%; float:left;  margin-top:20px;
+	}
+.c25l
+{ width:30%;  float:left; margin:8px;}
+
+.c25r
+{ width:30%; float:left;margin:8px;}
+
+.c50l
+{ width:30%;  float:left;margin:8px;}
+
+
+
+
+#News h3
+{font-size: 1.3em;
+line-height: 1.3em;
+margin-top: 0.769em;
+margin-bottom: 0.769em;
+	}
+	
+	
+	#News a {
+color: #2E61A6;
+font-weight: bold;
+text-decoration: none;
+}
+
+.blockquote{
+background: #EFECE9;
+font-weight: normal;
+padding: 0.25em 0.45em;
+margin: 0.4em 1.5em 0.4em 0;
+float: left;
+width: 38%;
+text-align: left;
+border: 1px #767370 solid;
+text-shadow: 1px 1px 0px white;
+font-size: 14px;
+border-radius: 0px 5px 5px 0px;
+border-image: initial;
+}

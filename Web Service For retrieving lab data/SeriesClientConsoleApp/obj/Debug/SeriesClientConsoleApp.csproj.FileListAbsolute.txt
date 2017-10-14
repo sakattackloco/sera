@@ -1,0 +1,13 @@
+C:\Documents and Settings\giannis\My Documents\Visual Studio 2008\Projects\SeriesClientConsoleApp\SeriesClientConsoleApp\bin\Debug\SeriesClientConsoleApp.exe.config
+C:\Documents and Settings\giannis\My Documents\Visual Studio 2008\Projects\SeriesClientConsoleApp\SeriesClientConsoleApp\bin\Debug\SeriesClientConsoleApp.exe
+C:\Documents and Settings\giannis\My Documents\Visual Studio 2008\Projects\SeriesClientConsoleApp\SeriesClientConsoleApp\bin\Debug\SeriesClientConsoleApp.pdb
+C:\Documents and Settings\giannis\My Documents\Visual Studio 2008\Projects\SeriesClientConsoleApp\SeriesClientConsoleApp\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\giannis\My Documents\Visual Studio 2008\Projects\SeriesClientConsoleApp\SeriesClientConsoleApp\obj\Debug\SeriesClientConsoleApp.exe
+C:\Documents and Settings\giannis\My Documents\Visual Studio 2008\Projects\SeriesClientConsoleApp\SeriesClientConsoleApp\obj\Debug\SeriesClientConsoleApp.pdb
+C:\Documents and Settings\xpuser\My Documents\Visual Studio 2008\Projects\SeriesClientConsoleApp\SeriesClientConsoleApp\bin\Debug\SeriesClientConsoleApp.exe.config
+C:\Documents and Settings\xpuser\My Documents\Visual Studio 2008\Projects\SeriesClientConsoleApp\SeriesClientConsoleApp\obj\Debug\SeriesClientConsoleApp.exe
+C:\Documents and Settings\xpuser\My Documents\Visual Studio 2008\Projects\SeriesClientConsoleApp\SeriesClientConsoleApp\obj\Debug\SeriesClientConsoleApp.pdb
+C:\Documents and Settings\xpuser\My Documents\Visual Studio 2008\Projects\SeriesClientConsoleApp\SeriesClientConsoleApp\bin\Debug\SeriesClientConsoleApp.exe
+C:\Documents and Settings\xpuser\My Documents\Visual Studio 2008\Projects\SeriesClientConsoleApp\SeriesClientConsoleApp\bin\Debug\SeriesClientConsoleApp.pdb
+C:\Documents and Settings\xpuser\My Documents\Visual Studio 2008\Projects\SeriesClientConsoleApp\SeriesClientConsoleApp\obj\Debug\ResolveAssemblyReference.cache
+C:\Documents and Settings\xpuser\My Documents\Visual Studio 2008\Projects\SeriesClientConsoleApp\SeriesClientConsoleApp\bin\Debug\MySql.Data.dll

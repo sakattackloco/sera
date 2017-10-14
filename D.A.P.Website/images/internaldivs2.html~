@@ -1,0 +1,69 @@
+<html>
+<head>
+	<title>divs</title>
+<style type="text/css">
+.pics { float: right; width:40%;}
+.pics img { padding: 15px; border: 1px solid #ccc; background-color: #eee; }
+.container1
+{ height:600px;
+}
+</style>
+
+	
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+<!-- include Cycle plugin -->
+<script type="text/javascript" src="http://cloud.github.com/downloads/malsup/cycle/jquery.cycle.all.latest.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			
+  $('.pics').cycle({
+		fx: 'fade' // choose your transition type, ex: fade, scrollUp, shuffle, etc...
+	});
+		});
+			
+			</script>
+</head>
+<body>
+ <div class="HomeContent">
+	  <h2>Welcome to the Data Access Portal of the SERIES Project.</h2>
+	  <p class="textp">
+      Currently we have 
+    
+       Published projects.
+      Please feel free to navigate through the projects information via the left panel.
+      You might also use the SEARCH functionality for acquirung detailed information on published projects
+      The information on the DAP follows the EDF structure. More information related to EDF can be found 
+      <a href="javascript:EDF_ShortDescription()">here</a>
+      </p>
+      
+      <br />
+      </div>
+      <div class="container1">
+      <div id="about"  style=" float:left; width:40%;">
+      European seismic engineering research suffers from extreme fragmentation of research infrastructures (RI) between countries and limited access to them by the S/T community of earthquake engineering, especially that of Europe’s most seismic regions. A 23-strong consortium of the key actors in Europe’s seismic engineering research (including 3 industrial beneficiaries) addresses these problems in a sustainable way via a 4-year programme of activities at an annual cost to the EC less than 1.35% of the total present value (€190m) of the RIs’ material resources.The scope covers all aspects of seismic engineering testing, from eight reaction wall pseudodynamic (PsD) facilities and ten shake table labs, to EU’s unique tester of bearings or isolators, its two major centrifuges and an instrumented site for wave propagation studies.
+      </div>
+	<div class="pics">
+		<img alt="Upatras" src="1.jpg" />
+		<img alt="LNEC 1" src="2.jpg" />
+		<img alt="Upatras" src="Eucentre-TREES-Lab-controllingCameras.jpg" />
+		<img alt="LNEC 1" src="Eucentre-TREES-Lab-IMG_6396.jpg" />
+		<img alt="Upatras" src="LNEC4_600_0.jpg" />
+		<img alt="LNEC 1" src="Eucentre-TREES-Lab-buildingOnTable.jpg" />
+		<img alt="Upatras" src="Eucentre-TREES-Lab-IMG_6162.jpg" />
+		<img alt="LNEC 1" src="fig2_ed_0.jpg" />
+		<img alt="Upatras" src="JRC2.jpg" />
+		<img alt="LNEC 1" src="JRC1.jpg" />
+		<img alt="Upatras" src="fig2_ed.jpg" />
+		<img alt="LNEC 1" src="fig5_ed_2.jpg" />
+	
+	
+	</div>
+
+</div>
+
+
+
+</body>
+</html>

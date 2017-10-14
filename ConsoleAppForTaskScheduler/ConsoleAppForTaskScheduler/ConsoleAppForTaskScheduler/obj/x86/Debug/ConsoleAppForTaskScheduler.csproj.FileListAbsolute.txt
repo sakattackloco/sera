@@ -1,0 +1,8 @@
+C:\Users\giannis\documents\visual studio 2010\Projects\ConsoleAppForTaskScheduler\ConsoleAppForTaskScheduler\bin\Debug\ConsoleAppForTaskScheduler.exe.config
+C:\Users\giannis\documents\visual studio 2010\Projects\ConsoleAppForTaskScheduler\ConsoleAppForTaskScheduler\bin\Debug\ConsoleAppForTaskScheduler.exe
+C:\Users\giannis\documents\visual studio 2010\Projects\ConsoleAppForTaskScheduler\ConsoleAppForTaskScheduler\bin\Debug\ConsoleAppForTaskScheduler.pdb
+C:\Users\giannis\documents\visual studio 2010\Projects\ConsoleAppForTaskScheduler\ConsoleAppForTaskScheduler\bin\Debug\SeriesClientConsoleApp.exe
+C:\Users\giannis\documents\visual studio 2010\Projects\ConsoleAppForTaskScheduler\ConsoleAppForTaskScheduler\bin\Debug\SeriesClientConsoleApp.pdb
+C:\Users\giannis\documents\visual studio 2010\Projects\ConsoleAppForTaskScheduler\ConsoleAppForTaskScheduler\obj\x86\Debug\ResolveAssemblyReference.cache
+C:\Users\giannis\documents\visual studio 2010\Projects\ConsoleAppForTaskScheduler\ConsoleAppForTaskScheduler\obj\x86\Debug\ConsoleAppForTaskScheduler.exe
+C:\Users\giannis\documents\visual studio 2010\Projects\ConsoleAppForTaskScheduler\ConsoleAppForTaskScheduler\obj\x86\Debug\ConsoleAppForTaskScheduler.pdb
