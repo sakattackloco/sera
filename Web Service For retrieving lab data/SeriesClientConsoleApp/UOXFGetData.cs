@@ -127,7 +127,8 @@ namespace SeriesClientConsoleApp
             */
 
             string[] ProjectOpenLocalIDS = WSClient.getOpenProjectIDs();
-                        
+            
+
             if (ProjectOpenLocalIDS != null)
             {
                 System.Console.WriteLine("1");
@@ -139,15 +140,12 @@ namespace SeriesClientConsoleApp
                 project cp = WSClient.getProjectData("http://jrc.ec.europa.eu/celestina#project193");
                 if (cp != null)
                 {
-                    System.Console.WriteLine(cp.projectTitle);
-                    System.Console.WriteLine(cp.idProject);
                     System.Console.WriteLine("EDW KATW");
-                    dbOps.UpdateSearch(cp);
                 }
                 else
                 {
                     System.Console.WriteLine("It is null");
-              }
+                 }
 
                 foreach (object x in WSClient.testMe())
                 {
@@ -168,9 +166,9 @@ namespace SeriesClientConsoleApp
                     project CurrentProject = WSClient.getProjectData(ProjectLocalIDString);
                     System.Console.WriteLine("Current Project: " + CurrentProject);
                     System.Console.WriteLine("3");
-                    InsertProjectLevel(LabID, CurrentProject);
-                    System.Console.WriteLine("4");
+                    InsertProjectLevel(LabID, CurrentProject, cp);
                 }
+                
             }
 
             string[] ProjectClosedLocalIDS = WSClient.getClosedProjectIDs();
@@ -181,17 +179,18 @@ namespace SeriesClientConsoleApp
                 string ProjectLocalIDString = ProjectLocalID.ToString();
                 //int CurrentInt = Convert.ToInt16(ProjectLocalID);
                 project CurrentProject = WSClient.getProjectData(ProjectLocalIDString);
-                InsertProjectLevel(LabID, CurrentProject);
+                InsertProjectLevel(LabID, CurrentProject, CurrentProject);
                 }
             }
 
-             //kanei ena update ton pinaka search
+            //kanei ena update ton pinaka search
+           
 
             dbOps.insertLabLastUpdate(DateTime.UtcNow.ToString("yyyy/MM/dd HH:mm:ss"), LabID); //kanei ena update sto laboratory
 
             dbOps.CloseConnection();
         }
-        public void InsertProjectLevel(string LabID, project CurrentProject)
+        public void InsertProjectLevel(string LabID, project CurrentProject, project cp)
         {
             string ProjectId;
             string PrInfrastrID;
@@ -204,8 +203,12 @@ namespace SeriesClientConsoleApp
                 System.Console.WriteLine("Project ID: " + CurrentProject.idProject);
 
                 ProjectId = dbOps.InsertProject(LabID, CurrentProject);
+                if (CurrentProject!=cp)
+                {
+                    dbOps.UpdateSearch(cp, ProjectId);
+                }
                 //////////////////////
-                dbOps.DeleteSpecimen(ProjectId);
+                dbOps.DeleteSpecimen(ProjectId);////1h allagh na elegxei apla
 
                 CrLogger.CreateLogIntro("insert", DateTime.UtcNow.ToString("yyyy/MM/dd HH:mm:ss"), ProjectId, "project");// kati san istoriko to kanei insert
                 infrastructure[] infrastrArray = CurrentProject.infrastructure;
@@ -262,18 +265,12 @@ namespace SeriesClientConsoleApp
                 string[] SpecimenIDs = CurrentProject.specimenIDs;
                 if (SpecimenIDs != null)
                 {
-                    for (int i = 0; i < SpecimenIDs.Length; i++)
+                    foreach (var new_specimen in SpecimenIDs)
                     {
-                        //RunningSpecimen = WSClient.getSpecimenData((int)SpecimenIDs[i]);
-                        RunningSpecimen = WSClient.getSpecimenData(SpecimenIDs[i]);
-
+                        RunningSpecimen = WSClient.getSpecimenData(new_specimen);
                         InsertSpecimenLevel(ProjectId, RunningSpecimen);
-
-                    }//end of specimen array
-
+                    }
                 }
-                ////////////
-                
             }
 
         }
@@ -892,6 +889,7 @@ namespace SeriesClientConsoleApp
 
         public string InsertProject(string idLab, project NewProject)
         {
+            System.Console.WriteLine("EDEDEDEDEDEDEDE" + NewProject.idProject);
             string PrID = CheckIFprojectExists(NewProject.idProject, idLab);
 
             string reasonOfPr;
@@ -950,6 +948,7 @@ namespace SeriesClientConsoleApp
         }
         public string CheckIFprojectExists(string ProjectLocalID, string idlab)
         {
+            
             string projectId = null;
             string sqlSelectPr = "select idProject from Project where project.Localid = @localId AND project.laboratory_idlaboratory = @idlab";
             MySqlCommand selectPr = new MySqlCommand(sqlSelectPr, conn);
@@ -1215,7 +1214,7 @@ namespace SeriesClientConsoleApp
 
                 insertSpec.ExecuteNonQuery();
                 //returns long I have to check it
-                idSpecimen = insertSpec.LastInsertedId.ToString();
+                //idSpecimen = insertSpec.LastInsertedId.ToString();
             }
             return idSpecimen;
         }
@@ -2483,24 +2482,61 @@ namespace SeriesClientConsoleApp
         */
 
 
-        public void UpdateSearch(project cp)
+        public void UpdateSearch(project cp, string LocalIdProject)
         {
+            if (cp.projectKeywords.Length>0) {
+               foreach (var new_keyword in cp.projectKeywords)
+                    {
+                    string insert_search_query = "insert into search " + " (Category,Keyword,ProjectID,ParentID,ProjectTitle,abstract,startdate,enddate,type,labid,labname)" + " values (@Category,@Keyword,@ProjectID,@ParentID,@ProjectTitle,@abstract,@startdate,@enddate,@type,@labid,@labname)";
+                    MySqlCommand InsertToSearch = new MySqlCommand(insert_search_query, conn);
+                    InsertToSearch.Parameters.AddWithValue("@Category", "resource");//DEN MPORW NA 3ERW TI KATHGORIA EINAI
+                    InsertToSearch.Parameters.AddWithValue("@Keyword", new_keyword);
+                    InsertToSearch.Parameters.AddWithValue("@ProjectID", LocalIdProject);
+                    InsertToSearch.Parameters.AddWithValue("@ParentID", LocalIdProject);
+                    InsertToSearch.Parameters.AddWithValue("@ProjectTitle", cp.projectTitle);
+                    InsertToSearch.Parameters.AddWithValue("@abstract", cp.projectDescription);
+                    InsertToSearch.Parameters.AddWithValue("@startdate", cp.projectStartDate);
+                    InsertToSearch.Parameters.AddWithValue("@enddate", cp.projectEndDate);
+                    InsertToSearch.Parameters.AddWithValue("@type", "type");//DEN MPORW NA 3ERW TI TYPE EINAI
 
-            for (int i = 1; i <= cp.projectKeywords.Length; i++)
-            {
-                System.Console.WriteLine(cp.projectKeywords[i]);
+                    string found_lab_Id;
+                    string sqlSelectLabId = "select laboratory_idlaboratory from project where idProject = @idproject ";
+                    MySqlCommand SelectLabId = new MySqlCommand(sqlSelectLabId, conn);
+                    SelectLabId.Parameters.AddWithValue("@idproject", LocalIdProject);
+                    MySqlDataReader lab_id = SelectLabId.ExecuteReader();
+                    if (lab_id.HasRows)
+                    {
+                        lab_id.Read();
+                        found_lab_Id = lab_id[0].ToString();
+                        InsertToSearch.Parameters.AddWithValue("@labid", found_lab_Id);
+
+                        string found_lab_Name;
+                        string sqlSelectLabName = "select LongName from laboratory where idlaboratory = @idlab ";
+                        MySqlCommand SelectLabName = new MySqlCommand(sqlSelectLabName, conn);
+                        SelectLabName.Parameters.AddWithValue("@idlab", found_lab_Id);
+                        MySqlDataReader lab_name = SelectLabId.ExecuteReader();
+                        if (lab_name.HasRows)
+                        {
+                            lab_name.Read();
+                            found_lab_Name = lab_name[0].ToString();
+                            InsertToSearch.Parameters.AddWithValue("@labname", found_lab_Name);
+                        }
+                    }
+                    lab_id.Close();
+
+                    InsertToSearch.ExecuteNonQuery();
+                    //System.Console.WriteLine(cp.idProject);
+                }
             }
            
             //System.Console.WriteLine("relation  between original and nomianl does not exist");
 
-
+            /*
             string SqlInsert = "delete from search ;";
             
             MySqlCommand Insert = new MySqlCommand(SqlInsert, conn);
             Insert.ExecuteNonQuery();
-
-
-
+            
             Insert.CommandText = "insert into search  (Category,Keyword,ProjectID,ParentID,ProjectTitle,abstract,startdate,enddate,type,labid,labname) (select 'resource', location.resource , project.idProject,project.idProject,project.title, Project.reason,project.startdate, project.enddate, 'Project',project.laboratory_idlaboratory,laboratory.LongName from laboratory, Location, project_has_location, Project where laboratory.idlaboratory =project.laboratory_idlaboratory and project_has_location.Project_idProject = Project.idProject AND project_has_location.Location_idLocation = Location.idLocation and location.resource is not null and location.resource != ' ');";
             Insert.ExecuteNonQuery();
 
@@ -2557,7 +2593,7 @@ namespace SeriesClientConsoleApp
 
             Insert.CommandText = " insert into search (Category,Keyword,ProjectID,ParentID,ProjectTitle,Abstract, startdate, enddate, specimenid, compexpid, signalid,type,labid,labname) ( Select distinct 'PhysicalQ', SignalResult.PhysicalQ, project.idproject, signalresult.idSignalResult, project.title,project.reason, project.StartDate, project.enddate ,specimen.idspecimen,compexp.idcompexp,signalresult.idsignalresult,'Signal',project.laboratory_idlaboratory,laboratory.LongName   from laboratory,project, specimen , compexp, signalresult WHERE laboratory.idlaboratory =project.laboratory_idlaboratory and project.idproject = specimen.project_idproject AND specimen.idspecimen = compexp.specimen_idspecimen AND signalresult.CompExp_idCompExp = compexp.idcompexp and SignalResult.PhysicalQ is not null and SignalResult.PhysicalQ != ' '  );";
             Insert.ExecuteNonQuery();
-
+            */
 
 
 
