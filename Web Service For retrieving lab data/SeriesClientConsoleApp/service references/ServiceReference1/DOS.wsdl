@@ -354,8 +354,8 @@
       </xs:complexType>
       <xs:complexType name="specimen">
         <xs:sequence>
-          <xs:element minOccurs="0" maxOccurs="unbounded" name="computationIDs" nillable="true" type="xs:int" />
-          <xs:element minOccurs="0" maxOccurs="unbounded" name="experimentIDs" nillable="true" type="xs:int" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="computationIDs" nillable="true" type="xs:string" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="experimentIDs" nillable="true" type="xs:string" />
           <xs:element minOccurs="0" name="idSpecimen" type="xs:string" />
           <xs:element name="maxDepth" type="xs:double" />
           <xs:element name="maxHeight" type="xs:double" />

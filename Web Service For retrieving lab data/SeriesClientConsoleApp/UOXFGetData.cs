@@ -125,7 +125,7 @@ namespace SeriesClientConsoleApp
                 }
             }
             */
-
+            System.Console.WriteLine("Running service getOpenProjectIDs()");
             string[] ProjectOpenLocalIDS = WSClient.getOpenProjectIDs();
             
 
@@ -136,7 +136,7 @@ namespace SeriesClientConsoleApp
                 //System.Console.WriteLine(WSClient.testMe());
                 //System.Console.WriteLine(WSClient.testMyKR());
 
-
+                System.Console.WriteLine("Running service getProjectData()");
                 project cp = WSClient.getProjectData("http://jrc.ec.europa.eu/celestina#project193");
                 if (cp != null)
                 {
@@ -170,7 +170,7 @@ namespace SeriesClientConsoleApp
                 }
                 
             }
-
+            System.Console.WriteLine("Running service getClosedProjectIDs()");
             string[] ProjectClosedLocalIDS = WSClient.getClosedProjectIDs();
             if (ProjectClosedLocalIDS != null)
             {
@@ -250,6 +250,8 @@ namespace SeriesClientConsoleApp
                     }
                 }
                 string DocId;
+
+                System.Console.WriteLine("Running service getProjectDocuments()");
                 document[] PrDocs = WSClient.getProjectDocuments(CurrentProject.idProject);
                 if (PrDocs != null)
                 {
@@ -267,6 +269,7 @@ namespace SeriesClientConsoleApp
                 {
                     foreach (var new_specimen in SpecimenIDs)
                     {
+                        System.Console.WriteLine("Running service getSpecimenData()");
                         RunningSpecimen = WSClient.getSpecimenData(new_specimen);
                         InsertSpecimenLevel(ProjectId, RunningSpecimen);
                     }
@@ -292,6 +295,8 @@ namespace SeriesClientConsoleApp
 
 
             SpecimenID = dbOps.InsertSpecimen(ProjectId, RunningSpecimen);
+            System.Console.WriteLine("HERHERHERHEHRHERHEHRHERHEHRHERHE");
+            System.Console.WriteLine(SpecimenID);
             CrLogger.CreateLogIntro("insert", DateTime.UtcNow.ToString("yyyy/MM/dd HH:mm:ss"), SpecimenID, "Specimen");
             string SimilitudeId;
 
@@ -309,8 +314,9 @@ namespace SeriesClientConsoleApp
             }
 
 
-            string SpecimenReportId;    
+            string SpecimenReportId;
             //get the specimen documents and insert them
+            System.Console.WriteLine("Running service getSpecimenDocuments()");
             document[] SpecDocs = WSClient.getSpecimenDocuments(RunningSpecimen.idSpecimen);
             if (SpecDocs != null)
             {
@@ -323,6 +329,7 @@ namespace SeriesClientConsoleApp
             }
 
             //Get the structural element of the specimen
+            System.Console.WriteLine("Running service getStructuralComponentData()");
             structuralComponent[] SpecStrElementArray = WSClient.getStructuralComponentData(RunningSpecimen.idSpecimen);
             string StructElemDocID = null;
             if (SpecStrElementArray != null)
@@ -413,6 +420,7 @@ namespace SeriesClientConsoleApp
             }
 
             //get and insert the specimen images
+            System.Console.WriteLine("Running service getSpecimenImages()");
             image[] SpecimenImagesArray = WSClient.getSpecimenImages(RunningSpecimen.idSpecimen);
             string SpecimenPictureID=null;
             if (SpecimenImagesArray != null)
@@ -430,6 +438,7 @@ namespace SeriesClientConsoleApp
                 for (int ExpCount = 0; ExpCount < RunningSpecimen.experimentIDs.Length; ExpCount++)
                 {
                     System.Console.WriteLine("Running specimen: " + RunningSpecimen.experimentIDs[ExpCount].ToString());
+                    System.Console.WriteLine("Running service getExperimentData("+ RunningSpecimen.experimentIDs[ExpCount].ToString() + ")");
                     RunningExp = WSClient.getExperimentData(RunningSpecimen.experimentIDs[ExpCount].ToString());
                     InsertExpLevel(SpecimenID, RunningExp);
 
@@ -444,6 +453,7 @@ namespace SeriesClientConsoleApp
                 for (int CompCount = 0; CompCount < RunningSpecimen.computationIDs.Length; CompCount++)
                 {
                     //experiment test = WSClient.getExperimentData(2);
+                    System.Console.WriteLine("Running service getComputationData()");
                     RunningComp = WSClient.getComputationData(RunningSpecimen.computationIDs[CompCount].ToString());
                     if (RunningComp != null)
                     {
@@ -487,6 +497,7 @@ namespace SeriesClientConsoleApp
             string EffectiveInputFileID;
             string OlsID;
 
+            
             ExpCompID = dbOps.InsertCompExp(SpecimenID, RunningComp);
             CrLogger.CreateLogIntro("insert", DateTime.UtcNow.ToString("yyyy/MM/dd HH:mm:ss"), ExpCompID, "ExpComp");
             //dbOps.InsertComputerSystem(ExpCompID, RunningComp.computerSystem);
@@ -568,7 +579,7 @@ namespace SeriesClientConsoleApp
                 }//end of experiment person
 
             }
-
+            System.Console.WriteLine("Running service getComputationDocuments()");
             CompExpDocsArray = WSClient.getComputationDocuments(RunningComp.idExpComp);
             string CompExpHasDocID = null;
             if (CompExpDocsArray != null)
@@ -583,7 +594,7 @@ namespace SeriesClientConsoleApp
 
                 }
             }
-
+            System.Console.WriteLine("Running service getComputationImages()");
             CompExpImagesArray = WSClient.getComputationImages(RunningComp.idExpComp);
             string CompExpPicID = null;
             if (CompExpImagesArray != null)
@@ -595,7 +606,7 @@ namespace SeriesClientConsoleApp
                 }
 
             }
-
+            System.Console.WriteLine("Running service getComputationVideos()");
             CompExpVideosArray = WSClient.getComputationVideos(RunningComp.idExpComp);
             string VideoID = null;
             if (CompExpVideosArray != null)
@@ -610,6 +621,7 @@ namespace SeriesClientConsoleApp
 
 
             //Detailed Loading Characteristics comp
+            System.Console.WriteLine("Running service getComputationLoadingData()");
             DLCArray = WSClient.getComputationLoadingData(RunningComp.idExpComp);
             string CompExpHasDLCID = null;
             string NominalLoading_OriginalLoadingID = null;
@@ -707,6 +719,7 @@ namespace SeriesClientConsoleApp
 
             }
             //RunningExp.outputSignals;
+            System.Console.WriteLine("Running service getExperimentDocuments()");
             CompExpDocsArray = WSClient.getExperimentDocuments(RunningExp.idExpComp);
             string CompExpHasDocumentId=null;
             if (CompExpDocsArray != null)
@@ -721,6 +734,7 @@ namespace SeriesClientConsoleApp
                 }
             }
             string CompExpImagesID=null;
+            System.Console.WriteLine("Running service getExperimentImages()");
             CompExpImagesArray = WSClient.getExperimentImages(RunningExp.idExpComp);
             if (CompExpImagesArray != null)
             {
@@ -732,7 +746,7 @@ namespace SeriesClientConsoleApp
                 }
 
             }
-
+            System.Console.WriteLine("Running service getExperimentVideos()");
             CompExpVideosArray = WSClient.getExperimentVideos(RunningExp.idExpComp);
             string CompExpVideoID=null;
             if (CompExpVideosArray != null)
@@ -745,6 +759,7 @@ namespace SeriesClientConsoleApp
             }
 
             //Detailed Loading Characteristics exp
+            System.Console.WriteLine("Running service getExperimentLoadingData()");
             DLCArray = WSClient.getExperimentLoadingData(RunningExp.idExpComp);
             string NominalLoadingOlsID;
             string CompExpHasDLCHID;
@@ -883,13 +898,8 @@ namespace SeriesClientConsoleApp
             return insert.LastInsertedId.ToString();
         }
 
-
-
-
-
         public string InsertProject(string idLab, project NewProject)
         {
-            System.Console.WriteLine("EDEDEDEDEDEDEDE" + NewProject.idProject);
             string PrID = CheckIFprojectExists(NewProject.idProject, idLab);
 
             string reasonOfPr;
@@ -1152,7 +1162,7 @@ namespace SeriesClientConsoleApp
 
         public string InsertProjectReport(string idProject, document ProjectDoc)
         {
-            string IDPrReport = CheckIfProjectReportExists(idProject, int.Parse( ProjectDoc.idDocument));
+            string IDPrReport = CheckIfProjectReportExists(idProject, ProjectDoc.idDocument);
             if (IDPrReport == null)
             {
                 string sqlInsertProjectReport = "insert into projectreport " + " (Project_idProject, Title, Author, Abstract,LocalId, DocDate, Size, Format, role, scope, privacy )" + " values (@idProject, @Title, @Author, @Abstract, @LocalId, @DocDate, @Size, @Format, @role, @scope, @privacy)";
@@ -1177,7 +1187,7 @@ namespace SeriesClientConsoleApp
             return IDPrReport;
 
         }
-        public string CheckIfProjectReportExists(string ProjectID, int ReportLocalID)
+        public string CheckIfProjectReportExists(string ProjectID, string ReportLocalID)
         {
             string SqlselectReport = "select idProjectReport from projectreport where localId = @reportLocalID AND Project_idProject = @projectID";
             string ReportID = null;
@@ -1211,10 +1221,9 @@ namespace SeriesClientConsoleApp
                 insertSpec.Parameters.AddWithValue("@SpecimenMass", Spec.specimenMass);
                 insertSpec.Parameters.AddWithValue("@privacy", Spec.privacy);
                 insertSpec.Parameters.AddWithValue("@LocalID", Spec.idSpecimen);
-
                 insertSpec.ExecuteNonQuery();
                 //returns long I have to check it
-                //idSpecimen = insertSpec.LastInsertedId.ToString();
+                idSpecimen = insertSpec.LastInsertedId.ToString();
             }
             return idSpecimen;
         }
@@ -1231,7 +1240,7 @@ namespace SeriesClientConsoleApp
                 SpecimenReader.Read();
                 SpecimenId = SpecimenReader[0].ToString();
             }
-
+            System.Console.WriteLine("edededededededededededede    " + SpecimenId);
             SpecimenReader.Close();
             return SpecimenId;
         }
@@ -1575,7 +1584,6 @@ namespace SeriesClientConsoleApp
         {
             string ActualMeanPropertyId = null;
 
-            //string[] keys = null;
             string sqlSelectActualMeanProperty = "select idMaterialActualProp from materialactualprop where  materialactualprop.properties = @name AND materialactualprop.Material_idMaterial = @idmaterial AND materialactualprop.StructuraElement_idStructuralElement = @idStructuralElement";
             MySqlCommand SelectActualMeanProperty = new MySqlCommand(sqlSelectActualMeanProperty, conn);
             SelectActualMeanProperty.Parameters.AddWithValue("@name", MaterialActualProp.actualMeanPropertyName);
@@ -1596,7 +1604,6 @@ namespace SeriesClientConsoleApp
             string idCompExp = CheckIdCompExpExists(Exp.idExpComp.ToString(), specimenId);
             if (idCompExp == null)
             {
-
                 string sqlInsertCompExp = "insert into CompExp " + " (Specimen_IDSpecimen, Name, CreationDate, Repetition, PeakExcitUnit,PeakExcitValue, LocalId, Type, ExpCompType , privacy)" + " values (@Specimen_IDSpecimen, @Name, @CreationDate, @Repetition, @PeakExcitUnit, @PeakExcitValue, @LocalId, @Type, @ExpCompType, @privacy)";
                 MySqlCommand insertCompExp = new MySqlCommand(sqlInsertCompExp, conn);
                 insertCompExp.Parameters.AddWithValue("@Specimen_IDSpecimen", specimenId);
@@ -2236,10 +2243,6 @@ namespace SeriesClientConsoleApp
             //string ComputerSystemId = CheckIfComputerSystemExists(idCompExp, Software);
             foreach (string soft in Software)
             {
-
-
-
-
                 if (ComputerSystemId == null)
                 {
                     string sqlInsert = "Insert Into ComputerSystem" + " (CompExp_idCompExp,Software) Values" + " (@idCompExp, @Software) ";
@@ -2503,101 +2506,30 @@ namespace SeriesClientConsoleApp
                     string sqlSelectLabId = "select laboratory_idlaboratory from project where idProject = @idproject ";
                     MySqlCommand SelectLabId = new MySqlCommand(sqlSelectLabId, conn);
                     SelectLabId.Parameters.AddWithValue("@idproject", LocalIdProject);
-                    MySqlDataReader lab_id = SelectLabId.ExecuteReader();
-                    if (lab_id.HasRows)
+                    MySqlDataReader db_reader = SelectLabId.ExecuteReader();
+                    if (db_reader.HasRows)
                     {
-                        lab_id.Read();
-                        found_lab_Id = lab_id[0].ToString();
+                        db_reader.Read();
+                        found_lab_Id = db_reader[0].ToString();
                         InsertToSearch.Parameters.AddWithValue("@labid", found_lab_Id);
 
                         string found_lab_Name;
                         string sqlSelectLabName = "select LongName from laboratory where idlaboratory = @idlab ";
                         MySqlCommand SelectLabName = new MySqlCommand(sqlSelectLabName, conn);
                         SelectLabName.Parameters.AddWithValue("@idlab", found_lab_Id);
-                        MySqlDataReader lab_name = SelectLabId.ExecuteReader();
-                        if (lab_name.HasRows)
+                        if (db_reader.HasRows)
                         {
-                            lab_name.Read();
-                            found_lab_Name = lab_name[0].ToString();
+                            db_reader.Read();
+                            found_lab_Name = db_reader[0].ToString();
                             InsertToSearch.Parameters.AddWithValue("@labname", found_lab_Name);
                         }
                     }
-                    lab_id.Close();
+                    db_reader.Close();
 
                     InsertToSearch.ExecuteNonQuery();
                     //System.Console.WriteLine(cp.idProject);
                 }
             }
-           
-            //System.Console.WriteLine("relation  between original and nomianl does not exist");
-
-            /*
-            string SqlInsert = "delete from search ;";
-            
-            MySqlCommand Insert = new MySqlCommand(SqlInsert, conn);
-            Insert.ExecuteNonQuery();
-            
-            Insert.CommandText = "insert into search  (Category,Keyword,ProjectID,ParentID,ProjectTitle,abstract,startdate,enddate,type,labid,labname) (select 'resource', location.resource , project.idProject,project.idProject,project.title, Project.reason,project.startdate, project.enddate, 'Project',project.laboratory_idlaboratory,laboratory.LongName from laboratory, Location, project_has_location, Project where laboratory.idlaboratory =project.laboratory_idlaboratory and project_has_location.Project_idProject = Project.idProject AND project_has_location.Location_idLocation = Location.idLocation and location.resource is not null and location.resource != ' ');";
-            Insert.ExecuteNonQuery();
-
-            Insert.CommandText = "insert into search  (Category,Keyword,ProjectID,ParentID,ProjectTitle,abstract,startdate,enddate,type,labid,labname) (select 'location', location.location , project.idProject,project.idProject,project.title, Project.reason ,project.startdate,project.enddate , 'Project',project.laboratory_idlaboratory,laboratory.LongName from laboratory,Location, project_has_location, Project where laboratory.idlaboratory =project.laboratory_idlaboratory and project_has_location.Project_idProject = Project.idProject AND project_has_location.Location_idLocation = Location.idLocation and location.location is not null and location.location != ' ');";
-            Insert.ExecuteNonQuery();
-
-            Insert.CommandText = "insert into search  (Category,Keyword,ProjectID,ParentID,ProjectTitle,abstract,startdate,enddate,type,labid,labname) (select 'location', location.location , project.idProject,project.idProject,project.title, Project.reason ,project.startdate,project.enddate, 'Project',project.laboratory_idlaboratory,laboratory.LongName   from laboratory,Location, project_has_location, Project where laboratory.idlaboratory =project.laboratory_idlaboratory and project_has_location.Project_idProject = Project.idProject AND project_has_location.Location_idLocation = Location.idLocation and location.location is not null and location.location != ' ');";
-            Insert.ExecuteNonQuery();
-
-            Insert.CommandText = "insert into search  (Category,Keyword,ProjectID,ParentID,ProjectTitle,abstract,startdate,enddate,type,labid,labname) (select 'Infrastructure',location.Infrastructure , project.idProject, project.idProject, project.title , Project.reason ,project.startdate,project.enddate  , 'Project',project.laboratory_idlaboratory,laboratory.LongName   from laboratory,Location, project_has_location, Project where laboratory.idlaboratory =project.laboratory_idlaboratory and project_has_location.Project_idProject = Project.idProject AND project_has_location.Location_idLocation = Location.idLocation and location.Infrastructure is not null and location.Infrastructure  != ' ');";
-            Insert.ExecuteNonQuery();
-
-            Insert.CommandText = "insert into search (Category,Keyword,ProjectID,ParentID,ProjectTitle,abstract,startdate,enddate,type,labid,labname) (select 'ResearchArea', project.MainFocus, project.idProject, project.idProject, project.title , Project.reason ,project.startdate,project.enddate, 'Project',project.laboratory_idlaboratory,laboratory.LongName   from laboratory,Project where laboratory.idlaboratory =project.laboratory_idlaboratory and project.MainFocus is not null and project.MainFocus != ' ');";
-            Insert.ExecuteNonQuery();
-
-            Insert.CommandText = "insert into search (Category,Keyword,ProjectID,ParentID,ProjectTitle,abstract,startdate,enddate,type,labid,labname) (select 'acronym', project.acronym, project.idProject, project.idProject, project.title , Project.reason ,project.startdate,project.enddate, 'Project',project.laboratory_idlaboratory,laboratory.LongName   from laboratory,project  where laboratory.idlaboratory =project.laboratory_idlaboratory and acronym is not null and acronym != ' ');";
-            Insert.ExecuteNonQuery();
-
-            Insert.CommandText = "insert into search (Category,Keyword,ProjectID,ParentID,ProjectTitle,abstract,startdate,enddate,type,labid,labname) (select 'investigator', personnel.name, project.idProject, project.idProject, project.title, Project.reason ,project.startdate,project.enddate, 'Project',project.laboratory_idlaboratory,laboratory.LongName   from laboratory,project,personnel,project_has_personnel where laboratory.idlaboratory =project.laboratory_idlaboratory and project.idproject = project_has_personnel.project_idproject and project_has_personnel.Personnel_idPersonnel = personnel.idpersonnel and personnel.name is not null and personnel.name != ' ');";
-            Insert.ExecuteNonQuery();
-
-            Insert.CommandText = "insert into search (Category,Keyword,ProjectID,ParentID,ProjectTitle,Abstract, startdate, enddate, SpecimenID,type,labid,labname) (select 'structural element', structuralelement.type, project.idproject, specimen.idspecimen, project.title,project.reason, project.StartDate, project.enddate, Specimen.idspecimen,'Specimen',project.laboratory_idlaboratory,laboratory.LongName   from laboratory,structuralElement, project,specimen where laboratory.idlaboratory =project.laboratory_idlaboratory and project.idproject = specimen.project_idproject and specimen.idspecimen = structuralelement.specimen_idspecimen and structuralelement.type is not null and structuralelement.type != ' ');";
-            Insert.ExecuteNonQuery();
-
-            Insert.CommandText = "insert into search (Category,Keyword,ProjectID,ParentID,ProjectTitle,Abstract, startdate, enddate, SpecimenID,type,labid,labname) (select distinct 'StructuralMaterial', material.name, project.idproject, specimen.idspecimen, project.title,project.reason, project.StartDate, project.enddate, specimen.idspecimen,'Specimen',project.laboratory_idlaboratory,laboratory.LongName    from laboratory,material, project,structuralelement_has_material,structuralelement,specimen WHERE laboratory.idlaboratory =project.laboratory_idlaboratory and material.idmaterial = structuralelement_has_material.Material_idMaterial AND structuralelement_has_material.StructuralElement_idStructuralElement = structuralelement.idStructuralElement AND structuralelement.Specimen_idSpecimen = specimen.idspecimen AND project.idproject = specimen.project_idproject and material.name is not null  and material.name != ' ');";
-            Insert.ExecuteNonQuery();
-
-            Insert.CommandText = " insert into search (Category,Keyword,ProjectID,ParentID,ProjectTitle,Abstract, startdate, enddate, SpecimenID,type,labid,labname) ( select distinct 'similitude',  similitude.scaledPropertyName, project.idproject , specimen.idspecimen, project.title,project.reason, project.StartDate, project.enddate, specimen.idspecimen,'Specimen',project.laboratory_idlaboratory,laboratory.LongName  from laboratory,similitude,specimen,project where laboratory.idlaboratory =project.laboratory_idlaboratory and project.idproject = specimen.project_idproject AND specimen.idspecimen = similitude.specimen AND  similitude.scaledPropertyName is not null and similitude.scaledPropertyName != ' ' );";
-            Insert.ExecuteNonQuery();
-
-            Insert.CommandText = "insert into search (Category,Keyword,ProjectID,ParentID,ProjectTitle,Abstract, startdate, enddate, SpecimenID,type,labid,labname) ( select distinct 'specimen pictures',  specimenpictures.Type, project.idproject , specimen.idspecimen, project.title,project.reason, project.StartDate, project.enddate, specimen.idspecimen,'Specimen' ,project.laboratory_idlaboratory,laboratory.LongName from laboratory,project, specimenpictures,specimen where laboratory.idlaboratory =project.laboratory_idlaboratory and project.idproject = specimen.project_idproject  AND specimenpictures.specimen_idspecimen = specimen.idspecimen and specimenpictures.Type is not null and specimenpictures.Type  != ' ');";
-            Insert.ExecuteNonQuery();
-
-            Insert.CommandText = "insert into search (Category,Keyword,ProjectID,ParentID,ProjectTitle,Abstract, startdate, enddate, specimenid, compexpid,type,labid,labname) ( SELECT distinct 'exptype', compexp.ExpCompType, project.idproject, compexp.idcompexp, project.title,project.reason, project.StartDate, project.enddate, specimen.idspecimen,compexp.idcompexp, compexp.type ,project.laboratory_idlaboratory,laboratory.LongName FROM laboratory,compexp,project,specimen WHERE laboratory.idlaboratory =project.laboratory_idlaboratory and project.idproject = specimen.project_idproject AND specimen.idspecimen = compexp.specimen_idspecimen AND Compexp.type= 'Experiment' AND compexp.ExpCompType is not null and compexp.ExpCompType != ' ' );";
-            Insert.ExecuteNonQuery();
-
-            Insert.CommandText = "insert into search (Category,Keyword,ProjectID,ParentID,ProjectTitle,Abstract, startdate, enddate, specimenid, compexpid,type,labid,labname) (select distinct 'OLS_nature',originalloading.nature, project.idproject, compexp.idcompexp, project.title,project.reason, project.StartDate, project.enddate, specimen.idspecimen,compexp.idcompexp, compexp.type,project.laboratory_idlaboratory,laboratory.LongName   from laboratory,project, originalloading, dlc, nominalloading_originalloading, specimen,compexp, compexp_has_dlc WHERE laboratory.idlaboratory =project.laboratory_idlaboratory and Originalloading.idOriginalloading = nominalloading_originalloading.originalloading AND nominalloading_originalloading.nominalloading = dlc.iddlc AND compexp_has_dlc.dlc_iddlc = dlc.iddlc and compexp_has_dlc.compexp_idcompexp = compexp.idcompexp and CompExp.specimen_idspecimen = specimen.idspecimen AND project.idproject = specimen.project_idproject and originalloading.nature is not null and originalloading.nature != ' ');";
-            Insert.ExecuteNonQuery();
-
-            Insert.CommandText = " insert into search (Category,Keyword,ProjectID,ParentID,ProjectTitle,Abstract, startdate, enddate, specimenid, compexpid,type,labid,labname) ( select distinct 'OLS_Source',originalloading.source, project.idproject, compexp.idcompexp, project.title,project.reason, project.StartDate, project.enddate, specimen.idspecimen,compexp.idcompexp, compexp.type,project.laboratory_idlaboratory,laboratory.LongName     from laboratory,project, originalloading, dlc, nominalloading_originalloading, specimen,compexp , compexp_has_dlc WHERE laboratory.idlaboratory =project.laboratory_idlaboratory and Originalloading.idOriginalloading = nominalloading_originalloading.originalloading AND nominalloading_originalloading.nominalloading = dlc.iddlc AND compexp_has_dlc.dlc_iddlc = dlc.iddlc and compexp_has_dlc.compexp_idcompexp = compexp.idcompexp AND CompExp.specimen_idspecimen = specimen.idspecimen AND project.idproject = specimen.project_idproject and originalloading.source is not null and originalloading.source !=  ' ');";
-            Insert.ExecuteNonQuery();
-
-            Insert.CommandText = "insert into search (Category,Keyword,ProjectID,ParentID,ProjectTitle,Abstract, startdate, enddate, specimenid, compexpid,type,labid,labname) ( select distinct 'CompType',compexp.ExpCompType, project.idproject , compexp.idcompexp, project.title,project.reason, project.StartDate, project.enddate, specimen.idspecimen,compexp.idcompexp, compexp.type ,project.laboratory_idlaboratory,laboratory.LongName    FROM laboratory,compexp,project,specimen WHERE laboratory.idlaboratory =project.laboratory_idlaboratory and project.idproject = specimen.project_idproject AND specimen.idspecimen = compexp.specimen_idspecimen AND Compexp.type= 'Computation' AND compexp.ExpCompType is not null and compexp.ExpCompType != ' ');";
-            Insert.ExecuteNonQuery();
-
-            Insert.CommandText = " insert into search (Category,Keyword,ProjectID,ParentID,ProjectTitle,Abstract, startdate, enddate, specimenid, compexpid,type,labid,labname) ( select distinct 'SymmetryType',MeshModel.SymmetryType, project.idproject , compexp.idcompexp, project.title,project.reason, project.StartDate, project.enddate, specimen.idspecimen,compexp.idcompexp, compexp.type ,project.laboratory_idlaboratory,laboratory.LongName    from laboratory,project,specimen,compexp,meshmodel WHERE laboratory.idlaboratory =project.laboratory_idlaboratory and project.idproject = specimen.project_idproject AND specimen.idspecimen = compexp.specimen_idspecimen AND CompExp.Type= 'Computation' AND meshmodel.CompExp_idcompexp = compexp.idcompexp and MeshModel.SymmetryType is not null and MeshModel.SymmetryType != ' ');";
-            Insert.ExecuteNonQuery();
-
-            Insert.CommandText = " insert into search (Category,Keyword,ProjectID,ParentID,ProjectTitle,Abstract, startdate, enddate, specimenid, compexpid,type,labid,labname) ( select distinct 'NonLinearity',MeshModel.NonLinearity, project.idproject , compexp.idcompexp, project.title,project.reason , project.StartDate, project.enddate, specimen.idspecimen,compexp.idcompexp, compexp.type,project.laboratory_idlaboratory,laboratory.LongName    from laboratory,project,specimen,compexp,meshmodel WHERE laboratory.idlaboratory =project.laboratory_idlaboratory and project.idproject = specimen.project_idproject AND specimen.idspecimen = compexp.specimen_idspecimen AND CompExp.Type= 'Computation' AND meshmodel.CompExp_idcompexp = compexp.idcompexp and  MeshModel.NonLinearity is not null and MeshModel.NonLinearity != ' ');";
-            Insert.ExecuteNonQuery();
-
-            Insert.CommandText = "insert into search (Category,Keyword,ProjectID,ParentID,ProjectTitle,Abstract, startdate, enddate, specimenid, compexpid,type,labid,labname) ( select distinct 'CompSoft', computersystem.Software, project.idproject , compexp.idcompexp, project.title,project.reason , project.StartDate, project.enddate, specimen.idspecimen,compexp.idcompexp, compexp.type ,project.laboratory_idlaboratory,laboratory.LongName   from laboratory,project,computerSystem,compexp,specimen WHERE laboratory.idlaboratory =project.laboratory_idlaboratory and project.idproject = specimen.project_idproject AND specimen.idspecimen = compexp.specimen_idspecimen AND computersystem.CompExp_idCompExp = compexp.idcompexp and computersystem.Software is not null and computersystem.Software != ' ');";
-            Insert.ExecuteNonQuery();
-
-            Insert.CommandText = " insert into search (Category,Keyword,ProjectID,ParentID,ProjectTitle,Abstract, startdate, enddate, specimenid, compexpid, signalid,type,labid,labname) ( Select distinct 'PhysicalQ', SignalResult.PhysicalQ, project.idproject, signalresult.idSignalResult, project.title,project.reason, project.StartDate, project.enddate ,specimen.idspecimen,compexp.idcompexp,signalresult.idsignalresult,'Signal',project.laboratory_idlaboratory,laboratory.LongName   from laboratory,project, specimen , compexp, signalresult WHERE laboratory.idlaboratory =project.laboratory_idlaboratory and project.idproject = specimen.project_idproject AND specimen.idspecimen = compexp.specimen_idspecimen AND signalresult.CompExp_idCompExp = compexp.idcompexp and SignalResult.PhysicalQ is not null and SignalResult.PhysicalQ != ' '  );";
-            Insert.ExecuteNonQuery();
-            */
-
-
-
-
         }
     }
     public class Logger 

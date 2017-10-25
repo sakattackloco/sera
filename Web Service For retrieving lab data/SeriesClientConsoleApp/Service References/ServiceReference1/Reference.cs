@@ -402,9 +402,9 @@ namespace SeriesClientConsoleApp.ServiceReference1 {
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://ilm.eng.ox.ac.uk/")]
     public partial class specimen : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private System.Nullable<int>[] computationIDsField;
+        private string[] computationIDsField;
         
-        private System.Nullable<int>[] experimentIDsField;
+        private string[] experimentIDsField;
         
         private string idSpecimenField;
         
@@ -432,7 +432,7 @@ namespace SeriesClientConsoleApp.ServiceReference1 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("computationIDs", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=0)]
-        public System.Nullable<int>[] computationIDs {
+        public string[] computationIDs {
             get {
                 return this.computationIDsField;
             }
@@ -444,7 +444,7 @@ namespace SeriesClientConsoleApp.ServiceReference1 {
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute("experimentIDs", Form=System.Xml.Schema.XmlSchemaForm.Unqualified, IsNullable=true, Order=1)]
-        public System.Nullable<int>[] experimentIDs {
+        public string[] experimentIDs {
             get {
                 return this.experimentIDsField;
             }
