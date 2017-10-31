@@ -20,12 +20,12 @@ namespace LastOneFromScratch
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         protected void BtnAgree_Click(object sender, EventArgs e)
         {
-            
+            Response.Write(Request.Url.ToString());
             string id = Request.Params["localid"];
             string cat = Request.Params["category"];
             string dom = Request.Params["lab"];
@@ -43,8 +43,9 @@ namespace LastOneFromScratch
 
 
             //string DigitalCertificateName = "E=ioannid@ceid.upatras.gr, CN=150.140.188.205, OU=Human Computer Interaction, O=University Of Patras, L=Patra, S=Akhaia, C=GR";
-           // string DigitalCertificateName = "E=ioannid@ceid.upatras.gr, CN=150.140.188.205, OU=Upatras, O=HCI Group, L=Patra, S=Achaia, C=GR";
-            string DigitalCertificateName = "E=ioannid@ceid.upatras.gr, CN=www.dap.series.upatras.gr, OU=CIVIL ENG, O=UPAT, L=PATRAS, S=AKHAIA, C=GR";
+            // string DigitalCertificateName = "E=ioannid@ceid.upatras.gr, CN=150.140.188.205, OU=Upatras, O=HCI Group, L=Patra, S=Achaia, C=GR";
+            string DigitalCertificateName = "CN=SERIES CENTRAL SITE";
+
             //load the certificate
             //X509Certificate2 CurentCert = new X509Certificate2//(@"C:\code\SignData.pfx");//X509Store(StoreName.My, StoreLocation.LocalMachine);
             //string DigitalCertificateName = "E=ioannid@ceid.upatras.gr, CN=150.140.188.205, OU=Upatras, O=Upatras, L=patra, S=patra, C=gr";

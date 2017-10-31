@@ -3198,7 +3198,8 @@ namespace SERIESnew_db
             //Response.Redirect(FinalUrl);
             MovetoTheNextPanelState(null, "LoadData_General");
             string param = "localid=" + localID + "&category=" + category + "&lab=" + lab + "&status=" + status+ "&ip=" +  ip +"&port="+port;
-            Response.Write("<script type='text/javascript'>detailedresults=window.open('Terms_Of_Use.aspx?"+ param+"');</script>");
+            param = param.Replace("#", "%23");
+            Response.Write("<script type='text/javascript'>detailedresults=window.open('Terms_Of_Use.aspx?"+ param +"');</script>");
         }
         protected void ProjectMenu_MenuItemClick(object sender ,MenuEventArgs e) 
         {
