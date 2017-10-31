@@ -25,7 +25,6 @@ namespace LastOneFromScratch
 
         protected void BtnAgree_Click(object sender, EventArgs e)
         {
-            Response.Write(Request.Url.ToString());
             string id = Request.Params["localid"];
             string cat = Request.Params["category"];
             string dom = Request.Params["lab"];

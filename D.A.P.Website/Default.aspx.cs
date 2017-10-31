@@ -3197,9 +3197,8 @@ namespace SERIESnew_db
         {
             //Response.Redirect(FinalUrl);
             MovetoTheNextPanelState(null, "LoadData_General");
-            string param = "localid=" + localID + "&category=" + category + "&lab=" + lab + "&status=" + status+ "&ip=" +  ip +"&port="+port;
-            param = param.Replace("#", "%23");
-            Response.Write("<script type='text/javascript'>detailedresults=window.open('Terms_Of_Use.aspx?"+ param +"');</script>");
+            string param = "localid=" + HttpUtility.UrlEncode(localID)  + "&category=" + HttpUtility.UrlEncode(category) + "&lab=" + HttpUtility.UrlEncode(lab) + "&status=" + HttpUtility.UrlEncode(status) + "&ip=" + HttpUtility.UrlEncode(ip) + "&port="+ HttpUtility.UrlEncode(port);
+            Response.Write("<script type='text/javascript'>detailedresults=window.open('Terms_Of_Use.aspx?"+ param + "');</script>");
         }
         protected void ProjectMenu_MenuItemClick(object sender ,MenuEventArgs e) 
         {
