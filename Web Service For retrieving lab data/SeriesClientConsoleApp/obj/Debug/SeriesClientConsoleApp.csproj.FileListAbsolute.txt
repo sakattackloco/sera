@@ -53,3 +53,10 @@ C:\Users\Sakis Ntourmas\Desktop\SERA project\p7\series code\Web Service For retr
 C:\Users\Sakis Ntourmas\Desktop\SERA project\p7\series code\Web Service For retrieving lab data\SeriesClientConsoleApp\obj\Debug\SeriesClientConsoleApp.csproj.CoreCompileInputs.cache
 C:\Users\Sakis Ntourmas\Desktop\SERA project\p7\series code\Web Service For retrieving lab data\SeriesClientConsoleApp\obj\Debug\SeriesClientConsoleApp.exe
 C:\Users\Sakis Ntourmas\Desktop\SERA project\p7\series code\Web Service For retrieving lab data\SeriesClientConsoleApp\obj\Debug\SeriesClientConsoleApp.pdb
+C:\Users\Sakis Ntourmas\Desktop\SERA project\p9\series code\Web Service For retrieving lab data\SeriesClientConsoleApp\bin\Debug\SeriesClientConsoleApp.exe.config
+C:\Users\Sakis Ntourmas\Desktop\SERA project\p9\series code\Web Service For retrieving lab data\SeriesClientConsoleApp\bin\Debug\SeriesClientConsoleApp.exe
+C:\Users\Sakis Ntourmas\Desktop\SERA project\p9\series code\Web Service For retrieving lab data\SeriesClientConsoleApp\bin\Debug\SeriesClientConsoleApp.pdb
+C:\Users\Sakis Ntourmas\Desktop\SERA project\p9\series code\Web Service For retrieving lab data\SeriesClientConsoleApp\obj\Debug\SeriesClientConsoleApp.csprojResolveAssemblyReference.cache
+C:\Users\Sakis Ntourmas\Desktop\SERA project\p9\series code\Web Service For retrieving lab data\SeriesClientConsoleApp\obj\Debug\SeriesClientConsoleApp.csproj.CoreCompileInputs.cache
+C:\Users\Sakis Ntourmas\Desktop\SERA project\p9\series code\Web Service For retrieving lab data\SeriesClientConsoleApp\obj\Debug\SeriesClientConsoleApp.exe
+C:\Users\Sakis Ntourmas\Desktop\SERA project\p9\series code\Web Service For retrieving lab data\SeriesClientConsoleApp\obj\Debug\SeriesClientConsoleApp.pdb

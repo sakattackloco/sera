@@ -48,10 +48,11 @@ namespace SeriesClientConsoleApp
 
         static void Main(string[] args)
         {
-
+            var watch = System.Diagnostics.Stopwatch.StartNew();
             UOXFGetData CallUOXFServices = new UOXFGetData("CELESTEST");
             CallUOXFServices.Initialization("CELESTEST");
-           
+            watch.Stop();
+            var elapsedmins = watch.ElapsedMilliseconds/60000;
 
         }
 
@@ -1053,6 +1054,11 @@ namespace SeriesClientConsoleApp
         {
 
             string IdPersonnel = CheckIFPersonnelExists(personnel, InstitutionID);
+            System.Console.WriteLine("PERSONEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEL");
+
+            System.Console.WriteLine("INST ID:  "+InstitutionID);
+            System.Console.WriteLine("Name:  " + personnel.familyName);
+            System.Console.WriteLine("localid:  " + personnel.familyName);
 
             if (IdPersonnel == null)
             {
@@ -1291,7 +1297,7 @@ namespace SeriesClientConsoleApp
 
         public string InsertSpecimenReport(string idSpecimen, document SpecimenDoc)
         {
-            string IdSpecReport = CheckIfSpecReportExists(idSpecimen,int.Parse( SpecimenDoc.idDocument));
+            string IdSpecReport = CheckIfSpecReportExists(idSpecimen, SpecimenDoc.idDocument);
             if (IdSpecReport == null)
             {
                 string sqlInsertSpecimenReport = "insert into specimenreport " + " (specimen_idspecimen, Title, Author, Abstract,LocalId, DocDate, Size, Format, role, scope, privacy )" + " values (@idSpecimen, @Title, @Author, @Abstract, @LocalId, @DocDate, @Size, @Format, @role, @scope, @privacy)";
@@ -1314,7 +1320,7 @@ namespace SeriesClientConsoleApp
             }
             return IdSpecReport;
         }
-        public string CheckIfSpecReportExists(string idSpecimen, int IdLocalSpecimenReport)
+        public string CheckIfSpecReportExists(string idSpecimen, string IdLocalSpecimenReport)
         {
             string IdSpecimenReport = null;
 

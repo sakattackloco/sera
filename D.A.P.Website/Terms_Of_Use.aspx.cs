@@ -83,7 +83,7 @@ namespace LastOneFromScratch
             signature = System.Web.HttpUtility.UrlEncode(signature);
 
             string urlPart = @"http://" + ip + ":"+port+"/DatOX/Download?";
-            string FinalUrl = urlPart + "rqd=" + rqd + "&id=" + id + "&cat=" + cat + "&dom=" + dom + "&par=" + par + "&signature=" + signature;
+            string FinalUrl = urlPart + "rqd=" + HttpUtility.UrlEncode(rqd) + "&id=" + HttpUtility.UrlEncode(id) + "&cat=" + HttpUtility.UrlEncode(cat) + "&dom=" + HttpUtility.UrlEncode(dom) + "&par=" + HttpUtility.UrlEncode(par) + "&signature=" + HttpUtility.UrlEncode(signature);
             //FinalUrl = FinalUrl.ToLower();
 
            //Response.Redirect(FinalUrl);
