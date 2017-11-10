@@ -43,7 +43,7 @@ namespace LastOneFromScratch
 
             //string DigitalCertificateName = "E=ioannid@ceid.upatras.gr, CN=150.140.188.205, OU=Human Computer Interaction, O=University Of Patras, L=Patra, S=Akhaia, C=GR";
             // string DigitalCertificateName = "E=ioannid@ceid.upatras.gr, CN=150.140.188.205, OU=Upatras, O=HCI Group, L=Patra, S=Achaia, C=GR";
-            string DigitalCertificateName = "CN=SERIES CENTRAL SITE";
+            string DigitalCertificateName = "CN=Central_Site_Download";
 
             //load the certificate
             //X509Certificate2 CurentCert = new X509Certificate2//(@"C:\code\SignData.pfx");//X509Store(StoreName.My, StoreLocation.LocalMachine);
@@ -83,7 +83,7 @@ namespace LastOneFromScratch
             signature = System.Web.HttpUtility.UrlEncode(signature);
 
             string urlPart = @"http://" + ip + ":"+port+"/DatOX/Download?";
-            string FinalUrl = urlPart + "rqd=" + HttpUtility.UrlEncode(rqd) + "&id=" + HttpUtility.UrlEncode(id) + "&cat=" + HttpUtility.UrlEncode(cat) + "&dom=" + HttpUtility.UrlEncode(dom) + "&par=" + HttpUtility.UrlEncode(par) + "&signature=" + HttpUtility.UrlEncode(signature);
+            string FinalUrl = urlPart + "rqd=" + HttpUtility.UrlEncode(rqd) + "&id=" + HttpUtility.UrlEncode(id) + "&cat=" + HttpUtility.UrlEncode(cat) + "&dom=" + HttpUtility.UrlEncode(dom) + "&par=" + HttpUtility.UrlEncode(par) + "&signature=" + signature;
             //FinalUrl = FinalUrl.ToLower();
 
            //Response.Redirect(FinalUrl);

@@ -237,16 +237,18 @@ namespace SeriesClientConsoleApp
                         if (PersonInstitution != null)
                         {
                             InstitutionID = dbOps.InsertInstitution(PersonInstitution);
-
-
                             CrLogger.CreateLogIntro("insert", DateTime.UtcNow.ToString("yyyy/MM/dd HH:mm:ss"), InstitutionID, "Institution");
-                            PersonnelID = dbOps.InsertPersonnel(ProjectPerson, InstitutionID);
+                        }
+                        else
+                        {
+                            InstitutionID = " ";
+                        }
+                        PersonnelID = dbOps.InsertPersonnel(ProjectPerson, InstitutionID);
 
-                            if (dbOps.CheckIfproject_has_personnelExists(ProjectId, PersonnelID) == null)
-                            {
-                                dbOps.InsertProjectHasPersonnel(ProjectId, PersonnelID, ProjectPerson.role);
-                                CrLogger.CreateLogIntro("insert", DateTime.UtcNow.ToString("yyyy/MM/dd HH:mm:ss"), ProjectId, "PrHasPersonnel");
-                            }
+                        if (dbOps.CheckIfproject_has_personnelExists(ProjectId, PersonnelID, ProjectPerson.role) == null)
+                        {
+                            dbOps.InsertProjectHasPersonnel(ProjectId, PersonnelID, ProjectPerson.role);
+                            CrLogger.CreateLogIntro("insert", DateTime.UtcNow.ToString("yyyy/MM/dd HH:mm:ss"), ProjectId, "PrHasPersonnel");
                         }
                     }
                 }
@@ -1054,12 +1056,6 @@ namespace SeriesClientConsoleApp
         {
 
             string IdPersonnel = CheckIFPersonnelExists(personnel, InstitutionID);
-            System.Console.WriteLine("PERSONEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEL");
-
-            System.Console.WriteLine("INST ID:  "+InstitutionID);
-            System.Console.WriteLine("Name:  " + personnel.familyName);
-            System.Console.WriteLine("localid:  " + personnel.familyName);
-
             if (IdPersonnel == null)
             {
                 System.Console.WriteLine("person does not exist");
@@ -1092,13 +1088,14 @@ namespace SeriesClientConsoleApp
 
             return IdPersonnel;
         }
-        public string CheckIfproject_has_personnelExists(string idProject, string idPersonnel)
+        public string CheckIfproject_has_personnelExists(string idProject, string idPersonnel, string person_role)
         {
-            string SqlselectPrPerson = "select Personnel_idPersonnel from project_has_personnel where Project_idProject = @idProject AND Personnel_idPersonnel = @idPersonnel ";
+            string SqlselectPrPerson = "select Personnel_idPersonnel from project_has_personnel where Project_idProject = @idProject AND Personnel_idPersonnel = @idPersonnel AND  role = @personrole";
             string IdPrPerson = null;
             MySqlCommand selectPrPerson = new MySqlCommand(SqlselectPrPerson, conn);
             selectPrPerson.Parameters.AddWithValue("@idProject", idProject);
             selectPrPerson.Parameters.AddWithValue("@idPersonnel", idPersonnel);
+            selectPrPerson.Parameters.AddWithValue("@personrole", person_role);
             MySqlDataReader PrPerson = selectPrPerson.ExecuteReader();
             if (PrPerson.HasRows)
             {
