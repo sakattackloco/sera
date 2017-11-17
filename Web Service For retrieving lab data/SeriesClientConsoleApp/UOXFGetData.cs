@@ -876,15 +876,16 @@ namespace SeriesClientConsoleApp
             return result;
         }
 
-        public string insertLab(string name, string ip, string interval, string LastUpdateTime, string TimeDif)
+        public string insertLab(string name, string ip, string interval, string LastUpdateTime, string TimeDif, string DownloadComponentName)
         {
-            string sqlInsert = "Insert Into laboratory" + " (Name, ip, Interv,LastUpdateTime,TimeDif) Values" + " (@Name,@ip,@interval,@LastUpdateTime,@TimeDif) ";
+            string sqlInsert = "Insert Into laboratory" + " (Name, ip, Interv,LastUpdateTime,TimeDif,DownloadComponentName) Values" + " (@Name,@ip,@interval,@LastUpdateTime,@TimeDif,@DownloadComponentName) ";
             MySqlCommand insert = new MySqlCommand(sqlInsert, conn);
             insert.Parameters.AddWithValue("@Name", name);
             insert.Parameters.AddWithValue("@ip", ip);
             insert.Parameters.AddWithValue("@interval", interval);
             insert.Parameters.AddWithValue("@LastUpdateTime", LastUpdateTime);
             insert.Parameters.AddWithValue("@TimeDif", TimeDif);
+            insert.Parameters.AddWithValue("@DownloadComponentName", DownloadComponentName);
             insert.ExecuteNonQuery();
 
             return insert.LastInsertedId.ToString();

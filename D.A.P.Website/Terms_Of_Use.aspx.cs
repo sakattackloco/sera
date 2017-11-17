@@ -31,6 +31,7 @@ namespace LastOneFromScratch
             string par = Request.Params["status"];
             string ip = Request.Params["ip"];
             string port = Request.Params["port"];
+            string downloadComponentName = Request.Params["downloadComponentName"];
 
             string rqd = DateTime.UtcNow.ToString("dd/MM/yyyy HH:mm:ss");
             UTF8Encoding ByteConverter = new UTF8Encoding();
@@ -82,7 +83,7 @@ namespace LastOneFromScratch
             //fix it so as to be ok for web transimition
             signature = System.Web.HttpUtility.UrlEncode(signature);
 
-            string urlPart = @"http://" + ip + ":"+port+"/DatOX/Download?";
+            string urlPart = @"https://" + ip + ":"+port+"/" + HttpUtility.UrlEncode(downloadComponentName) + "/Download?";
             string FinalUrl = urlPart + "rqd=" + HttpUtility.UrlEncode(rqd) + "&id=" + HttpUtility.UrlEncode(id) + "&cat=" + HttpUtility.UrlEncode(cat) + "&dom=" + HttpUtility.UrlEncode(dom) + "&par=" + HttpUtility.UrlEncode(par) + "&signature=" + signature;
             //FinalUrl = FinalUrl.ToLower();
 

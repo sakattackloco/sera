@@ -3189,15 +3189,15 @@ namespace SERIESnew_db
             //string[] test = ClickedGridView.DataKeyNames;
             string[] labdata = GetLabName();
             //check this with the name
-            Terms_Of_Use(localID, category, labdata[1], "OK", labdata[0],labdata[2]);
+            Terms_Of_Use(localID, category, labdata[1], "OK", labdata[0],labdata[2],labdata[3]);
            // DownloadFile(localID, category, "UOXF", "OK", "163.1.8.139");
         }
 
-        protected void Terms_Of_Use(string localID,string category, string lab,string status,string ip,string port) 
+        protected void Terms_Of_Use(string localID,string category, string lab,string status,string ip,string port,string downloadComponentName) 
         {
             //Response.Redirect(FinalUrl);
             MovetoTheNextPanelState(null, "LoadData_General");
-            string param = "localid=" + HttpUtility.UrlEncode(localID)  + "&category=" + HttpUtility.UrlEncode(category) + "&lab=" + HttpUtility.UrlEncode(lab) + "&status=" + HttpUtility.UrlEncode(status) + "&ip=" + HttpUtility.UrlEncode(ip) + "&port="+ HttpUtility.UrlEncode(port);
+            string param = "localid=" + HttpUtility.UrlEncode(localID)  + "&category=" + HttpUtility.UrlEncode(category) + "&lab=" + HttpUtility.UrlEncode(lab) + "&status=" + HttpUtility.UrlEncode(status) + "&ip=" + HttpUtility.UrlEncode(ip) + "&port="+ HttpUtility.UrlEncode(port) + "&downloadComponentName="+ HttpUtility.UrlEncode(downloadComponentName);
             Response.Write("<script type='text/javascript'>detailedresults=window.open('Terms_Of_Use.aspx?"+ param + "');</script>");
         }
         protected void ProjectMenu_MenuItemClick(object sender ,MenuEventArgs e) 
@@ -3709,21 +3709,21 @@ namespace SERIESnew_db
         protected string[] GetLabName() 
         {
             MySqlConnection conn = new MySqlConnection("server=localhost;User Id=root;database=newseriesserver;password=root;CharSet=utf8;");
-            MySqlCommand selectLab = new MySqlCommand("select ip, name,publicport from Project,laboratory where project.laboratory_idlaboratory = laboratory.idlaboratory and project.idproject = @Prid", conn);
+            MySqlCommand selectLab = new MySqlCommand("select ip, name,publicport,DownloadComponentName from Project,laboratory where project.laboratory_idlaboratory = laboratory.idlaboratory and project.idproject = @Prid", conn);
 
             conn.Open();
             
             selectLab.Parameters.AddWithValue("@Prid", PrIDLabel.Text.Substring("projectid:".Length));
             MySqlDataReader LabReader = selectLab.ExecuteReader();
 
-            string[] labdata = new string [3];
+            string[] labdata = new string [4];
 
             if (LabReader.Read())
             {
                 labdata[0] = LabReader[0].ToString();
                 labdata[1] = LabReader[1].ToString();
                 labdata[2] = LabReader[2].ToString();
-              
+                labdata[3] = LabReader[3].ToString();
             }
             conn.Close();
             return labdata;

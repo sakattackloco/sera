@@ -84,3 +84,9 @@ C:\Users\Sakis Ntourmas\Desktop\SERA project\p10\series code\D.A.P.Website\obj\D
 C:\Users\Sakis Ntourmas\Desktop\SERA project\p10\series code\D.A.P.Website\obj\Debug\SERIESnew_db.csproj.CoreCompileInputs.cache
 C:\Users\Sakis Ntourmas\Desktop\SERA project\p10\series code\D.A.P.Website\obj\Debug\LastOneFromScratch.dll
 C:\Users\Sakis Ntourmas\Desktop\SERA project\p10\series code\D.A.P.Website\obj\Debug\LastOneFromScratch.pdb
+C:\Users\Sakis Ntourmas\Desktop\SERA project\p11\series code\D.A.P.Website\bin\LastOneFromScratch.dll
+C:\Users\Sakis Ntourmas\Desktop\SERA project\p11\series code\D.A.P.Website\bin\LastOneFromScratch.pdb
+C:\Users\Sakis Ntourmas\Desktop\SERA project\p11\series code\D.A.P.Website\obj\Debug\SERIESnew_db.csproj.CoreCompileInputs.cache
+C:\Users\Sakis Ntourmas\Desktop\SERA project\p11\series code\D.A.P.Website\obj\Debug\LastOneFromScratch.dll
+C:\Users\Sakis Ntourmas\Desktop\SERA project\p11\series code\D.A.P.Website\obj\Debug\LastOneFromScratch.pdb
+C:\Users\Sakis Ntourmas\Desktop\SERA project\p11\series code\D.A.P.Website\obj\Debug\SERIESnew_db.csprojResolveAssemblyReference.cache
