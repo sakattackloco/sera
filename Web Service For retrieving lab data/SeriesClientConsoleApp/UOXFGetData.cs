@@ -49,8 +49,8 @@ namespace SeriesClientConsoleApp
         static void Main(string[] args)
         {
             var watch = System.Diagnostics.Stopwatch.StartNew();
-            UOXFGetData CallUOXFServices = new UOXFGetData("CELESTEST");
-            CallUOXFServices.Initialization("CELESTEST");
+            UOXFGetData CallUOXFServices = new UOXFGetData("UPAT");
+            CallUOXFServices.Initialization("UPAT");
             watch.Stop();
             var elapsedmins = watch.ElapsedMilliseconds/60000;
 

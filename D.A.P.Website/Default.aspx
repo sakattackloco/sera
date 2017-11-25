@@ -1278,7 +1278,7 @@ project.idproject= @idproject"
                             ConnectionString="<%$ ConnectionStrings:newseriesserverConnectionString %>" 
                             OnSelecting="_LevelAllSelecting" 
                             ProviderName="<%$ ConnectionStrings:newseriesserverConnectionString.ProviderName %>" 
-                            SelectCommand="SELECT project.title AS PrTitle, specimen.Name AS SpecName, CompExp.Name as CompExpName, compexppictures.title, compexppictures.creationDate,compexppictures.LocalId, compexppictures.role, round(compexppictures.size/1024,2) as ImgSize ,compexppictures.summary,compexppictures.format FROM project, specimen, compexp, compexppictures WHERE (project.idproject = @idproject and project.idproject = specimen.project_idproject AND compexp.specimen_idspecimen = specimen.idspecimen  AND compexppictures.CompExp_idCompExp = compexp.idcompexp and compexp.type= @type)">
+                            SelectCommand="SELECT compexppictures.Author AS author, project.title AS PrTitle, specimen.Name AS SpecName, CompExp.Name as CompExpName, compexppictures.title, compexppictures.creationDate,compexppictures.LocalId, compexppictures.role, round(compexppictures.size/1024,2) as ImgSize ,compexppictures.summary,compexppictures.format FROM project, specimen, compexp, compexppictures WHERE (project.idproject = @idproject and project.idproject = specimen.project_idproject AND compexp.specimen_idspecimen = specimen.idspecimen  AND compexppictures.CompExp_idCompExp = compexp.idcompexp and compexp.type= @type)">
                             <SelectParameters>
                                 <asp:Parameter Name="idproject" />
                                 <asp:Parameter Name = "type" />

@@ -562,13 +562,13 @@ namespace SERIESnew_db
                 DataBindGridView(GridCompExpLevelData, H4ExpCompData, "Experiment data");
                 DataBindGridView(GridCompExpLevelDLC, H4ExpCompDLC, "Experiment Detailed Loading Characteristics");
                 DataBindGridView(GridCompExpLevelDOC, H4ExpCompDoc, "Experiment Documents");
-                DataBindGridView(GridCompExpLevelIMG, H4ExpCompIMGS, "Experimen Imaegs");
+                DataBindGridView(GridCompExpLevelIMG, H4ExpCompIMGS, "Experiment Images");
                 DataBindGridView(GridCompExpLevelMeshModel, H4ExpCompMeshModel, "Mesh model");
                 DataBindGridView(GridCompExpLevelMeshModelDoc, H4ExpCompMeshModelDoc, "Mesh Model Documents");
                 DataBindGridView(GridCompExpLevelMeshModelIMG, H4ExpCompMeshModelIMG, "Mesh Model Images");
                 DataBindGridView(GridCompExpLevelOLS, H4ExpCompOLS, "Original Loading Signals");
                 DataBindGridView(GridCompExpLevelPerson,H4ExpCompPerson,"Experiment Imvestigators");
-                DataBindGridView(GridCompExpLevelVideo,H4ExpCompVideo,"Experiment Video");
+                DataBindGridView(GridCompExpLevelVideo,H4ExpCompVideo,"Experiment Videos");
                 DataBindGridView(GridCompExpLevelPC, H4ExpCompPC, "Computer System");
                 DataBindGridView(GridCompExpLevelInputFile, H4ExpCompInputFile, "Effective Input Files");
                 DataBindGridView(GridCompExpLevelOLS_Signals, H4ExpCompOLS_Signal, "OLS signal Attributes");
@@ -3189,15 +3189,15 @@ namespace SERIESnew_db
             //string[] test = ClickedGridView.DataKeyNames;
             string[] labdata = GetLabName();
             //check this with the name
-            Terms_Of_Use(localID, category, labdata[1], "OK", labdata[0],labdata[2],labdata[3]);
+            Terms_Of_Use(localID, category, labdata[1], "OK", labdata[0],labdata[2],labdata[3], labdata[4]);
            // DownloadFile(localID, category, "UOXF", "OK", "163.1.8.139");
         }
 
-        protected void Terms_Of_Use(string localID,string category, string lab,string status,string ip,string port,string downloadComponentName) 
+        protected void Terms_Of_Use(string localID,string category, string lab,string status,string ip,string port,string downloadComponentName, string secured) 
         {
             //Response.Redirect(FinalUrl);
             MovetoTheNextPanelState(null, "LoadData_General");
-            string param = "localid=" + HttpUtility.UrlEncode(localID)  + "&category=" + HttpUtility.UrlEncode(category) + "&lab=" + HttpUtility.UrlEncode(lab) + "&status=" + HttpUtility.UrlEncode(status) + "&ip=" + HttpUtility.UrlEncode(ip) + "&port="+ HttpUtility.UrlEncode(port) + "&downloadComponentName="+ HttpUtility.UrlEncode(downloadComponentName);
+            string param = "localid=" + HttpUtility.UrlEncode(localID)  + "&category=" + HttpUtility.UrlEncode(category) + "&lab=" + HttpUtility.UrlEncode(lab) + "&status=" + HttpUtility.UrlEncode(status) + "&ip=" + HttpUtility.UrlEncode(ip) + "&port="+ HttpUtility.UrlEncode(port) + "&downloadComponentName="+ HttpUtility.UrlEncode(downloadComponentName) + "&secured=" + HttpUtility.UrlEncode(secured);
             Response.Write("<script type='text/javascript'>detailedresults=window.open('Terms_Of_Use.aspx?"+ param + "');</script>");
         }
         protected void ProjectMenu_MenuItemClick(object sender ,MenuEventArgs e) 
@@ -3709,14 +3709,14 @@ namespace SERIESnew_db
         protected string[] GetLabName() 
         {
             MySqlConnection conn = new MySqlConnection("server=localhost;User Id=root;database=newseriesserver;password=root;CharSet=utf8;");
-            MySqlCommand selectLab = new MySqlCommand("select ip, name,publicport,DownloadComponentName from Project,laboratory where project.laboratory_idlaboratory = laboratory.idlaboratory and project.idproject = @Prid", conn);
+            MySqlCommand selectLab = new MySqlCommand("select ip, name,publicport,DownloadComponentName,SECURED from Project,laboratory where project.laboratory_idlaboratory = laboratory.idlaboratory and project.idproject = @Prid", conn);
 
             conn.Open();
             
             selectLab.Parameters.AddWithValue("@Prid", PrIDLabel.Text.Substring("projectid:".Length));
             MySqlDataReader LabReader = selectLab.ExecuteReader();
 
-            string[] labdata = new string [4];
+            string[] labdata = new string [5];
 
             if (LabReader.Read())
             {
@@ -3724,6 +3724,7 @@ namespace SERIESnew_db
                 labdata[1] = LabReader[1].ToString();
                 labdata[2] = LabReader[2].ToString();
                 labdata[3] = LabReader[3].ToString();
+                labdata[4] = LabReader[4].ToString();
             }
             conn.Close();
             return labdata;
