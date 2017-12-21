@@ -430,8 +430,10 @@ namespace SeriesClientConsoleApp
             {
                 foreach (image CurrentImg in SpecimenImagesArray)
                 {
-                    dbOps.InsertSpecimenPicture(SpecimenID, CurrentImg);
-                    CrLogger.CreateLogIntro("insert", DateTime.UtcNow.ToString("yyyy/MM/dd HH:mm:ss"), SpecimenPictureID, "Specimen Picture");
+                    if (CurrentImg.idImage!=null) {
+                        dbOps.InsertSpecimenPicture(SpecimenID, CurrentImg);
+                        CrLogger.CreateLogIntro("insert", DateTime.UtcNow.ToString("yyyy/MM/dd HH:mm:ss"), SpecimenPictureID, "Specimen Picture");
+                    }
                 }
             }
 
@@ -2491,47 +2493,51 @@ namespace SeriesClientConsoleApp
 
         public void UpdateSearch(project cp, string LocalIdProject)
         {
-            if (cp.projectKeywords.Length>0) {
-               foreach (var new_keyword in cp.projectKeywords)
+            if (cp != null)
+            {
+                if (cp.projectKeywords.Length > 0)
+                {
+                    foreach (var new_keyword in cp.projectKeywords)
                     {
-                    string insert_search_query = "insert into search " + " (Category,Keyword,ProjectID,ParentID,ProjectTitle,abstract,startdate,enddate,type,labid,labname)" + " values (@Category,@Keyword,@ProjectID,@ParentID,@ProjectTitle,@abstract,@startdate,@enddate,@type,@labid,@labname)";
-                    MySqlCommand InsertToSearch = new MySqlCommand(insert_search_query, conn);
-                    InsertToSearch.Parameters.AddWithValue("@Category", "resource");//DEN MPORW NA 3ERW TI KATHGORIA EINAI
-                    InsertToSearch.Parameters.AddWithValue("@Keyword", new_keyword);
-                    InsertToSearch.Parameters.AddWithValue("@ProjectID", LocalIdProject);
-                    InsertToSearch.Parameters.AddWithValue("@ParentID", LocalIdProject);
-                    InsertToSearch.Parameters.AddWithValue("@ProjectTitle", cp.projectTitle);
-                    InsertToSearch.Parameters.AddWithValue("@abstract", cp.projectDescription);
-                    InsertToSearch.Parameters.AddWithValue("@startdate", cp.projectStartDate);
-                    InsertToSearch.Parameters.AddWithValue("@enddate", cp.projectEndDate);
-                    InsertToSearch.Parameters.AddWithValue("@type", "type");//DEN MPORW NA 3ERW TI TYPE EINAI
+                        string insert_search_query = "insert into search " + " (Category,Keyword,ProjectID,ParentID,ProjectTitle,abstract,startdate,enddate,type,labid,labname)" + " values (@Category,@Keyword,@ProjectID,@ParentID,@ProjectTitle,@abstract,@startdate,@enddate,@type,@labid,@labname)";
+                        MySqlCommand InsertToSearch = new MySqlCommand(insert_search_query, conn);
+                        InsertToSearch.Parameters.AddWithValue("@Category", "resource");//DEN MPORW NA 3ERW TI KATHGORIA EINAI
+                        InsertToSearch.Parameters.AddWithValue("@Keyword", new_keyword);
+                        InsertToSearch.Parameters.AddWithValue("@ProjectID", LocalIdProject);
+                        InsertToSearch.Parameters.AddWithValue("@ParentID", LocalIdProject);
+                        InsertToSearch.Parameters.AddWithValue("@ProjectTitle", cp.projectTitle);
+                        InsertToSearch.Parameters.AddWithValue("@abstract", cp.projectDescription);
+                        InsertToSearch.Parameters.AddWithValue("@startdate", cp.projectStartDate);
+                        InsertToSearch.Parameters.AddWithValue("@enddate", cp.projectEndDate);
+                        InsertToSearch.Parameters.AddWithValue("@type", "type");//DEN MPORW NA 3ERW TI TYPE EINAI
 
-                    string found_lab_Id;
-                    string sqlSelectLabId = "select laboratory_idlaboratory from project where idProject = @idproject ";
-                    MySqlCommand SelectLabId = new MySqlCommand(sqlSelectLabId, conn);
-                    SelectLabId.Parameters.AddWithValue("@idproject", LocalIdProject);
-                    MySqlDataReader db_reader = SelectLabId.ExecuteReader();
-                    if (db_reader.HasRows)
-                    {
-                        db_reader.Read();
-                        found_lab_Id = db_reader[0].ToString();
-                        InsertToSearch.Parameters.AddWithValue("@labid", found_lab_Id);
-
-                        string found_lab_Name;
-                        string sqlSelectLabName = "select LongName from laboratory where idlaboratory = @idlab ";
-                        MySqlCommand SelectLabName = new MySqlCommand(sqlSelectLabName, conn);
-                        SelectLabName.Parameters.AddWithValue("@idlab", found_lab_Id);
+                        string found_lab_Id;
+                        string sqlSelectLabId = "select laboratory_idlaboratory from project where idProject = @idproject ";
+                        MySqlCommand SelectLabId = new MySqlCommand(sqlSelectLabId, conn);
+                        SelectLabId.Parameters.AddWithValue("@idproject", LocalIdProject);
+                        MySqlDataReader db_reader = SelectLabId.ExecuteReader();
                         if (db_reader.HasRows)
                         {
                             db_reader.Read();
-                            found_lab_Name = db_reader[0].ToString();
-                            InsertToSearch.Parameters.AddWithValue("@labname", found_lab_Name);
-                        }
-                    }
-                    db_reader.Close();
+                            found_lab_Id = db_reader[0].ToString();
+                            InsertToSearch.Parameters.AddWithValue("@labid", found_lab_Id);
 
-                    InsertToSearch.ExecuteNonQuery();
-                    //System.Console.WriteLine(cp.idProject);
+                            string found_lab_Name;
+                            string sqlSelectLabName = "select LongName from laboratory where idlaboratory = @idlab ";
+                            MySqlCommand SelectLabName = new MySqlCommand(sqlSelectLabName, conn);
+                            SelectLabName.Parameters.AddWithValue("@idlab", found_lab_Id);
+                            if (db_reader.HasRows)
+                            {
+                                db_reader.Read();
+                                found_lab_Name = db_reader[0].ToString();
+                                InsertToSearch.Parameters.AddWithValue("@labname", found_lab_Name);
+                            }
+                        }
+                        db_reader.Close();
+
+                        InsertToSearch.ExecuteNonQuery();
+                        //System.Console.WriteLine(cp.idProject);
+                    }
                 }
             }
         }
